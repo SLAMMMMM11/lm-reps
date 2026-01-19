@@ -272,7 +272,7 @@
 
     /* Ajuste para flechas del carrusel de promociones */
     .promo-control {
-        width: 5%;
+        width: 10%;
         filter: invert(1);
         /* Para que las flechas sean negras si el fondo es blanco */
     }
