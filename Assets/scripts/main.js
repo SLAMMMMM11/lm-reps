@@ -5,14 +5,15 @@ async function loadTravelData() {
   try {
     const response = await fetch(SHEET_URL);
     const text = await response.text();
-    
+
     // Este paso es más seguro para limpiar el texto de Google
     const jsonText = text.match(/google\.visualization\.Query\.setResponse\(([\s\S\w]+)\)/);
     if (!jsonText) throw new Error("No se pudo procesar el formato de Google Sheets");
-    
+
     const data = JSON.parse(jsonText[1]);
 
     const travelData = {
+      carouselhero: [],
       carouselpromos: [],
       carouselnorteamerica: [],
       carouselcentroamerica: [],
@@ -22,18 +23,22 @@ async function loadTravelData() {
     };
 
     data.table.rows.forEach(row => {
-      // Obtenemos los valores de las columnas A, B y C de forma segura
       const catRaw = row.c[0] ? row.c[0].v : '';
       const cat = catRaw.toString().toLowerCase().trim();
       const img = row.c[1] ? row.c[1].v : '';
       const tit = row.c[2] ? row.c[2].v : 'Viaje';
 
+      // CAPTURAMOS LA COLUMNA D (Índice 3) para el botón
+      const btn = row.c[3] ? row.c[3].v : 'Ver Promociones';
+
       if (travelData.hasOwnProperty(cat)) {
-        travelData[cat].push({ src: img, alt: tit });
+        // Guardamos también el texto del botón
+        travelData[cat].push({ src: img, alt: tit, btnText: btn });
       }
     });
 
     // Dibujamos cada carrusel
+    renderHeroCarousel('heroCarousel', travelData.carouselhero);
     renderCarousels('carouselPromos', travelData.carouselpromos);
     renderCarousels('carouselNorteamerica', travelData.carouselnorteamerica);
     renderCarousels('carouselCentroamerica', travelData.carouselcentroamerica);
@@ -52,7 +57,7 @@ function renderCarousels(id, images) {
 
   const inner = carousel.querySelector('.carousel-inner');
   const indicators = carousel.querySelector('.carousel-indicators');
-  
+
   inner.innerHTML = '';
   if (indicators) indicators.innerHTML = '';
 
@@ -99,4 +104,42 @@ document.addEventListener('DOMContentLoaded', () => {
       document.getElementById('fullResImage').src = '';
     });
   }
+
 });
+
+function renderHeroCarousel(id, images) {
+  const carousel = document.getElementById(id);
+  if (!carousel) return;
+
+  const inner = carousel.querySelector('.carousel-inner');
+  const indicators = carousel.querySelector('.carousel-indicators'); // Necesitamos este contenedor
+
+  inner.innerHTML = '';
+  if (indicators) indicators.innerHTML = '';
+
+  if (!images || images.length === 0) return;
+
+  images.forEach((img, index) => {
+    const activeClass = index === 0 ? 'active' : '';
+
+    // Crear Viñetas (Indicators)
+    if (indicators) {
+      indicators.innerHTML += `
+        <button type="button" data-bs-target="#${id}" data-bs-slide-to="${index}" 
+                class="${activeClass}" aria-current="${index === 0 ? 'true' : 'false'}"></button>`;
+    }
+
+    // Crear Slide
+    inner.innerHTML += `
+      <div class="carousel-item ${activeClass}">
+        <section class="hero-section" style="background-image: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url('${img.src}');">
+          <div class="container hero-content">
+            <h1 class="display-3">${img.alt}</h1>
+            <a href="#Promociones" class="btn btn-danger btn-lg px-5 py-3 shadow border-0"
+              style="background-color: var(--brand-primary);">${img.btnText}</a>
+          </div>
+        </section>
+      </div>
+    `;
+  });
+}
