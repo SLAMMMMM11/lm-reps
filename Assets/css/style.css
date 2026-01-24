@@ -73,20 +73,44 @@
     /* --- Hero Section --- */
     .hero-section {
         position: relative;
-        height: 70vh;
+        height: 80vh;
         min-height: 500px;
-        background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
-            url('https://images.unsplash.com/photo-1501785888041-af3ef285b470?q=80&w=2070') center center/cover no-repeat;
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
         color: white;
-        display: flex;
+        display: flex !important;
+        /* Importante para Bootstrap Carousel */
         align-items: center;
         justify-content: center;
         text-align: center;
     }
 
+    /* Ajuste para que las flechas del Hero se vean bien */
+    #heroCarousel .carousel-control-prev,
+    #heroCarousel .carousel-control-next {
+        width: 5%;
+        filter: none;
+        /* Que se vean blancas sobre el fondo oscuro */
+    }
+
     .hero-content h1 {
         font-weight: 800;
-        text-shadow: 2px 2px 10px rgba(0, 0, 0, 0.3);
+        line-height: 1.1;
+        /* Ajusta el espacio entre las dos líneas */
+        text-shadow: 2px 4px 10px rgba(0, 0, 0, 0.5);
+        /* Le da profundidad para que no se vea plano */
+        margin-bottom: 1.5rem;
+        letter-spacing: -1px;
+        /* Hace que el título se vea más moderno y compacto */
+    }
+
+    /* Opcional: Para que el botón resalte más sobre el carrusel */
+    .hero-content .btn {
+        text-transform: uppercase;
+        font-weight: 700;
+        letter-spacing: 1px;
+        box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3) !important;
     }
 
     /* --- Cards & Packages --- */
