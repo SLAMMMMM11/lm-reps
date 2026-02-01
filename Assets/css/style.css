@@ -1,0 +1,446 @@
+    /* --- Variables de Marca --- */
+    :root {
+        --brand-primary: #c0392b;
+        --brand-secondary: #2c3e50;
+        --brand-accent: #f1c40f;
+        --text-dark: #1a1a1a;
+        --transition: all 0.3s ease;
+    }
+
+    body {
+        font-family: 'Inter', sans-serif;
+        color: var(--text-dark);
+        scroll-behavior: smooth;
+    }
+
+    /* --- Header & Nav --- */
+    .top-bar {
+        background-color: #f8f9fa;
+        font-size: 0.85rem;
+        padding: 0.6rem 0;
+        border-bottom: 1px solid #eee;
+    }
+
+    .navbar-brand img {
+        max-height: 55px;
+        transition: var(--transition);
+    }
+
+    .nav-link {
+        color: var(--brand-secondary);
+        font-weight: 600;
+        font-size: 0.95rem;
+        padding: 0.5rem 1rem !important;
+    }
+
+    .nav-link:hover,
+    .nav-link.active {
+        color: var(--brand-primary) !important;
+    }
+
+    .btn-reserva {
+        background-color: var(--brand-accent);
+        color: #000 !important;
+        font-weight: 800;
+        border-radius: 50px;
+        padding: 0.6rem 1.5rem !important;
+        box-shadow: 0 4px 10px rgba(241, 196, 15, 0.3);
+        transition: var(--transition);
+        animation: pulse 2s infinite;
+        border: none;
+    }
+
+    .btn-reserva:hover {
+        background-color: #d4ac0d;
+        transform: translateY(-2px);
+        box-shadow: 0 6px 15px rgba(241, 196, 15, 0.4);
+    }
+
+    /* --- Animación de Entrada --- */
+    .hidden-section {
+        display: none !important;
+        /* Oculto por defecto */
+    }
+
+    .fade-in-entry {
+        animation: fadeInUp 0.8s ease-out forwards;
+    }
+
+    /* --- Sección de Servicios --- */
+    .service-card {
+        transition: all 0.3s ease;
+        border-bottom: 3px solid transparent;
+    }
+
+    .service-card:hover {
+        transform: translateY(-10px);
+        box-shadow: 0 15px 30px rgba(0, 0, 0, 0.1) !important;
+        border-bottom: 3px solid var(--brand-primary);
+    }
+
+    .img-wrapper {
+        width: 120px;
+        height: 120px;
+        overflow: hidden;
+        border-radius: 50%;
+        border: 4px solid #f8f9fa;
+        box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    }
+
+    .img-wrapper img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        transition: transform 0.5s ease;
+    }
+
+    .service-card:hover .img-wrapper img {
+        transform: scale(1.1);
+    }
+
+
+
+    @keyframes fadeInUp {
+        from {
+            opacity: 0;
+            transform: translateY(20px);
+        }
+
+        to {
+            opacity: 1;
+            transform: translateY(0);
+        }
+    }
+
+    @keyframes pulse {
+        0% {
+            box-shadow: 0 0 0 0 rgba(241, 196, 15, 0.7);
+        }
+
+        70% {
+            box-shadow: 0 0 0 10px rgba(241, 196, 15, 0);
+        }
+
+        100% {
+            box-shadow: 0 0 0 0 rgba(241, 196, 15, 0);
+        }
+    }
+
+    /* --- Redes Sociales Top Bar --- */
+    .social-icons a {
+        color: #555;
+        font-size: 1.1rem;
+        transition: var(--transition);
+    }
+
+    .social-icons a:hover {
+        color: var(--brand-primary);
+        transform: translateY(-2px);
+    }
+
+    /* --- Hero Section --- */
+    .hero-section {
+        position: relative;
+        height: 80vh;
+        min-height: 500px;
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
+        color: white;
+        display: flex !important;
+        /* Importante para Bootstrap Carousel */
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+    }
+
+    /* Ajuste para que las flechas del Hero se vean bien */
+    #heroCarousel .carousel-control-prev,
+    #heroCarousel .carousel-control-next {
+        width: 5%;
+        filter: none;
+        /* Que se vean blancas sobre el fondo oscuro */
+    }
+
+    .hero-content h1 {
+        font-weight: 800;
+        line-height: 1.2;
+        /* Espacio entre líneas */
+        text-shadow: 2px 4px 15px rgba(0, 0, 0, 0.6);
+        /* Sombra para dar profundidad */
+        margin-bottom: 2rem;
+    }
+
+    /* Estilo para las viñetas (indicators) para que se vean mejor */
+    .carousel-indicators button {
+        width: 12px !important;
+        height: 12px !important;
+        border-radius: 50% !important;
+        margin: 0 5px !important;
+        background-color: white !important;
+        opacity: 0.5;
+    }
+
+    .carousel-indicators .active {
+        opacity: 1;
+        background-color: var(--brand-primary) !important;
+    }
+
+    /* Opcional: Para que el botón resalte más sobre el carrusel */
+    .hero-content .btn {
+        text-transform: uppercase;
+        font-weight: 700;
+        letter-spacing: 1px;
+        box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3) !important;
+    }
+
+    /* --- Cards & Packages --- */
+    .section-padding {
+        padding: 80px 0;
+    }
+
+    .package-card {
+        border-radius: 16px;
+        overflow: hidden;
+        border: none;
+        box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
+        transition: var(--transition);
+        height: 100%;
+    }
+
+    .package-card:hover {
+        transform: translateY(-10px);
+        box-shadow: 0 15px 35px rgba(0, 0, 0, 0.12);
+    }
+
+    .package-card img {
+        height: 220px;
+        object-fit: cover;
+        transition: var(--transition);
+    }
+
+    .package-card:hover img {
+        transform: scale(1.05);
+    }
+
+    .duration-tag {
+        position: absolute;
+        top: 15px;
+        left: 15px;
+        background-color: rgba(26, 26, 26, 0.85);
+        backdrop-filter: blur(4px);
+        color: white;
+        padding: 5px 14px;
+        border-radius: 30px;
+        font-size: 0.75rem;
+        font-weight: 700;
+        z-index: 10;
+    }
+
+    .price {
+        font-size: 1.6rem;
+        font-weight: 800;
+        color: var(--brand-primary);
+    }
+
+    /* --- Carousel Adjustments --- */
+    .carousel-control-prev-icon,
+    .carousel-control-next-icon {
+        width: 3rem;
+        height: 3rem;
+        background-size: 50%;
+    }
+
+    .international-section {
+        background-color: var(--brand-secondary);
+        color: white;
+    }
+
+    /* --- Footer --- */
+    footer {
+        background-color: #1a252f;
+        color: #adb5bd;
+        font-size: 0.9rem;
+    }
+
+    footer h6 {
+        color: white;
+        font-weight: 700;
+        margin-bottom: 1.5rem;
+    }
+
+    footer a {
+        color: #adb5bd;
+        text-decoration: none;
+        transition: var(--transition);
+    }
+
+    footer a:hover {
+        color: var(--brand-accent);
+    }
+
+    .footer-bottom {
+        background-color: #111a22;
+        padding: 20px 0;
+        font-size: 0.8rem;
+    }
+
+    .promo-img-container {
+        width: 100%;
+        height: 350px;
+        /* Altura fija para escritorio */
+        object-fit: cover;
+        /* Corta la imagen para llenar el espacio sin deformarla */
+        object-position: top;
+        /* Centra el recorte en la parte superior (ideal para flyers) */
+        border-radius: 8px;
+        box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+        transition: transform 0.3s ease;
+    }
+
+    .promo-img-container {
+        width: 100%;
+        aspect-ratio: 3 / 5;
+        /* Proporción 3 de ancho por 4 de alto */
+        object-fit: cover;
+        border-radius: 8px;
+    }
+
+    /* --- WhatsApp Button --- */
+    .whatsapp-float {
+        position: fixed;
+        width: 60px;
+        height: 60px;
+        bottom: 30px;
+        right: 30px;
+        background-color: #25d366;
+        color: #FFF;
+        border-radius: 50px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 32px;
+        box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+        z-index: 1000;
+        transition: var(--transition);
+    }
+
+    .whatsapp-float:hover {
+        transform: scale(1.1);
+        color: white;
+        box-shadow: 0 6px 20px rgba(37, 211, 102, 0.4);
+    }
+
+    .contact-hero-section {
+        background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)),
+            url('https://images.unsplash.com/photo-1516738901171-8eb4fc13bd20?q=80&w=2070') center/cover no-repeat;
+        padding: 80px 0;
+        color: white;
+        text-align: center;
+        border-radius: 0 0 40px 40px;
+    }
+
+    .contact-icon-box {
+        width: 45px;
+        height: 45px;
+        background-color: rgba(192, 57, 43, 0.1);
+        /* --brand-primary con opacidad */
+        color: var(--brand-primary);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        border-radius: 12px;
+        font-size: 1.2rem;
+    }
+
+    #contactForm .form-control:focus,
+    #contactForm .form-select:focus {
+        box-shadow: 0 0 0 0.25rem rgba(192, 57, 43, 0.1);
+        border-color: var(--brand-primary);
+    }
+
+    /* Mobile adjustments */
+    @media (max-width: 768px) {
+        .hero-section {
+            height: 50vh;
+        }
+
+        .hero-content h1 {
+            font-size: 2rem;
+        }
+
+        .section-padding {
+            padding: 50px 0;
+        }
+
+        .promo-img-container {
+            height: 250px;
+        }
+    }
+
+    /* --- Sección Promociones (Estilo tipo Flyer) --- */
+    .carousel-item img {
+        width: 100%;
+        height: auto;
+        border-radius: 8px;
+        cursor: pointer;
+        transition: transform 0.3s ease;
+        box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    }
+
+    /* Efecto Hover para todos */
+    .carousel-item img:hover {
+        transform: scale(1.05);
+        /* Un poquito más de zoom para que se note */
+        box-shadow: 0 8px 25px rgba(0, 0, 0, 0.2);
+    }
+
+    .promo-title {
+        font-weight: 800;
+        letter-spacing: 2px;
+        margin-bottom: 40px;
+        text-transform: uppercase;
+        color: #333;
+    }
+
+    /* Ajuste para flechas del carrusel de promociones */
+    .promo-control {
+        width: 10%;
+        filter: invert(1);
+        /* Para que las flechas sean negras si el fondo es blanco */
+    }
+
+    /* Modal de Preview */
+    .modal-content {
+        background-color: transparent;
+        border: none;
+    }
+
+    .btn-close-white {
+        filter: invert(1) grayscale(100%) brightness(200%);
+        position: absolute;
+        right: -30px;
+        top: 0;
+        z-index: 1060;
+    }
+
+    .img-preview-custom {
+        /* Evita que la imagen sea más alta que la pantalla */
+        max-height: 90vh;
+        /* Mantiene la proporción sin deformar */
+        object-fit: contain;
+        /* Sombra para que resalte sobre el fondo oscuro */
+        box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
+    }
+
+    /* En móviles, permitimos que use un poco más de espacio */
+    @media (max-width: 576px) {
+        .img-preview-custom {
+            max-height: 100vh;
+            border-radius: 0;
+        }
+
+        .modal-content {
+            background: #000 !important;
+        }
+    }

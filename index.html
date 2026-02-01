@@ -1,0 +1,417 @@
+<!doctype html>
+<html lang="es">
+
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>VIAJES LM-REPS - Tu Aventura Comienza Aquí</title>
+
+  <!-- SEO Básico -->
+  <meta name="description"
+    content="En Viajes LM-REPS ofrecemos los mejores paquetes turísticos nacionales e internacionales.">
+  <meta property="og:image" content="https://lm-reps.com/Assets/img/og-image.png">
+
+  <!-- Fuentes y Bootstrap -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;800&display=swap" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+
+  <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+  <link rel="stylesheet" href="Assets/css/style.css">
+  <script src="Assets/scripts/main.js" defer></script>
+</head>
+
+<body>
+  <header>
+    <div class="top-bar d-none d-md-block">
+      <div class="container d-flex justify-content-between align-items-center">
+
+        <!-- Redes Sociales (Izquierda) -->
+        <div class="social-icons">
+          <span class="me-2 fw-bold text-muted small">Síguenos:</span>
+          <a href="https://www.facebook.com/lmreps" target="_blank" class="me-3"><i class="bi bi-facebook"></i></a>
+          <a href="https://www.instagram.com/viajes_lm_reps/" target="_blank" class="me-3"><i
+              class="bi bi-instagram"></i></a>
+          <a href="https://www.tiktok.com/@viajes.lm.reps" target="_blank" class="me-3"><i class="bi bi-tiktok"></i></a>
+          <a href="https://wa.me/51987594032" target="_blank"><i class="bi bi-whatsapp"></i></a>
+        </div>
+
+        <!-- Contacto (Derecha) - Se mantiene igual -->
+        <div class="contact-info">
+          <a href="mailto:reservas@lm-reps.com" class="text-dark text-decoration-none me-4">
+            <i class="bi bi-envelope-fill text-danger me-2"></i>reservas@lm-reps.com
+          </a>
+          <a href="tel:+51987594032" class="text-dark text-decoration-none">
+            <i class="bi bi-telephone-fill text-danger me-2"></i>(+51) 987 594 032
+          </a>
+        </div>
+
+      </div>
+    </div>
+    <nav class="navbar navbar-expand-lg bg-white shadow-sm sticky-top">
+      <div class="container">
+        <!-- Logo -->
+        <a class="navbar-brand" href="index.html">
+          <img src="Assets/img/og-image.png" alt="Logo">
+        </a>
+
+        <!-- Botón Hamburguesa (Móvil) -->
+        <button class="navbar-toggler border-0" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse" id="navbarNav">
+          <ul class="navbar-nav ms-auto align-items-center gap-2">
+
+            <!-- Inicio -->
+            <li class="nav-item"><a class="nav-link active" href="#">INICIO</a></li>
+
+            <!-- Promociones -->
+            <li class="nav-item"><a class="nav-link" href="#Promociones">PROMOCIONES</a></li>
+
+            <!-- NUEVO: Menú Desplegable Destinos -->
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
+                aria-expanded="false">
+                DESTINOS
+              </a>
+              <ul class="dropdown-menu border-0 shadow">
+                <li><a class="dropdown-item" href="#Norteamerica">AMÉRICA</a></li>
+                <li><a class="dropdown-item" href="#Europa">EUROPA</a></li>
+                <li><a class="dropdown-item" href="#Asia">ASIA</a></li>
+              </ul>
+            </li>
+
+            <!-- NUEVO: Opción Visas -->
+            <li class="nav-item"><a class="nav-link" href="Pages/tramites.html">VISAS</a></li>
+
+            <!-- Contacto -->
+            <li class="nav-item"><a class="nav-link" href="Pages/contactanos.html">CONTÁCTANOS</a></li>
+
+            <!-- Botón de Acción -->
+            <li class="nav-item ms-lg-3"><a class="nav-link btn-reserva text-center" href="https://wa.me/51987594032"
+                target="_blank"><i class="bi bi-whatsapp me-2"></i>RESERVAR AHORA</a></li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+  </header>
+
+  <main>
+
+    <div id="heroCarousel" class="carousel slide carousel-fade" data-bs-ride="carousel">
+      <!-- Indicadores (Puntitos abajo) -->
+      <div class="carousel-indicators">
+        <button type="button" data-bs-target="#heroCarousel" data-bs-slide-to="0" class="active" aria-current="true"
+          aria-label="Slide 1"></button>
+        <button type="button" data-bs-target="#heroCarousel" data-bs-slide-to="1" aria-label="Slide 2"></button>
+        <button type="button" data-bs-target="#heroCarousel" data-bs-slide-to="2" aria-label="Slide 3"></button>
+        <button type="button" data-bs-target="#heroCarousel" data-bs-slide-to="3" aria-label="Slide 4"></button>
+      </div>
+
+      <div class="carousel-inner">
+
+        <!-- SLIDE 1: Promociones -->
+        <div class="carousel-item active">
+          <section class="hero-section"
+            style="background-image: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url('https://i.postimg.cc/bv1q2V3Z/hero-section-img-1.jpg');">
+            <div class="container hero-content">
+              <h1 class="display-3">Descubre el Mundo<br>Vive la Aventura</h1>
+              <a href="#Promociones" class="btn btn-danger btn-lg px-5 py-3 shadow border-0"
+                style="background-color: var(--brand-primary);">VER PROMOCIONES</a>
+            </div>
+          </section>
+        </div>
+
+        <!-- SLIDE 2: Contáctanos -->
+        <div class="carousel-item">
+          <section class="hero-section"
+            style="background-image: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url('https://i.postimg.cc/zf6BYR3D/hero-section-contact-us-img-4.png');">
+            <div class="container hero-content">
+              <h1 class="display-3">¿Necesitas ayuda<br>con tu Viaje?</h1>
+              <a href="Pages/contactanos.html" class="btn btn-danger btn-lg px-5 py-3 shadow border-0"
+                style="background-color: var(--brand-primary);">CONTÁCTANOS</a>
+            </div>
+          </section>
+        </div>
+
+        <!-- SLIDE 3: Cotiza -->
+        <div class="carousel-item">
+          <section class="hero-section"
+            style="background-image: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url('https://i.postimg.cc/kXFJ4pYr/hero-section-img-2.jpg');">
+            <div class="container hero-content">
+              <h1 class="display-3">Destinos Únicos<br>Momentos Inolvidables</h1>
+              <a href="Pages/contactanos.html" class="btn btn-danger btn-lg px-5 py-3 shadow border-0"
+                style="background-color: var(--brand-primary);">COTIZA AQUÍ</a>
+            </div>
+          </section>
+        </div>
+
+        <!-- SLIDE 4: Reserva (WhatsApp) -->
+        <div class="carousel-item">
+          <section class="hero-section"
+            style="background-image: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url('https://i.postimg.cc/BQGZJ0pq/hero-section-img-3.jpg');">
+            <div class="container hero-content">
+              <h1 class="display-3">El Viaje de tu Vida<br>a un solo CLICK!</h1>
+              <a href="https://wa.me/51987594032" target="_blank"
+                class="btn btn-danger btn-lg px-5 py-3 shadow border-0"
+                style="background-color: var(--brand-primary);">RESERVA AHORA</a>
+            </div>
+          </section>
+        </div>
+
+
+
+      </div>
+
+      <!-- Controles (Flechas) -->
+      <button class="carousel-control-prev" type="button" data-bs-target="#heroCarousel" data-bs-slide="prev">
+        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Anterior</span>
+      </button>
+      <button class="carousel-control-next" type="button" data-bs-target="#heroCarousel" data-bs-slide="next">
+        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Siguiente</span>
+      </button>
+    </div>
+
+    <!-- SECCIÓN DE SERVICIOS -->
+    <section id="Servicios" class="section-padding bg-light position-relative">
+      <div class="container">
+        <div class="text-center mb-5">
+          <h2 class="promo-title">NUESTROS <span style="color: var(--brand-primary);">SERVICIOS</span></h2>
+          <p class="text-muted mx-auto" style="max-width: 600px;">
+            Nos encargamos de cada detalle para que tú solo te preocupes por disfrutar.
+            Experiencia, seguridad y los mejores precios garantizados.
+          </p>
+        </div>
+
+        <div class="row g-4">
+
+          <!-- Servicio 1: Paquetes Turísticos -->
+          <div class="col-md-6 col-lg-3">
+            <div class="service-card bg-white p-4 h-100 rounded text-center shadow-sm">
+              <div class="img-wrapper mb-4 mx-auto">
+                <img src="https://images.unsplash.com/photo-1476514525535-07fb3b4ae5f1?q=80&w=400"
+                  alt="Paquetes Turísticos" class="img-fluid rounded-circle">
+              </div>
+              <h4 class="fw-bold h5">Paquetes Turísticos</h4>
+              <p class="small text-muted mb-4">Diseñamos itinerarios a medida para familias, parejas y grupos. Todo
+                incluido para tu tranquilidad.</p>
+              <a href="#Promociones" class="btn btn-outline-danger btn-sm rounded-pill px-4">Ver Destinos</a>
+            </div>
+          </div>
+
+          <!-- Servicio 2: Boletos Aéreos -->
+          <div class="col-md-6 col-lg-3">
+            <div class="service-card bg-white p-4 h-100 rounded text-center shadow-sm">
+              <div class="img-wrapper mb-4 mx-auto">
+                <img src="https://images.unsplash.com/photo-1436491865332-7a61a109cc05?q=80&w=400" alt="Vuelos"
+                  class="img-fluid rounded-circle">
+              </div>
+              <h4 class="fw-bold h5">Boletos Aéreos</h4>
+              <p class="small text-muted mb-4">Encontramos las mejores rutas y tarifas en vuelos nacionales e
+                internacionales. Asesoría en check-in.</p>
+              <a href="https://wa.me/51987594032" target="_blank"
+                class="btn btn-outline-danger btn-sm rounded-pill px-4">Cotizar Vuelo</a>
+            </div>
+          </div>
+
+          <!-- Servicio 3: Trámites de Visas -->
+          <div class="col-md-6 col-lg-3">
+            <div class="service-card bg-white p-4 h-100 rounded text-center shadow-sm">
+              <div class="img-wrapper mb-4 mx-auto">
+                <img src="https://images.unsplash.com/photo-1569974498991-d3c12a504f95?q=80&w=400" alt="Visas"
+                  class="img-fluid rounded-circle">
+              </div>
+              <h4 class="fw-bold h5">Asesoría de Visas</h4>
+              <p class="small text-muted mb-4">Expertos en Visa Americana y Canadiense. Aumenta tus probabilidades de
+                aprobación con nosotros.</p>
+              <a href="Pages/tramites.html" class="btn btn-outline-danger btn-sm rounded-pill px-4">Más Info</a>
+            </div>
+          </div>
+
+          <!-- Servicio 4: Seguros de Viaje -->
+          <div class="col-md-6 col-lg-3">
+            <div class="service-card bg-white p-4 h-100 rounded text-center shadow-sm">
+              <div class="img-wrapper mb-4 mx-auto">
+                <img src="https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?q=80&w=400" alt="Seguros"
+                  class="img-fluid rounded-circle">
+              </div>
+              <h4 class="fw-bold h5">Seguros de Viaje</h4>
+              <p class="small text-muted mb-4">Viaja protegido ante cualquier imprevisto médico o logístico. Cobertura
+                internacional obligatoria.</p>
+              <a href="https://wa.me/51987594032" target="_blank"
+                class="btn btn-outline-danger btn-sm rounded-pill px-4">Asegúrate</a>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- SECCIONES VACÍAS (JS LAS LLENARÁ) -->
+    <section id="Promociones" class="section-padding bg-white hidden-section">
+      <div class="container">
+        <h2 class="text-center promo-title">PROMOCIONES</h2>
+        <div id="carouselPromos" class="carousel slide" data-bs-ride="carousel" data-bs-interval="3000">
+          <div class="carousel-indicators" style="bottom: -50px;"></div>
+          <div class="carousel-inner"></div>
+          <button class="carousel-control-prev promo-control" type="button" data-bs-target="#carouselPromos"
+            data-bs-slide="prev"><span class="carousel-control-prev-icon"></span></button>
+          <button class="carousel-control-next promo-control" type="button" data-bs-target="#carouselPromos"
+            data-bs-slide="next"><span class="carousel-control-next-icon"></span></button>
+        </div>
+      </div>
+    </section>
+
+    <section id="Norteamerica" class="section-padding bg-white hidden-section">
+      <div class="container">
+        <h2 class="text-center promo-title">Norteamérica</h2>
+        <div id="carouselNorteamerica" class="carousel slide" data-bs-ride="carousel" data-bs-interval="3000">
+          <div class="carousel-indicators" style="bottom: -50px;"></div>
+          <div class="carousel-inner"></div>
+          <button class="carousel-control-prev promo-control" type="button" data-bs-target="#carouselNorteamerica"
+            data-bs-slide="prev"><span class="carousel-control-prev-icon"></span></button>
+          <button class="carousel-control-next promo-control" type="button" data-bs-target="#carouselNorteamerica"
+            data-bs-slide="next"><span class="carousel-control-next-icon"></span></button>
+        </div>
+      </div>
+    </section>
+
+    <section id="Centroamerica" class="section-padding bg-white hidden-section">
+      <div class="container">
+        <h2 class="text-center promo-title">Centroamérica</h2>
+        <div id="carouselCentroamerica" class="carousel slide" data-bs-ride="carousel" data-bs-interval="3000">
+          <div class="carousel-indicators" style="bottom: -50px;"></div>
+          <div class="carousel-inner"></div>
+          <button class="carousel-control-prev promo-control" type="button" data-bs-target="#carouselCentroamerica"
+            data-bs-slide="prev"><span class="carousel-control-prev-icon"></span></button>
+          <button class="carousel-control-next promo-control" type="button" data-bs-target="#carouselCentroamerica"
+            data-bs-slide="next"><span class="carousel-control-next-icon"></span></button>
+        </div>
+      </div>
+    </section>
+
+    <section id="Sudamerica" class="section-padding bg-white hidden-section">
+      <div class="container">
+        <h2 class="text-center promo-title">Sudamérica</h2>
+        <div id="carouselSudamerica" class="carousel slide" data-bs-ride="carousel" data-bs-interval="3000">
+          <div class="carousel-indicators" style="bottom: -50px;"></div>
+          <div class="carousel-inner"></div>
+          <button class="carousel-control-prev promo-control" type="button" data-bs-target="#carouselSudamerica"
+            data-bs-slide="prev"><span class="carousel-control-prev-icon"></span></button>
+          <button class="carousel-control-next promo-control" type="button" data-bs-target="#carouselSudamerica"
+            data-bs-slide="next"><span class="carousel-control-next-icon"></span></button>
+        </div>
+      </div>
+    </section>
+
+    <section id="Asia" class="section-padding bg-white hidden-section">
+      <div class="container">
+        <h2 class="text-center promo-title">Asia</h2>
+        <div id="carouselAsia" class="carousel slide" data-bs-ride="carousel" data-bs-interval="3000">
+          <div class="carousel-indicators" style="bottom: -50px;"></div>
+          <div class="carousel-inner"></div>
+          <button class="carousel-control-prev promo-control" type="button" data-bs-target="#carouselAsia"
+            data-bs-slide="prev"><span class="carousel-control-prev-icon"></span></button>
+          <button class="carousel-control-next promo-control" type="button" data-bs-target="#carouselAsia"
+            data-bs-slide="next"><span class="carousel-control-next-icon"></span></button>
+        </div>
+      </div>
+    </section>
+
+    <section id="Europa" class="section-padding bg-white hidden-section">
+      <div class="container">
+        <h2 class="text-center promo-title">Europa</h2>
+        <div id="carouselEuropa" class="carousel slide" data-bs-ride="carousel" data-bs-interval="3000">
+          <div class="carousel-indicators" style="bottom: -50px;"></div>
+          <div class="carousel-inner"></div>
+          <button class="carousel-control-prev promo-control" type="button" data-bs-target="#carouselEuropa"
+            data-bs-slide="prev"><span class="carousel-control-prev-icon"></span></button>
+          <button class="carousel-control-next promo-control" type="button" data-bs-target="#carouselEuropa"
+            data-bs-slide="next"><span class="carousel-control-next-icon"></span></button>
+        </div>
+      </div>
+    </section>
+
+    <!-- MODAL DE PREVIEW -->
+    <div class="modal fade" id="previewModal" tabindex="-1" aria-hidden="true">
+      <div class="modal-dialog modal-dialog-centered modal-xl">
+        <div class="modal-content" style="background: rgba(0,0,0,0.9); border: none;">
+          <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal"
+            style="position: absolute; right: 15px; top: 15px; z-index: 10;"></button>
+          <div class="modal-body p-0 text-center">
+            <img src="" id="fullResImage" class="img-fluid img-preview-custom" alt="Vista previa">
+          </div>
+        </div>
+      </div>
+    </div>
+  </main>
+
+
+
+  <footer class="pt-5 pb-3">
+    <div class="container">
+      <div class="row g-4">
+        <div class="col-md-4">
+          <h6>VIAJES LM-REPS</h6>
+          <p class="small">Tu agencia de viajes especialista en crear memorias inolvidables.</p>
+          <img src="Assets/img/og-image.png" alt="Logo" style="max-height: 60px;" class="mt-2 rounded p-1 shadow-sm">
+        </div>
+        <div class="col-md-2">
+          <h6>EXPLORA</h6>
+          <ul class="list-unstyled small">
+            <li><a href="#Promociones">Promociones</a></li>
+            <li><a target="_blank" href="https://wa.me/51987594032">Reserva</a></li>
+            <li><a target="_blank" href="Pages/libro-de-reclamaciones.html">Libro de Reclamaciones</a></li>
+            <li><a target="_blank" href="Pages/politicas-de-privacidad.html">Políticas de Privacidad</a></li>
+          </ul>
+        </div>
+        <div class="col-md-3">
+          <h6>CONTACTO</h6>
+          <p class="small mb-1"><i class="bi bi-geo-alt text-warning me-2"></i>JR. TARATA NRO. 135, Pucallpa</p>
+          <p class="small mb-1"><i class="bi bi-envelope text-warning me-2"></i>reservas@lm-reps.com</p>
+          <p class="small"><i class="bi bi-telephone text-warning me-2"></i>(+51) 987 594 032</p>
+        </div>
+        <div class="col-md-3">
+          <h6>PAGOS SEGUROS</h6>
+          <img src="Assets/img/medios_de_pago.jpeg" style="max-height: 140px;" alt="Pagos"
+            class="img-fluid rounded shadow-sm p-2">
+        </div>
+
+        <div class="row footer-partners text-center align-items-center g-4">
+          <div class="col-6 col-md-3">
+            <img src="Assets/img/agencia_registrada.jpeg" style="max-height: 80px;" class="partner-logo img-fluid"
+              alt="gencia_registrada">
+          </div>
+          <div class="col-6 col-md-3">
+            <img src="Assets/img/promperu.jpeg" class="partner-logo img-fluid" alt="Marca Perú">
+          </div>
+          <div class="col-6 col-md-3">
+            <img src="Assets/img/minter.jpeg" class="partner-logo img-fluid" alt="mintur">
+          </div>
+          <div class="col-6 col-md-3">
+            <img src="Assets/img/logo-protegeme.webp" style="max-height: 60px;" class="partner-logo img-fluid"
+              alt="logo-protegeme">
+          </div>
+        </div>
+      </div>
+
+
+
+      <hr class="mt-4 opacity-10">
+      <div class="text-center small opacity-50">VIAJES LM-REPS &copy; 2024 Todos los derechos reservados.</div>
+    </div>
+
+
+
+  </footer>
+
+  <a href="https://wa.me/51987594032" class="whatsapp-float" target="_blank"><i class="bi bi-whatsapp"></i></a>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+
+</html>
