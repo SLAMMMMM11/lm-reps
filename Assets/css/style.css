@@ -126,6 +126,8 @@
         }
     }
 
+
+
     /* --- Redes Sociales Top Bar --- */
     .social-icons a {
         color: #555;
@@ -423,6 +425,25 @@
         top: 0;
         z-index: 1060;
     }
+
+    .btn-whitelabel {
+        background: linear-gradient(120deg, #7b2ff7, #f107a3);
+        color: #fff !important;
+        font-weight: 700;
+        border-radius: 50px;
+        padding: 0.6rem 1.5rem !important;
+        border: 1px solid rgba(255, 255, 255, 0.25);
+        box-shadow: 0 8px 24px rgba(123, 47, 247, 0.35);
+        transition: var(--transition);
+    }
+
+    .btn-whitelabel:hover {
+        color: #fff !important;
+        transform: translateY(-2px) scale(1.01);
+        box-shadow: 0 12px 28px rgba(241, 7, 163, 0.35);
+        background: linear-gradient(120deg, #6f2adf, #df0f95);
+    }
+
 
     .img-preview-custom {
         /* Evita que la imagen sea más alta que la pantalla */

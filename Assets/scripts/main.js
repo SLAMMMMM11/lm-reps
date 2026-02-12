@@ -174,3 +174,4 @@ function renderHeroCarousel(id, images) {
     `;
   });
 }
+
