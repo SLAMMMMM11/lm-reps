@@ -2291,8 +2291,7 @@
     transition: opacity 0.2s ease, transform 0.2s ease, visibility 0.2s;
 }
 
-.asesor-fab.open .asesor-card,
-.asesor-fab:hover .asesor-card {
+.asesor-fab.open .asesor-card {
     opacity: 1;
     visibility: visible;
     pointer-events: auto;
