@@ -794,6 +794,38 @@
     flex-shrink: 0;
 }
 
+.sidebar-avatar.has-photo,
+.panel-avatar.has-photo {
+    background-size: cover;
+    background-position: center;
+}
+
+.sidebar-avatar-edit {
+    position: relative;
+}
+
+.sidebar-avatar-edit-btn {
+    position: absolute;
+    bottom: -2px;
+    right: -2px;
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    background: var(--brand-primary);
+    color: #fff;
+    border: 2px solid #fff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 0.7rem;
+    cursor: pointer;
+    padding: 0;
+}
+
+.sidebar-avatar-edit-btn:hover {
+    background: #e06f1c;
+}
+
 .app-sidebar .nav-pills .nav-link {
     display: flex;
     align-items: center;
@@ -1361,14 +1393,33 @@
 }
 
 /* El menu movil desplegado siempre se ve solido blanco, scrolleado o no,
-   para que el texto sea legible sobre la imagen del hero */
+   para que el texto sea legible sobre la imagen del hero.
+   El fondo/sombra se aplican ya desde ".collapsing" (clase que Bootstrap
+   pone mientras anima el alto) para que el panel se vea solido desde el
+   primer frame; el texto entra con fade+slide en vez de aparecer "pelado"
+   sobre el hero antes de que el fondo blanco termine de pintarse. */
 @media (max-width: 1199.98px) {
+    .navbar-overlay .navbar-collapse {
+        transition: opacity 0.28s ease, transform 0.28s ease;
+    }
+
+    .navbar-overlay .navbar-collapse.collapsing,
     .navbar-overlay .navbar-collapse.show {
         background-color: #fff;
         border-radius: 12px;
         box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
         padding: 1rem;
         margin-top: 0.5rem;
+    }
+
+    .navbar-overlay .navbar-collapse.collapsing {
+        opacity: 0;
+        transform: translateY(-8px);
+    }
+
+    .navbar-overlay .navbar-collapse.show {
+        opacity: 1;
+        transform: translateY(0);
     }
 
     .navbar-overlay .navbar-collapse.show .nav-link {

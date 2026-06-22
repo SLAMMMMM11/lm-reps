@@ -53,12 +53,19 @@
       <div class="col-12 col-lg-3">
         <div class="app-sidebar">
           <div class="sidebar-user">
-            <div class="sidebar-avatar"><i class="bi bi-person-fill"></i></div>
+            <div class="sidebar-avatar-edit">
+              <div class="sidebar-avatar" id="sidebarAvatar"><i class="bi bi-person-fill"></i></div>
+              <button type="button" class="sidebar-avatar-edit-btn" id="avatarEditBtn" aria-label="Cambiar foto de perfil">
+                <i class="bi bi-pencil-fill"></i>
+              </button>
+              <input type="file" id="avatarInput" accept="image/*" class="d-none">
+            </div>
             <div>
               <p class="fw-bold mb-0" id="userNameLabel">Mi cuenta</p>
               <p class="small text-muted mb-0">Cliente</p>
             </div>
           </div>
+          <p class="small text-danger mb-3 d-none" id="avatarAlert"></p>
           <ul class="nav nav-pills flex-column">
             <li class="nav-item"><a class="nav-link active" data-tab="resumen" href="#"><i class="bi bi-grid-1x2"></i>Resumen</a></li>
             <li class="nav-item"><a class="nav-link" data-tab="historial" href="#"><i class="bi bi-suitcase-lg"></i>Historial de Viajes</a></li>
