@@ -1,6 +1,9 @@
 import { supabase } from './supabase-client.js';
 import { requireAdmin } from './auth-guard.js';
 
+const ASESOR_RESTRICTED_TABS = ['auditoria', 'promociones'];
+const SUPER_ADMIN_ONLY_TABS = ['admins'];
+
 const loadingState = document.getElementById('loadingState');
 const panelContent = document.getElementById('panelContent');
 const clientesTableBody = document.getElementById('clientesTableBody');
@@ -355,12 +358,26 @@ document.querySelectorAll('.app-sidebar .nav-link[data-tab]').forEach((link) => 
     document.getElementById('tab-auditoria').classList.toggle('d-none', link.dataset.tab !== 'auditoria');
     document.getElementById('tab-promociones').classList.toggle('d-none', link.dataset.tab !== 'promociones');
     document.getElementById('tab-solicitudes').classList.toggle('d-none', link.dataset.tab !== 'solicitudes');
+    document.getElementById('tab-admins')?.classList.toggle('d-none', link.dataset.tab !== 'admins');
     if (link.dataset.tab === 'vouchers') renderVouchersQueue();
     if (link.dataset.tab === 'auditoria') renderAuditLog();
     if (link.dataset.tab === 'promociones') document.dispatchEvent(new CustomEvent('admin:show-promociones'));
     if (link.dataset.tab === 'solicitudes') document.dispatchEvent(new CustomEvent('admin:show-solicitudes'));
+    if (link.dataset.tab === 'admins') document.dispatchEvent(new CustomEvent('admin:show-admins'));
   });
 });
+
+function applyRoleVisibility(adminRole) {
+  const hidden = adminRole === 'super_admin'
+    ? []
+    : adminRole === 'admin'
+      ? SUPER_ADMIN_ONLY_TABS
+      : [...ASESOR_RESTRICTED_TABS, ...SUPER_ADMIN_ONLY_TABS];
+
+  document.querySelectorAll('.app-sidebar .nav-link[data-tab]').forEach((link) => {
+    if (hidden.includes(link.dataset.tab)) link.closest('.nav-item')?.classList.add('d-none');
+  });
+}
 
 document.getElementById('logoutBtn').addEventListener('click', async () => {
   await supabase.auth.signOut();
@@ -378,6 +395,9 @@ async function init() {
   if (!session) return;
 
   document.getElementById('userEmailLabel').textContent = session.user.email;
+
+  const { data: ownProfile } = await supabase.from('profiles').select('admin_role').eq('id', session.user.id).single();
+  applyRoleVisibility(ownProfile?.admin_role);
 
   profiles = await loadProfiles();
   populateClienteSelect();

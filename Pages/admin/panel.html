@@ -76,6 +76,7 @@
             </li>
             <li class="nav-item"><a class="nav-link" data-tab="auditoria" href="#"><i class="bi bi-clock-history"></i>Auditoría</a></li>
             <li class="nav-item"><a class="nav-link" data-tab="promociones" href="#"><i class="bi bi-megaphone"></i>Paquetes</a></li>
+            <li class="nav-item"><a class="nav-link" data-tab="admins" href="#"><i class="bi bi-person-badge"></i>Gestión de admins</a></li>
           </ul>
         </div>
       </div>
@@ -232,6 +233,47 @@
                 </tr>
               </thead>
               <tbody id="leadsTableBody"></tbody>
+            </table>
+          </div>
+        </div>
+
+        <div id="tab-admins" class="d-none">
+          <h5 class="fw-bold mb-3">Gestión de admins</h5>
+
+          <div class="balance-card mb-4">
+            <h6 class="fw-bold mb-3">Asignar rol</h6>
+            <div id="adminRolesAlert" class="alert d-none"></div>
+            <form id="asignarRolForm" class="row g-3">
+              <div class="col-md-6">
+                <label class="form-label small fw-bold">Correo del usuario (debe estar registrado)</label>
+                <input type="email" class="form-control" id="asignarRolEmail" required>
+              </div>
+              <div class="col-md-4">
+                <label class="form-label small fw-bold">Rol</label>
+                <select class="form-select" id="asignarRolSelect">
+                  <option value="asesor">Admin asesor</option>
+                  <option value="admin">Admin</option>
+                  <option value="super_admin">Super admin</option>
+                </select>
+              </div>
+              <div class="col-md-2 d-flex align-items-end">
+                <button type="submit" class="btn btn-brand-primary border-0 w-100" id="asignarRolBtn">Asignar</button>
+              </div>
+            </form>
+          </div>
+
+          <h6 class="fw-bold mb-3">Admins actuales</h6>
+          <div class="table-responsive">
+            <table class="table bg-white rounded shadow-sm align-middle">
+              <thead>
+                <tr>
+                  <th>Nombre</th>
+                  <th>Correo</th>
+                  <th>Rol</th>
+                  <th></th>
+                </tr>
+              </thead>
+              <tbody id="adminsTableBody"></tbody>
             </table>
           </div>
         </div>
@@ -525,6 +567,7 @@
   <script type="module" src="../../Assets/scripts/mfa.js"></script>
   <script type="module" src="../../Assets/scripts/admin-promociones.js"></script>
   <script type="module" src="../../Assets/scripts/admin-leads.js"></script>
+  <script type="module" src="../../Assets/scripts/admin-roles.js"></script>
   <script type="module" src="../../Assets/scripts/perfil.js"></script>
 </body>
 
