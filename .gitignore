@@ -3,3 +3,6 @@
 
 # Archivos temporales/caché del generador de paquetes
 tools/_*
+
+# Carpeta local de sesiones de Claude Code
+.claude/
