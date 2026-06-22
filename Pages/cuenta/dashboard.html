@@ -1,0 +1,264 @@
+<!doctype html>
+<html lang="es">
+
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Mi Cuenta — VIAJES LM-REPS</title>
+  <meta name="robots" content="noindex, nofollow">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;800&family=Outfit:wght@500;600;700;800&display=swap"
+    rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+
+  <link rel="stylesheet" href="../../Assets/css/style.css">
+</head>
+
+<body class="bg-light">
+
+  <nav class="navbar navbar-expand-lg bg-white shadow-sm sticky-top app-navbar">
+    <div class="container">
+      <a class="navbar-brand d-flex align-items-center" href="/">
+        <img src="../../Assets/img/og-image.png" alt="Logo">
+      </a>
+      <span class="panel-tag d-none d-sm-inline">Mi cuenta</span>
+      <div class="ms-auto dropdown">
+        <a class="panel-account dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+          <span class="panel-avatar"><i class="bi bi-person-fill"></i></span>
+          <span class="panel-account-sub d-none d-md-inline" id="userEmailLabel"></span>
+        </a>
+        <ul class="dropdown-menu dropdown-menu-end account-menu border-0 shadow">
+          <li><a class="dropdown-item" href="/"><i class="bi bi-house me-2"></i>Volver al sitio</a></li>
+          <li>
+            <hr class="dropdown-divider">
+          </li>
+          <li><button type="button" class="dropdown-item text-danger" id="logoutBtn"><i class="bi bi-box-arrow-right me-2"></i>Cerrar sesión</button></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <main class="container py-5 app-shell">
+    <div id="loadingState" class="text-center py-5">
+      <div class="spinner-border" role="status"></div>
+      <p class="text-muted small mt-3">Cargando tu cuenta...</p>
+    </div>
+
+    <div id="dashboardContent" class="row g-4 d-none">
+      <!-- Sidebar -->
+      <div class="col-12 col-lg-3">
+        <div class="app-sidebar">
+          <div class="sidebar-user">
+            <div class="sidebar-avatar"><i class="bi bi-person-fill"></i></div>
+            <div>
+              <p class="fw-bold mb-0" id="userNameLabel">Mi cuenta</p>
+              <p class="small text-muted mb-0">Cliente</p>
+            </div>
+          </div>
+          <ul class="nav nav-pills flex-column">
+            <li class="nav-item"><a class="nav-link active" data-tab="resumen" href="#"><i class="bi bi-grid-1x2"></i>Resumen</a></li>
+            <li class="nav-item"><a class="nav-link" data-tab="historial" href="#"><i class="bi bi-suitcase-lg"></i>Historial de Viajes</a></li>
+            <li class="nav-item"><a class="nav-link" data-tab="cuenta" href="#"><i class="bi bi-gear"></i>Mi cuenta</a></li>
+          </ul>
+        </div>
+      </div>
+
+      <!-- Contenido -->
+      <div class="col-12 col-lg-9">
+
+        <div id="emptyState" class="balance-card text-center d-none">
+          <i class="bi bi-info-circle fs-1 text-muted"></i>
+          <p class="mt-3 mb-0">Aún no tienes una cuenta de crédito activa. Si compraste un paquete a plazos, contáctanos para activarla.</p>
+        </div>
+
+        <div id="tab-resumen">
+          <div class="mb-3" id="accountSelectorWrapper" style="display:none;">
+            <label class="form-label small fw-bold">Cuenta de crédito</label>
+            <select id="accountSelector" class="form-select w-auto"></select>
+          </div>
+
+          <div class="account-hero mb-4">
+            <div class="row align-items-center">
+              <div class="col-md-8">
+                <p class="text-muted small mb-1" id="accountDescription">—</p>
+                <div class="balance-amount" id="balanceAmount">S/ 0.00</div>
+                <p class="small text-muted mb-0"><i class="bi bi-wallet2 me-1"></i>Saldo pendiente</p>
+              </div>
+              <div class="col-md-4 text-md-end mt-3 mt-md-0">
+                <span class="badge rounded-pill px-3 py-2" id="accountStatusBadge">—</span>
+                <p class="small text-muted mt-2 mb-0" id="nextDueLabel"></p>
+              </div>
+            </div>
+          </div>
+
+          <h5 class="fw-bold mb-3">Cronograma de cuotas</h5>
+          <div class="table-responsive">
+            <table class="table bg-white rounded shadow-sm align-middle">
+              <thead>
+                <tr>
+                  <th>#</th>
+                  <th>Vencimiento</th>
+                  <th>Monto</th>
+                  <th>Estado</th>
+                  <th></th>
+                </tr>
+              </thead>
+              <tbody id="installmentsTableBody"></tbody>
+            </table>
+          </div>
+        </div>
+
+        <div id="tab-historial" class="d-none">
+          <h5 class="fw-bold mb-3">Historial de cuentas de crédito</h5>
+          <div id="historialList"></div>
+        </div>
+
+        <div id="tab-cuenta" class="d-none">
+          <h5 class="fw-bold mb-3">Mi cuenta</h5>
+
+          <!-- Datos personales -->
+          <div class="balance-card mb-4">
+            <h6 class="fw-bold mb-3"><i class="bi bi-person-vcard me-2"></i>Datos personales</h6>
+            <div id="perfilAlert" class="alert d-none"></div>
+            <form id="perfilForm" class="row g-3">
+              <div class="col-md-6">
+                <label class="form-label small fw-bold">Nombre completo</label>
+                <input type="text" class="form-control" id="perfilNombre">
+              </div>
+              <div class="col-md-6">
+                <label class="form-label small fw-bold">Teléfono / WhatsApp</label>
+                <input type="text" class="form-control" id="perfilTelefono">
+              </div>
+              <div class="col-12">
+                <label class="form-label small fw-bold">Correo electrónico</label>
+                <input type="email" class="form-control" id="perfilCorreo">
+                <div class="form-text">Si cambias el correo, te enviaremos un enlace de confirmación a la nueva
+                  dirección.</div>
+              </div>
+              <div class="col-12">
+                <button type="submit" class="btn btn-brand-primary border-0" id="perfilSubmitBtn"><i
+                    class="bi bi-check-lg me-1"></i>Guardar cambios</button>
+              </div>
+            </form>
+          </div>
+
+          <!-- Contraseña -->
+          <div class="balance-card mb-4">
+            <h6 class="fw-bold mb-3"><i class="bi bi-key me-2"></i>Cambiar contraseña</h6>
+            <div id="passwordAlert" class="alert d-none"></div>
+            <form id="passwordForm" class="row g-3">
+              <div class="col-md-6">
+                <label class="form-label small fw-bold">Nueva contraseña</label>
+                <input type="password" class="form-control" id="newPassword" autocomplete="new-password">
+              </div>
+              <div class="col-md-6">
+                <label class="form-label small fw-bold">Repetir contraseña</label>
+                <input type="password" class="form-control" id="newPasswordConfirm" autocomplete="new-password">
+              </div>
+              <div class="col-12">
+                <button type="submit" class="btn btn-brand-primary border-0" id="passwordSubmitBtn"><i
+                    class="bi bi-shield-check me-1"></i>Actualizar contraseña</button>
+              </div>
+            </form>
+          </div>
+
+          <!-- Seguridad / MFA (opcional) -->
+          <div class="balance-card">
+            <h6 class="fw-bold mb-2"><i class="bi bi-shield-lock me-2"></i>Verificación en 2 pasos <span
+                class="badge bg-light text-muted border ms-1">Opcional</span></h6>
+            <p class="small text-muted mb-3">Añade una capa extra de seguridad a tu cuenta con una app de
+              autenticación (Google Authenticator, Authy, etc.).</p>
+            <button class="btn btn-outline-secondary" id="mfaButton" data-bs-toggle="modal" data-bs-target="#mfaModal">
+              <i class="bi bi-shield-lock me-1"></i><span id="mfaButtonLabel">Verificación en 2 pasos</span>
+            </button>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </main>
+
+  <!-- Modal: Subir Voucher -->
+  <div class="modal fade" id="voucherModal" tabindex="-1" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered">
+      <div class="modal-content rounded-4">
+        <div class="modal-header">
+          <h5 class="modal-title fw-bold">Subir comprobante de pago</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+        </div>
+        <div class="modal-body">
+          <div id="voucherAlert" class="alert d-none"></div>
+          <form id="voucherForm">
+            <input type="hidden" id="voucherInstallmentId">
+            <div class="mb-3">
+              <label class="form-label small fw-bold">Método de pago</label>
+              <select class="form-select" id="voucherPaymentMethod" required>
+                <option value="yape">Yape</option>
+                <option value="plin">Plin</option>
+                <option value="transferencia">Transferencia bancaria</option>
+              </select>
+            </div>
+            <div class="mb-3">
+              <label class="form-label small fw-bold">Captura/foto del voucher</label>
+              <input type="file" class="form-control" id="voucherFile" accept="image/jpeg,image/png" required>
+              <div class="form-text">JPG o PNG, máximo 5MB.</div>
+            </div>
+            <div class="mb-3">
+              <label class="form-label small fw-bold">Nota (opcional)</label>
+              <textarea class="form-control" id="voucherNote" rows="2"></textarea>
+            </div>
+            <button type="submit" class="btn btn-brand-primary w-100 border-0" id="voucherSubmitBtn">
+              <i class="bi bi-upload me-1"></i>Enviar comprobante
+            </button>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Modal: Verificacion en 2 pasos (MFA) -->
+  <div class="modal fade" id="mfaModal" tabindex="-1" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered">
+      <div class="modal-content rounded-4">
+        <div class="modal-header">
+          <h5 class="modal-title fw-bold">Verificación en 2 pasos</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+        </div>
+        <div class="modal-body">
+          <div id="mfaAlert" class="alert d-none"></div>
+
+          <div id="mfaEnabledState" class="d-none">
+            <p class="text-success"><i class="bi bi-check-circle-fill me-2"></i>La verificación en 2 pasos ya está activa en tu cuenta.</p>
+            <button type="button" class="btn btn-outline-danger w-100" id="mfaDisableBtn">Desactivar</button>
+          </div>
+
+          <div id="mfaEnrollState" class="d-none">
+            <p class="small text-muted">Escanea este código con Google Authenticator, Authy o similar:</p>
+            <div class="text-center mb-3">
+              <img id="mfaQrImg" src="" alt="Código QR" style="max-width: 200px;">
+            </div>
+            <p class="small text-muted">¿No puedes escanear? Ingresa esta clave manualmente: <code id="mfaSecret"></code></p>
+            <label class="form-label small fw-bold">Código de 6 dígitos</label>
+            <input type="text" class="form-control mb-3" id="mfaVerifyCode" inputmode="numeric" maxlength="6" placeholder="123456">
+            <button type="button" class="btn btn-brand-primary w-100 border-0" id="mfaVerifyBtn">Activar</button>
+          </div>
+
+          <div id="mfaLoadingState" class="text-center py-3">
+            <div class="spinner-border spinner-border-sm" role="status"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+  <script type="module" src="../../Assets/scripts/dashboard.js"></script>
+  <script type="module" src="../../Assets/scripts/perfil.js"></script>
+  <script type="module" src="../../Assets/scripts/mfa.js"></script>
+</body>
+
+</html>

@@ -6,56 +6,79 @@
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>VIAJES LM-REPS - Tu Aventura Comienza Aquí</title>
 
-  <!-- SEO Básico -->
+  <!-- SEO -->
   <meta name="description"
-    content="En Viajes LM-REPS ofrecemos los mejores paquetes turísticos nacionales e internacionales.">
+    content="Agencia de viajes en Perú: paquetes turísticos nacionales e internacionales, vuelos, visas, seguros y financiamiento propio. Viaja ahora y paga en cuotas.">
+  <link rel="canonical" href="https://lm-reps.com/">
+  <meta name="robots" content="index, follow">
+  <meta property="og:type" content="website">
+  <meta property="og:locale" content="es_PE">
+  <meta property="og:site_name" content="Viajes LM-REPS">
+  <meta property="og:title" content="Viajes LM-REPS — Tu aventura comienza aquí">
+  <meta property="og:description"
+    content="Paquetes turísticos, vuelos, visas, seguros y financiamiento propio. Viaja ahora y paga en cuotas.">
+  <meta property="og:url" content="https://lm-reps.com/">
   <meta property="og:image" content="https://lm-reps.com/Assets/img/og-image.png">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Viajes LM-REPS — Tu aventura comienza aquí">
+  <meta name="twitter:description"
+    content="Paquetes turísticos, vuelos, visas, seguros y financiamiento propio. Viaja ahora y paga en cuotas.">
+  <meta name="twitter:image" content="https://lm-reps.com/Assets/img/og-image.png">
 
   <!-- Fuentes y Bootstrap -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;800&display=swap" rel="stylesheet">
+  <link
+    href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;800&family=Outfit:wght@500;600;700;800&display=swap"
+    rel="stylesheet">
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
 
+  <!-- Preload de la imagen LCP del hero (primera slide del carrusel de fondo) -->
+  <link rel="preload" as="image" href="Assets/img/hero-1.jpg" fetchpriority="high">
   <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
   <link rel="stylesheet" href="Assets/css/style.css">
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.0/font/bootstrap-icons.css">
-  <script src="Assets/scripts/main.js" defer></script>
+  <script type="module" src="Assets/scripts/main.js"></script>
+  <script type="module" src="Assets/scripts/nav-session.js"></script>
+  <script src="Assets/scripts/scroll-reveal.js" defer></script>
+  <script src="Assets/scripts/navbar-scroll.js" defer></script>
+  <script src="Assets/scripts/counters.js" defer></script>
+
+  <!-- Datos estructurados (SEO local) -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "TravelAgency",
+    "name": "Viajes LM-REPS",
+    "url": "https://lm-reps.com/",
+    "image": "https://lm-reps.com/Assets/img/og-image.png",
+    "logo": "https://lm-reps.com/Assets/img/og-image.png",
+    "description": "Agencia de viajes en Perú: paquetes turísticos nacionales e internacionales, vuelos, visas, seguros y financiamiento propio.",
+    "telephone": "+51987594032",
+    "email": "reservas@lm-reps.com",
+    "priceRange": "$$",
+    "address": {
+      "@type": "PostalAddress",
+      "streetAddress": "Jr. Tarata 135",
+      "addressLocality": "Pucallpa",
+      "addressRegion": "Ucayali",
+      "addressCountry": "PE"
+    },
+    "sameAs": [
+      "https://www.facebook.com/lmreps",
+      "https://www.instagram.com/viajes_lm_reps/",
+      "https://www.tiktok.com/@viajes.lm.reps"
+    ]
+  }
+  </script>
 </head>
 
 <body>
   <header>
-    <div class="top-bar d-none d-md-block">
-      <div class="container d-flex justify-content-between align-items-center">
-
-        <!-- Redes Sociales (Izquierda) -->
-        <div class="social-icons">
-          <span class="me-2 fw-bold text-muted small">Síguenos:</span>
-          <a href="https://www.facebook.com/lmreps" target="_blank" class="me-3"><i class="bi bi-facebook"></i></a>
-          <a href="https://www.instagram.com/viajes_lm_reps/" target="_blank" class="me-3"><i
-              class="bi bi-instagram"></i></a>
-          <a href="https://www.tiktok.com/@viajes.lm.reps" target="_blank" class="me-3"><i class="bi bi-tiktok"></i></a>
-          <a href="https://wa.me/51987594032" target="_blank"><i class="bi bi-whatsapp"></i></a>
-        </div>
-
-        <!-- Contacto (Derecha) - Se mantiene igual -->
-        <div class="contact-info">
-          <a href="mailto:reservas@lm-reps.com" class="text-dark text-decoration-none me-4">
-            <i class="bi bi-envelope-fill text-danger me-2"></i>reservas@lm-reps.com
-          </a>
-          <a href="tel:+51987594032" class="text-dark text-decoration-none">
-            <i class="bi bi-telephone-fill text-danger me-2"></i>(+51) 987 594 032
-          </a>
-        </div>
-
-      </div>
-    </div>
-
-    <nav class="navbar navbar-expand-lg bg-white shadow-sm sticky-top">
+    <nav class="navbar navbar-expand-xl navbar-overlay">
       <div class="container">
         <!-- Logo -->
-        <a class="navbar-brand" href="index.html">
+        <a class="navbar-brand" href="/">
           <img src="Assets/img/og-image.png" alt="Logo">
         </a>
 
@@ -65,41 +88,86 @@
         </button>
 
         <div class="collapse navbar-collapse" id="navbarNav">
-          <ul class="navbar-nav ms-auto align-items-center gap-2">
+          <ul class="navbar-nav ms-auto align-items-center gap-1">
 
             <!-- Inicio -->
-            <li class="nav-item"><a class="nav-link active" href="#">INICIO</a></li>
+            <li class="nav-item"><a class="nav-link active" href="#">Inicio</a></li>
 
-            <!-- Promociones -->
-            <li class="nav-item"><a class="nav-link" href="#Promociones">PROMOCIONES</a></li>
-
-            <!-- NUEVO: Menú Desplegable Destinos -->
+            <!-- Mega-menú Destinos -->
             <li class="nav-item dropdown">
               <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
                 aria-expanded="false">
-                DESTINOS
+                Destinos
               </a>
-              <ul class="dropdown-menu border-0 shadow">
-                <li><a class="dropdown-item" href="#Norteamerica">AMÉRICA</a></li>
-                <li><a class="dropdown-item" href="#Europa">EUROPA</a></li>
-                <li><a class="dropdown-item" href="#Asia">ASIA</a></li>
+              <ul class="dropdown-menu mega-menu border-0 shadow">
+                <li class="row g-2">
+                  <div class="col-6 col-md-2dot4" style="flex: 0 0 20%;">
+                    <a class="mega-menu-item" href="/paquetes?region=norteamerica">
+                      <img src="https://images.unsplash.com/photo-1496442226666-8d4d0e62e6e9?q=80&w=400" alt="Norteamérica">
+                      <span>Norteamérica</span>
+                    </a>
+                  </div>
+                  <div class="col-6" style="flex: 0 0 20%;">
+                    <a class="mega-menu-item" href="/paquetes?region=caribe">
+                      <img src="https://images.unsplash.com/photo-1507525428034-b723cf961d3e?q=80&w=400" alt="Centroamérica">
+                      <span>Centroamérica</span>
+                    </a>
+                  </div>
+                  <div class="col-6" style="flex: 0 0 20%;">
+                    <a class="mega-menu-item" href="/paquetes?region=sudamerica">
+                      <img src="https://images.unsplash.com/photo-1531968455001-5c5272a41129?q=80&w=400" alt="Sudamérica">
+                      <span>Sudamérica</span>
+                    </a>
+                  </div>
+                  <div class="col-6" style="flex: 0 0 20%;">
+                    <a class="mega-menu-item" href="/paquetes?region=asia">
+                      <img src="https://images.unsplash.com/photo-1512453979798-5ea266f8880c?q=80&w=400" alt="Asia">
+                      <span>Asia</span>
+                    </a>
+                  </div>
+                  <div class="col-6" style="flex: 0 0 20%;">
+                    <a class="mega-menu-item" href="/paquetes?region=europa">
+                      <img src="https://images.unsplash.com/photo-1500313830540-7b6650a74fd0?q=80&w=400" alt="Europa">
+                      <span>Europa</span>
+                    </a>
+                  </div>
+                </li>
               </ul>
             </li>
 
-            <!-- NUEVO: Opción Visas -->
-            <li class="nav-item"><a class="nav-link" href="Pages/tramites.html">VISAS</a></li>
+            <!-- Promociones -->
+            <li class="nav-item"><a class="nav-link" href="/paquetes">Paquetes</a></li>
+
+            <!-- Visas -->
+            <li class="nav-item"><a class="nav-link" href="/informacion-de-viaje">Información de viaje</a></li>
 
             <!-- Contacto -->
-            <li class="nav-item"><a class="nav-link" href="Pages/contactanos.html">CONTÁCTANOS</a></li>
+            <li class="nav-item"><a class="nav-link" href="/contactanos">Contáctanos</a></li>
+
+            <!-- Mi Cuenta (estado segun sesion, ver Assets/scripts/nav-session.js) -->
+            <li class="nav-item dropdown account-dropdown ms-lg-1" id="navAccount">
+              <a class="nav-link account-toggle dropdown-toggle" href="#" id="navAccountToggle" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                <i class="bi bi-person-circle"></i><span class="account-label">Mi cuenta</span>
+              </a>
+              <ul class="dropdown-menu dropdown-menu-end account-menu border-0">
+                <li class="account-out"><a class="dropdown-item" href="/login"><i class="bi bi-box-arrow-in-right me-2"></i>Iniciar sesión</a></li>
+                <li class="account-out"><a class="dropdown-item" href="/registro"><i class="bi bi-person-plus me-2"></i>Crear cuenta</a></li>
+                <li class="account-in d-none"><h6 class="dropdown-header" id="navAccountName">Mi cuenta</h6></li>
+                <li class="account-in d-none"><a class="dropdown-item" href="/cuenta"><i class="bi bi-grid-1x2 me-2"></i>Ir a mi cuenta</a></li>
+                <li class="account-in account-admin d-none"><a class="dropdown-item" href="/admin"><i class="bi bi-shield-lock me-2"></i>Panel admin</a></li>
+                <li class="account-in d-none"><hr class="dropdown-divider"></li>
+                <li class="account-in d-none"><a class="dropdown-item text-danger" href="#" id="navLogout"><i class="bi bi-box-arrow-right me-2"></i>Cerrar sesión</a></li>
+              </ul>
+            </li>
 
             <!-- Botón de Acción -->
             <li class="nav-item ms-lg-3"><a class="nav-link btn-whitelabel text-center"
                 href="https://viajeslmreps.e-agencias.com/paquetes" target="_blank" rel="noopener noreferrer"><i
-                  class="bi bi-stars me-2"></i>COTIZA ONLINE</a></li>
+                  class="bi bi-stars me-2"></i>Cotiza online</a></li>
 
             <!-- Botón de Acción -->
             <li class="nav-item ms-lg-3"><a class="nav-link btn-reserva text-center" href="https://wa.me/51987594032"
-                target="_blank"><i class="bi bi-whatsapp me-2"></i>RESERVAR AHORA</a></li>
+                target="_blank"><i class="bi bi-whatsapp me-2"></i>Reservar ahora</a></li>
           </ul>
         </div>
       </div>
@@ -110,86 +178,78 @@
 
 
 
-    <div id="heroCarousel" class="carousel slide carousel-fade" data-bs-ride="carousel">
-      <!-- Indicadores (Puntitos abajo) -->
-      <div class="carousel-indicators">
-        <button type="button" data-bs-target="#heroCarousel" data-bs-slide-to="0" class="active" aria-current="true"
-          aria-label="Slide 1"></button>
-        <button type="button" data-bs-target="#heroCarousel" data-bs-slide-to="1" aria-label="Slide 2"></button>
-        <button type="button" data-bs-target="#heroCarousel" data-bs-slide-to="2" aria-label="Slide 3"></button>
-        <button type="button" data-bs-target="#heroCarousel" data-bs-slide-to="3" aria-label="Slide 4"></button>
+    <!-- HERO PRINCIPAL: carrusel de fondo a pantalla completa (crossfade automatico,
+         minimalista: sin flechas ni indicadores) + buscador integrado. -->
+    <section class="hero-single">
+      <div class="hero-bg" aria-hidden="true">
+        <div class="hero-slide" style="background-image: url('Assets/img/hero-1.jpg');"></div>
+        <div class="hero-slide" style="background-image: url('Assets/img/hero-2.jpg');"></div>
+        <div class="hero-slide" style="background-image: url('Assets/img/hero-3.jpg');"></div>
+        <div class="hero-slide" style="background-image: url('Assets/img/hero-4.jpg');"></div>
       </div>
-
-      <div class="carousel-inner">
-
-        <!-- SLIDE 1: Promociones -->
-        <div class="carousel-item active">
-          <section class="hero-section"
-            style="background-image: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url('https://i.postimg.cc/bv1q2V3Z/hero-section-img-1.jpg');">
-            <div class="container hero-content">
-              <h1 class="display-3">Descubre el Mundo<br>Vive la Aventura</h1>
-              <a href="#Promociones" class="btn btn-danger btn-lg px-5 py-3 shadow border-0"
-                style="background-color: var(--brand-primary);">VER PROMOCIONES</a>
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-11 col-xl-10">
+            <p class="hero-eyebrow mb-3">Viajes LM-REPS · Agencia de viajes</p>
+            <h1 class="mb-3">Descubre el mundo,<br>vive la aventura</h1>
+            <p class="hero-lead mb-4">Paquetes a tu medida, vuelos, visas y financiamiento propio. Tú eliges el destino;
+              nosotros nos encargamos de todo lo demás.</p>
+            <!-- Buscador integrado (visual; al enviar redirige al motor de cotizacion white-label) -->
+            <div class="hero-search">
+              <form id="heroSearchForm" class="row g-2 align-items-end">
+                <div class="col-12 col-lg">
+                  <label class="form-label">Origen</label>
+                  <div class="hero-ac">
+                    <input type="text" class="form-control hero-ac-input" id="heroOrigenInput"
+                      placeholder="¿Desde dónde?" autocomplete="off" role="combobox" aria-autocomplete="list"
+                      aria-expanded="false">
+                    <input type="hidden" id="heroOrigen">
+                    <ul class="hero-ac-list" id="heroOrigenList"></ul>
+                  </div>
+                </div>
+                <div class="col-auto d-none d-lg-flex align-items-end">
+                  <button type="button" class="hero-swap" id="heroSwap" title="Intercambiar origen y destino"
+                    aria-label="Intercambiar origen y destino"><i class="bi bi-arrow-left-right"></i></button>
+                </div>
+                <div class="col-12 col-lg">
+                  <label class="form-label">Destino</label>
+                  <div class="hero-ac">
+                    <input type="text" class="form-control hero-ac-input" id="heroDestinoInput"
+                      placeholder="¿A dónde vas?" autocomplete="off" role="combobox" aria-autocomplete="list"
+                      aria-expanded="false">
+                    <input type="hidden" id="heroDestino">
+                    <ul class="hero-ac-list" id="heroDestinoList"></ul>
+                  </div>
+                </div>
+                <div class="col-6 col-lg-2">
+                  <label class="form-label">Salida</label>
+                  <input type="date" class="form-control" id="heroCheckin">
+                </div>
+                <div class="col-6 col-lg-2">
+                  <label class="form-label">Regreso</label>
+                  <input type="date" class="form-control" id="heroCheckout">
+                </div>
+                <div class="col-4 col-lg-1">
+                  <label class="form-label">Hab.</label>
+                  <input type="number" class="form-control px-2" id="heroRooms" min="1" value="1">
+                </div>
+                <div class="col-4 col-lg-1">
+                  <label class="form-label">Pers.</label>
+                  <input type="number" class="form-control px-2" id="heroPax" min="1" value="2">
+                </div>
+                <div class="col-4 col-lg-auto">
+                  <button type="submit" class="btn btn-brand-primary w-100 px-3"><i class="bi bi-search me-1"></i>Buscar</button>
+                </div>
+              </form>
             </div>
-          </section>
+          </div>
         </div>
-
-        <!-- SLIDE 2: Contáctanos -->
-        <div class="carousel-item">
-          <section class="hero-section"
-            style="background-image: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url('https://i.postimg.cc/zf6BYR3D/hero-section-contact-us-img-4.png');">
-            <div class="container hero-content">
-              <h1 class="display-3">¿Necesitas ayuda<br>con tu Viaje?</h1>
-              <a href="Pages/contactanos.html" class="btn btn-danger btn-lg px-5 py-3 shadow border-0"
-                style="background-color: var(--brand-primary);">CONTÁCTANOS</a>
-            </div>
-          </section>
-        </div>
-
-        <!-- SLIDE 3: Cotiza -->
-        <div class="carousel-item">
-          <section class="hero-section"
-            style="background-image: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url('https://i.postimg.cc/kXFJ4pYr/hero-section-img-2.jpg');">
-            <div class="container hero-content">
-              <h1 class="display-3">Destinos Únicos<br>Momentos Inolvidables</h1>
-              <a href="https://viajeslmreps.e-agencias.com/paquetes" target="_blank" rel="noopener noreferrer"
-                class="btn btn-whitelabel btn-lg px-5 py-3 border-0">COTIZA AQUÍ</a>
-            </div>
-          </section>
-        </div>
-
-        <!-- SLIDE 4: Reserva (WhatsApp) -->
-        <div class="carousel-item">
-          <section class="hero-section"
-            style="background-image: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url('https://i.postimg.cc/BQGZJ0pq/hero-section-img-3.jpg');">
-            <div class="container hero-content">
-              <h1 class="display-3">El Viaje de tu Vida<br>a un solo CLICK!</h1>
-              <a href="https://wa.me/51987594032" target="_blank"
-                class="btn btn-danger btn-lg px-5 py-3 shadow border-0"
-                style="background-color: var(--brand-primary);">RESERVA AHORA</a>
-            </div>
-          </section>
-        </div>
-
-
-
       </div>
-
-      <!-- Controles (Flechas) -->
-      <button class="carousel-control-prev" type="button" data-bs-target="#heroCarousel" data-bs-slide="prev">
-        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-        <span class="visually-hidden">Anterior</span>
-      </button>
-      <button class="carousel-control-next" type="button" data-bs-target="#heroCarousel" data-bs-slide="next">
-        <span class="carousel-control-next-icon" aria-hidden="true"></span>
-        <span class="visually-hidden">Siguiente</span>
-      </button>
-    </div>
-
-
+      <a href="#Servicios" class="hero-scroll-cue" aria-label="Ver más"><i class="bi bi-chevron-down"></i></a>
+    </section>
 
     <!-- SECCIÓN DE SERVICIOS -->
-    <section id="Servicios" class="section-padding bg-light position-relative">
+    <section id="Servicios" class="section-padding bg-white position-relative">
       <div class="container">
         <div class="text-center mb-5">
           <h2 class="promo-title">NUESTROS <span style="color: var(--brand-primary);">SERVICIOS</span></h2>
@@ -199,151 +259,756 @@
           </p>
         </div>
 
-        <div class="row g-4">
+        <div class="row g-4 justify-content-center">
 
           <!-- Servicio 1: Paquetes Turísticos -->
-          <div class="col-md-6 col-lg-3">
+          <div class="col-md-6 col-lg-4">
             <div class="service-card bg-white p-4 h-100 rounded text-center shadow-sm">
               <div class="img-wrapper mb-4 mx-auto">
                 <img src="https://images.unsplash.com/photo-1476514525535-07fb3b4ae5f1?q=80&w=400"
-                  alt="Paquetes Turísticos" class="img-fluid rounded-circle">
+                  alt="Paquetes Turísticos" loading="lazy" class="img-fluid rounded-circle">
               </div>
               <h4 class="fw-bold h5">Paquetes Turísticos</h4>
               <p class="small text-muted mb-4">Diseñamos itinerarios a medida para familias, parejas y grupos. Todo
                 incluido para tu tranquilidad.</p>
-              <a href="#Promociones" class="btn btn-outline-danger btn-sm rounded-pill px-4">Ver Destinos</a>
+              <a href="/paquetes-turisticos" class="btn btn-outline-brand-primary btn-sm rounded-pill px-4">Ver
+                servicio</a>
             </div>
           </div>
 
           <!-- Servicio 2: Boletos Aéreos -->
-          <div class="col-md-6 col-lg-3">
+          <div class="col-md-6 col-lg-4">
             <div class="service-card bg-white p-4 h-100 rounded text-center shadow-sm">
               <div class="img-wrapper mb-4 mx-auto">
                 <img src="https://images.unsplash.com/photo-1436491865332-7a61a109cc05?q=80&w=400" alt="Vuelos"
-                  class="img-fluid rounded-circle">
+                  loading="lazy" class="img-fluid rounded-circle">
               </div>
               <h4 class="fw-bold h5">Boletos Aéreos</h4>
               <p class="small text-muted mb-4">Encontramos las mejores rutas y tarifas en vuelos nacionales e
                 internacionales. Asesoría en check-in.</p>
-              <a href="https://wa.me/51987594032" target="_blank"
-                class="btn btn-outline-danger btn-sm rounded-pill px-4">Cotizar Vuelo</a>
+              <a href="/boletos-aereos" class="btn btn-outline-brand-primary btn-sm rounded-pill px-4">Ver servicio</a>
             </div>
           </div>
 
           <!-- Servicio 3: Trámites de Visas -->
-          <div class="col-md-6 col-lg-3">
+          <div class="col-md-6 col-lg-4">
             <div class="service-card bg-white p-4 h-100 rounded text-center shadow-sm">
               <div class="img-wrapper mb-4 mx-auto">
                 <img src="https://images.unsplash.com/photo-1569974498991-d3c12a504f95?q=80&w=400" alt="Visas"
-                  class="img-fluid rounded-circle">
+                  loading="lazy" class="img-fluid rounded-circle">
               </div>
               <h4 class="fw-bold h5">Asesoría de Visas</h4>
               <p class="small text-muted mb-4">Expertos en Visa Americana y Canadiense. Aumenta tus probabilidades de
                 aprobación con nosotros.</p>
-              <a href="Pages/tramites.html" class="btn btn-outline-danger btn-sm rounded-pill px-4">Más Info</a>
+              <a href="/tramites" class="btn btn-outline-brand-primary btn-sm rounded-pill px-4">Ver servicio</a>
             </div>
           </div>
 
           <!-- Servicio 4: Seguros de Viaje -->
-          <div class="col-md-6 col-lg-3">
+          <div class="col-md-6 col-lg-4">
             <div class="service-card bg-white p-4 h-100 rounded text-center shadow-sm">
               <div class="img-wrapper mb-4 mx-auto">
                 <img src="https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?q=80&w=400" alt="Seguros"
-                  class="img-fluid rounded-circle">
+                  loading="lazy" class="img-fluid rounded-circle">
               </div>
               <h4 class="fw-bold h5">Seguros de Viaje</h4>
               <p class="small text-muted mb-4">Viaja protegido ante cualquier imprevisto médico o logístico. Cobertura
                 internacional obligatoria.</p>
-              <a href="https://wa.me/51987594032" target="_blank"
-                class="btn btn-outline-danger btn-sm rounded-pill px-4">Asegúrate</a>
+              <a href="/seguros-de-viaje" class="btn btn-outline-brand-primary btn-sm rounded-pill px-4">Ver
+                servicio</a>
             </div>
           </div>
 
+          <!-- Servicio 5: Financia tu Viaje -->
+          <div class="col-md-6 col-lg-4">
+            <div class="service-card bg-white p-4 h-100 rounded text-center shadow-sm">
+              <div class="img-wrapper mb-4 mx-auto">
+                <img src="https://images.unsplash.com/photo-1554224155-6726b3ff858f?q=80&w=400"
+                  alt="Financia tu viaje" loading="lazy" class="img-fluid rounded-circle">
+              </div>
+              <h4 class="fw-bold h5">Financia tu Viaje</h4>
+              <p class="small text-muted mb-4">Viaja ahora y paga en cuotas con nuestro financiamiento propio, sin
+                bancos ni trámites complicados.</p>
+              <a href="/financia-tu-viaje" class="btn btn-outline-brand-primary btn-sm rounded-pill px-4">Conoce el
+                plan</a>
+            </div>
+          </div>
+
+          <!-- Servicio 6: Tours y Excursiones -->
+          <div class="col-md-6 col-lg-4">
+            <div class="service-card bg-white p-4 h-100 rounded text-center shadow-sm">
+              <div class="img-wrapper mb-4 mx-auto">
+                <img src="https://images.unsplash.com/photo-1539635278303-d4002c07eae3?q=80&w=400"
+                  alt="Tours y Excursiones" loading="lazy" class="img-fluid rounded-circle">
+              </div>
+              <h4 class="fw-bold h5">Tours y Excursiones</h4>
+              <p class="small text-muted mb-4">City tours, full-days y excursiones guiadas para que vivas cada destino
+                al máximo.</p>
+              <a href="/tours-y-excursiones" class="btn btn-outline-brand-primary btn-sm rounded-pill px-4">Ver
+                servicio</a>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- PAQUETES MÁS BUSCADOS -->
+    <!-- Datos reales tomados del motor de cotizacion white-label
+         (viajeslmreps.e-agencias.com/paquetes). El motor no expone un link
+         directo por paquete, asi que cada tarjeta enlaza al buscador general.
+         Los precios/disponibilidad cambian en el motor; actualizar a mano
+         aqui si se nota desactualizado. -->
+    <section id="PaquetesMasBuscados" class="section-padding bg-light">
+      <div class="container">
+        <div class="text-center mb-5">
+          <h2 class="promo-title">LOS PAQUETES MÁS <span style="color: var(--brand-primary);">BUSCADOS</span></h2>
+          <p class="text-muted mx-auto" style="max-width: 600px;">
+            Aquí empiezan las mejores historias. Vuelo + hotel listos para tu próxima escapada — tú solo eliges a
+            dónde ir.
+          </p>
+        </div>
+
+        <div class="row g-4">
+
+          <div class="col-md-6 col-lg-4">
+            <div class="destination-card">
+              <img src="https://images.unsplash.com/photo-1535262412227-85541e910204?q=80&w=400" alt="Punta Cana" loading="lazy" class="destination-card-img">
+              <div class="destination-card-body">
+                <span class="badge bg-light text-dark border mb-2 align-self-start">5D/4N</span>
+                <h5 class="fw-bold mb-1">Punta Cana</h5>
+                <p class="small text-muted mb-2">Calificación 8.0 · Hotel + Vuelo</p>
+                <p class="fw-bold fs-5 mb-2" style="color: var(--brand-primary);">S/ 2,709 <span class="small text-muted fw-normal">por persona</span></p>
+                <a href="https://viajeslmreps.e-agencias.com/paquetes" target="_blank" rel="noopener noreferrer" class="destination-card-link">Ver oferta →</a>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-md-6 col-lg-4">
+            <div class="destination-card">
+              <img src="https://images.unsplash.com/photo-1589909202802-8f4aadce1849?q=80&w=400" alt="Buenos Aires" loading="lazy" class="destination-card-img">
+              <div class="destination-card-body">
+                <span class="badge bg-light text-dark border mb-2 align-self-start">6D/5N</span>
+                <h5 class="fw-bold mb-1">Buenos Aires</h5>
+                <p class="small text-muted mb-2">Calificación 8.6 · Hotel + Vuelo</p>
+                <p class="fw-bold fs-5 mb-2" style="color: var(--brand-primary);">S/ 1,710 <span class="small text-muted fw-normal">por persona</span></p>
+                <a href="https://viajeslmreps.e-agencias.com/paquetes" target="_blank" rel="noopener noreferrer" class="destination-card-link">Ver oferta →</a>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-md-6 col-lg-4">
+            <div class="destination-card">
+              <img src="https://images.unsplash.com/photo-1587595431973-160d0d94add1?q=80&w=400" alt="Cusco" loading="lazy" class="destination-card-img">
+              <div class="destination-card-body">
+                <span class="badge bg-light text-dark border mb-2 align-self-start">4D/3N</span>
+                <h5 class="fw-bold mb-1">Cusco</h5>
+                <p class="small text-muted mb-2">Hotel + Vuelo</p>
+                <p class="fw-bold fs-5 mb-2" style="color: var(--brand-primary);">S/ 435 <span class="small text-muted fw-normal">por persona</span></p>
+                <a href="https://viajeslmreps.e-agencias.com/paquetes" target="_blank" rel="noopener noreferrer" class="destination-card-link">Ver oferta →</a>
+              </div>
+            </div>
+          </div>
+
+          <!-- Imagen aproximada: foto de costa peruana (Lima), no es Arequipa exacta -->
+          <div class="col-md-6 col-lg-4">
+            <div class="destination-card">
+              <img src="https://images.unsplash.com/photo-1531968455001-5c5272a41129?q=80&w=400" alt="Arequipa" loading="lazy" class="destination-card-img">
+              <div class="destination-card-body">
+                <span class="badge bg-light text-dark border mb-2 align-self-start">5D/4N</span>
+                <h5 class="fw-bold mb-1">Arequipa</h5>
+                <p class="small text-muted mb-2">Calificación 8.8 · Hotel + Vuelo</p>
+                <p class="fw-bold fs-5 mb-2" style="color: var(--brand-primary);">S/ 956 <span class="small text-muted fw-normal">por persona</span></p>
+                <a href="https://viajeslmreps.e-agencias.com/paquetes" target="_blank" rel="noopener noreferrer" class="destination-card-link">Ver oferta →</a>
+              </div>
+            </div>
+          </div>
+
+          <!-- Imagen aproximada: calle colonial de Cartagena, no es Santiago de Chile exacta -->
+          <div class="col-md-6 col-lg-4">
+            <div class="destination-card">
+              <img src="https://images.unsplash.com/photo-1583531352515-8884af319dc1?q=80&w=400" alt="Santiago de Chile" loading="lazy" class="destination-card-img">
+              <div class="destination-card-body">
+                <span class="badge bg-light text-dark border mb-2 align-self-start">6D/5N</span>
+                <h5 class="fw-bold mb-1">Santiago de Chile</h5>
+                <p class="small text-muted mb-2">Calificación 9.5 · Hotel + Vuelo</p>
+                <p class="fw-bold fs-5 mb-2" style="color: var(--brand-primary);">S/ 1,292 <span class="small text-muted fw-normal">por persona</span></p>
+                <a href="https://viajeslmreps.e-agencias.com/paquetes" target="_blank" rel="noopener noreferrer" class="destination-card-link">Ver oferta →</a>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-md-6 col-lg-4">
+            <div class="destination-card">
+              <img src="https://images.unsplash.com/photo-1469474968028-56623f02e42e?q=80&w=400" alt="Tarapoto" loading="lazy" class="destination-card-img">
+              <div class="destination-card-body">
+                <span class="badge bg-light text-dark border mb-2 align-self-start">5D/4N</span>
+                <h5 class="fw-bold mb-1">Tarapoto</h5>
+                <p class="small text-muted mb-2">Calificación 8.5 · Hotel + Vuelo</p>
+                <p class="fw-bold fs-5 mb-2" style="color: var(--brand-primary);">S/ 650 <span class="small text-muted fw-normal">por persona</span></p>
+                <a href="https://viajeslmreps.e-agencias.com/paquetes" target="_blank" rel="noopener noreferrer" class="destination-card-link">Ver oferta →</a>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-md-6 col-lg-4">
+            <div class="destination-card">
+              <img src="https://images.unsplash.com/photo-1539037116277-4db20889f2d4?q=80&w=400" alt="Madrid" loading="lazy" class="destination-card-img">
+              <div class="destination-card-body">
+                <span class="badge bg-light text-dark border mb-2 align-self-start">12D/11N</span>
+                <h5 class="fw-bold mb-1">Madrid</h5>
+                <p class="small text-muted mb-2">Calificación 9.0 · Hotel + Vuelo</p>
+                <p class="fw-bold fs-5 mb-2" style="color: var(--brand-primary);">S/ 6,047 <span class="small text-muted fw-normal">por persona</span></p>
+                <a href="https://viajeslmreps.e-agencias.com/paquetes" target="_blank" rel="noopener noreferrer" class="destination-card-link">Ver oferta →</a>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-md-6 col-lg-4">
+            <div class="destination-card">
+              <img src="https://images.unsplash.com/photo-1597466599360-3b9775841aec?q=80&w=400" alt="Orlando" loading="lazy" class="destination-card-img">
+              <div class="destination-card-body">
+                <span class="badge bg-light text-dark border mb-2 align-self-start">7D/6N</span>
+                <h5 class="fw-bold mb-1">Orlando</h5>
+                <p class="small text-muted mb-2">Calificación 8.8 · Hotel + Vuelo</p>
+                <p class="fw-bold fs-5 mb-2" style="color: var(--brand-primary);">S/ 2,814 <span class="small text-muted fw-normal">por persona</span></p>
+                <a href="https://viajeslmreps.e-agencias.com/paquetes" target="_blank" rel="noopener noreferrer" class="destination-card-link">Ver oferta →</a>
+              </div>
+            </div>
+          </div>
+
+          <!-- Imagen aproximada: bungalows sobre agua estilo Maldivas, no es Aruba exacta -->
+          <div class="col-md-6 col-lg-4">
+            <div class="destination-card">
+              <img src="https://images.unsplash.com/photo-1544550581-5f7ceaf7f992?q=80&w=400" alt="Aruba" loading="lazy" class="destination-card-img">
+              <div class="destination-card-body">
+                <span class="badge bg-light text-dark border mb-2 align-self-start">4D/3N</span>
+                <h5 class="fw-bold mb-1">Aruba</h5>
+                <p class="small text-muted mb-2">Hotel + Vuelo</p>
+                <p class="fw-bold fs-5 mb-2" style="color: var(--brand-primary);">S/ 2,670 <span class="small text-muted fw-normal">por persona</span></p>
+                <a href="https://viajeslmreps.e-agencias.com/paquetes" target="_blank" rel="noopener noreferrer" class="destination-card-link">Ver oferta →</a>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-md-6 col-lg-4">
+            <div class="destination-card">
+              <img src="https://images.unsplash.com/photo-1605723517503-3cadb5818a0c?q=80&w=400" alt="Miami" loading="lazy" class="destination-card-img">
+              <div class="destination-card-body">
+                <span class="badge bg-light text-dark border mb-2 align-self-start">8D/7N</span>
+                <h5 class="fw-bold mb-1">Miami</h5>
+                <p class="small text-muted mb-2">Hotel + Vuelo</p>
+                <p class="fw-bold fs-5 mb-2" style="color: var(--brand-primary);">S/ 2,666 <span class="small text-muted fw-normal">por persona</span></p>
+                <a href="https://viajeslmreps.e-agencias.com/paquetes" target="_blank" rel="noopener noreferrer" class="destination-card-link">Ver oferta →</a>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-md-6 col-lg-4">
+            <div class="destination-card">
+              <img src="https://images.unsplash.com/photo-1510097467424-192d713fd8b2?q=80&w=400" alt="Cancún" loading="lazy" class="destination-card-img">
+              <div class="destination-card-body">
+                <span class="badge bg-light text-dark border mb-2 align-self-start">6D/5N</span>
+                <h5 class="fw-bold mb-1">Cancún</h5>
+                <p class="small text-muted mb-2">Calificación 9.2 · Hotel + Vuelo</p>
+                <p class="fw-bold fs-5 mb-2" style="color: var(--brand-primary);">S/ 2,890 <span class="small text-muted fw-normal">por persona</span></p>
+                <a href="https://viajeslmreps.e-agencias.com/paquetes" target="_blank" rel="noopener noreferrer" class="destination-card-link">Ver oferta →</a>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-md-6 col-lg-4">
+            <div class="destination-card">
+              <img src="https://images.unsplash.com/photo-1483729558449-99ef09a8c325?q=80&w=400" alt="Río de Janeiro" loading="lazy" class="destination-card-img">
+              <div class="destination-card-body">
+                <span class="badge bg-light text-dark border mb-2 align-self-start">6D/5N</span>
+                <h5 class="fw-bold mb-1">Río de Janeiro</h5>
+                <p class="small text-muted mb-2">Calificación 9.1 · Hotel + Vuelo</p>
+                <p class="fw-bold fs-5 mb-2" style="color: var(--brand-primary);">S/ 2,150 <span class="small text-muted fw-normal">por persona</span></p>
+                <a href="https://viajeslmreps.e-agencias.com/paquetes" target="_blank" rel="noopener noreferrer" class="destination-card-link">Ver oferta →</a>
+              </div>
+            </div>
+          </div>
+
+        </div>
+
+        <div class="text-center mt-5">
+          <a href="https://viajeslmreps.e-agencias.com/paquetes" target="_blank" rel="noopener noreferrer"
+            class="btn btn-whitelabel px-5"><i class="bi bi-stars me-2"></i>VER TODOS LOS PAQUETES</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- DESTINOS DESTACADOS POR PAÍS (estilo editorial, texto original) -->
+    <section id="DestinosDestacados" class="section-padding bg-white">
+      <div class="container">
+        <div class="text-center mb-5">
+          <h2 class="promo-title">Destinos <span style="color: var(--brand-primary);">DESTACADOS</span></h2>
+          <p class="text-muted mx-auto" style="max-width: 600px;">
+            Algunos de los países que más piden nuestros viajeros.
+          </p>
+        </div>
+
+        <div class="dest-marquee">
+          <div class="dest-track">
+
+            <article class="dcard">
+              <img src="https://images.unsplash.com/photo-1587595431973-160d0d94add1?q=80&w=700" alt="Perú" loading="lazy" class="dcard-img">
+              <div class="dcard-body">
+                <p class="eyebrow">Sudamérica</p>
+                <h3>Perú</h3>
+                <p class="dcard-desc">Machu Picchu, el Valle Sagrado y la gastronomía más premiada del mundo.</p>
+                <a href="/destinos/peru" class="dcard-link">Ver destino →</a>
+              </div>
+            </article>
+
+            <article class="dcard">
+              <img src="https://images.unsplash.com/photo-1535262412227-85541e910204?q=80&w=700" alt="México" loading="lazy" class="dcard-img">
+              <div class="dcard-body">
+                <p class="eyebrow">Norteamérica</p>
+                <h3>México</h3>
+                <p class="dcard-desc">Playas turquesa del Caribe y ciudades coloniales llenas de cultura.</p>
+                <a href="/destinos/mexico" class="dcard-link">Ver destino →</a>
+              </div>
+            </article>
+
+            <article class="dcard">
+              <img src="https://images.unsplash.com/photo-1539037116277-4db20889f2d4?q=80&w=700" alt="España" loading="lazy" class="dcard-img">
+              <div class="dcard-body">
+                <p class="eyebrow">Europa</p>
+                <h3>España</h3>
+                <p class="dcard-desc">Historia, arquitectura y vida nocturna de Madrid a Barcelona.</p>
+                <a href="/destinos/espana" class="dcard-link">Ver destino →</a>
+              </div>
+            </article>
+
+            <article class="dcard">
+              <img src="https://images.unsplash.com/photo-1496442226666-8d4d0e62e6e9?q=80&w=700" alt="Estados Unidos" loading="lazy" class="dcard-img">
+              <div class="dcard-body">
+                <p class="eyebrow">Norteamérica</p>
+                <h3>Estados Unidos</h3>
+                <p class="dcard-desc">De las luces de Nueva York a la magia de Orlando, para toda la familia.</p>
+                <a href="/destinos/estados-unidos" class="dcard-link">Ver destino →</a>
+              </div>
+            </article>
+
+            <article class="dcard">
+              <img src="https://images.unsplash.com/photo-1589909202802-8f4aadce1849?q=80&w=700" alt="Argentina" loading="lazy" class="dcard-img">
+              <div class="dcard-body">
+                <p class="eyebrow">Sudamérica</p>
+                <h3>Argentina</h3>
+                <p class="dcard-desc">Buenos Aires: tango, asado y elegancia europea en Latinoamérica.</p>
+                <a href="/destinos/argentina" class="dcard-link">Ver destino →</a>
+              </div>
+            </article>
+
+            <article class="dcard">
+              <img src="https://images.unsplash.com/photo-1512453979798-5ea266f8880c?q=80&w=700" alt="Emiratos Árabes Unidos" loading="lazy" class="dcard-img">
+              <div class="dcard-body">
+                <p class="eyebrow">Asia</p>
+                <h3>Emiratos Árabes</h3>
+                <p class="dcard-desc">Dubái: lujo, rascacielos imponentes y desierto infinito.</p>
+                <a href="/destinos/emiratos-arabes" class="dcard-link">Ver destino →</a>
+              </div>
+            </article>
+
+            <article class="dcard">
+              <img src="https://images.unsplash.com/photo-1508804185872-d7badad00f7d?q=80&w=700" alt="China" loading="lazy" class="dcard-img">
+              <div class="dcard-body">
+                <p class="eyebrow">Asia</p>
+                <h3>China</h3>
+                <p class="dcard-desc">La Gran Muralla, Pekín y Shanghái: historia milenaria y modernidad deslumbrante.</p>
+                <a href="/destinos/china" class="dcard-link">Ver destino →</a>
+              </div>
+            </article>
+
+            <article class="dcard">
+              <img src="https://images.unsplash.com/photo-1545569341-9eb8b30979d9?q=80&w=700" alt="Japón" loading="lazy" class="dcard-img">
+              <div class="dcard-body">
+                <p class="eyebrow">Asia</p>
+                <h3>Japón</h3>
+                <p class="dcard-desc">Tokio, Kioto y los cerezos en flor: tradición, templos y tecnología.</p>
+                <a href="/destinos/japon" class="dcard-link">Ver destino →</a>
+              </div>
+            </article>
+
+            <article class="dcard">
+              <img src="https://images.unsplash.com/photo-1528181304800-259b08848526?q=80&w=700" alt="Tailandia" loading="lazy" class="dcard-img">
+              <div class="dcard-body">
+                <p class="eyebrow">Asia</p>
+                <h3>Tailandia</h3>
+                <p class="dcard-desc">Bangkok, templos dorados y playas paradisíacas del sudeste asiático.</p>
+                <a href="/destinos/tailandia" class="dcard-link">Ver destino →</a>
+              </div>
+            </article>
+
+            <article class="dcard">
+              <img src="https://images.unsplash.com/photo-1552832230-c0197dd311b5?q=80&w=700" alt="Italia" loading="lazy" class="dcard-img">
+              <div class="dcard-body">
+                <p class="eyebrow">Europa</p>
+                <h3>Italia</h3>
+                <p class="dcard-desc">Roma, Venecia y la Toscana: arte, historia y la mejor gastronomía.</p>
+                <a href="/destinos/italia" class="dcard-link">Ver destino →</a>
+              </div>
+            </article>
+
+            <!-- Copia para el bucle continuo (oculta a lectores de pantalla) -->
+            <article class="dcard" aria-hidden="true">
+              <img src="https://images.unsplash.com/photo-1587595431973-160d0d94add1?q=80&w=700" alt="Perú" loading="lazy" class="dcard-img">
+              <div class="dcard-body">
+                <p class="eyebrow">Sudamérica</p>
+                <h3>Perú</h3>
+                <p class="dcard-desc">Machu Picchu, el Valle Sagrado y la gastronomía más premiada del mundo.</p>
+                <a href="/destinos/peru" class="dcard-link">Ver destino →</a>
+              </div>
+            </article>
+
+            <article class="dcard" aria-hidden="true">
+              <img src="https://images.unsplash.com/photo-1535262412227-85541e910204?q=80&w=700" alt="México" loading="lazy" class="dcard-img">
+              <div class="dcard-body">
+                <p class="eyebrow">Norteamérica</p>
+                <h3>México</h3>
+                <p class="dcard-desc">Playas turquesa del Caribe y ciudades coloniales llenas de cultura.</p>
+                <a href="/destinos/mexico" class="dcard-link">Ver destino →</a>
+              </div>
+            </article>
+
+            <article class="dcard" aria-hidden="true">
+              <img src="https://images.unsplash.com/photo-1539037116277-4db20889f2d4?q=80&w=700" alt="España" loading="lazy" class="dcard-img">
+              <div class="dcard-body">
+                <p class="eyebrow">Europa</p>
+                <h3>España</h3>
+                <p class="dcard-desc">Historia, arquitectura y vida nocturna de Madrid a Barcelona.</p>
+                <a href="/destinos/espana" class="dcard-link">Ver destino →</a>
+              </div>
+            </article>
+
+            <article class="dcard" aria-hidden="true">
+              <img src="https://images.unsplash.com/photo-1496442226666-8d4d0e62e6e9?q=80&w=700" alt="Estados Unidos" loading="lazy" class="dcard-img">
+              <div class="dcard-body">
+                <p class="eyebrow">Norteamérica</p>
+                <h3>Estados Unidos</h3>
+                <p class="dcard-desc">De las luces de Nueva York a la magia de Orlando, para toda la familia.</p>
+                <a href="/destinos/estados-unidos" class="dcard-link">Ver destino →</a>
+              </div>
+            </article>
+
+            <article class="dcard" aria-hidden="true">
+              <img src="https://images.unsplash.com/photo-1589909202802-8f4aadce1849?q=80&w=700" alt="Argentina" loading="lazy" class="dcard-img">
+              <div class="dcard-body">
+                <p class="eyebrow">Sudamérica</p>
+                <h3>Argentina</h3>
+                <p class="dcard-desc">Buenos Aires: tango, asado y elegancia europea en Latinoamérica.</p>
+                <a href="/destinos/argentina" class="dcard-link">Ver destino →</a>
+              </div>
+            </article>
+
+            <article class="dcard" aria-hidden="true">
+              <img src="https://images.unsplash.com/photo-1512453979798-5ea266f8880c?q=80&w=700" alt="Emiratos Árabes Unidos" loading="lazy" class="dcard-img">
+              <div class="dcard-body">
+                <p class="eyebrow">Asia</p>
+                <h3>Emiratos Árabes</h3>
+                <p class="dcard-desc">Dubái: lujo, rascacielos imponentes y desierto infinito.</p>
+                <a href="/destinos/emiratos-arabes" class="dcard-link">Ver destino →</a>
+              </div>
+            </article>
+
+            <article class="dcard" aria-hidden="true">
+              <img src="https://images.unsplash.com/photo-1508804185872-d7badad00f7d?q=80&w=700" alt="China" loading="lazy" class="dcard-img">
+              <div class="dcard-body">
+                <p class="eyebrow">Asia</p>
+                <h3>China</h3>
+                <p class="dcard-desc">La Gran Muralla, Pekín y Shanghái: historia milenaria y modernidad deslumbrante.</p>
+                <a href="/destinos/china" class="dcard-link">Ver destino →</a>
+              </div>
+            </article>
+
+            <article class="dcard" aria-hidden="true">
+              <img src="https://images.unsplash.com/photo-1545569341-9eb8b30979d9?q=80&w=700" alt="Japón" loading="lazy" class="dcard-img">
+              <div class="dcard-body">
+                <p class="eyebrow">Asia</p>
+                <h3>Japón</h3>
+                <p class="dcard-desc">Tokio, Kioto y los cerezos en flor: tradición, templos y tecnología.</p>
+                <a href="/destinos/japon" class="dcard-link">Ver destino →</a>
+              </div>
+            </article>
+
+            <article class="dcard" aria-hidden="true">
+              <img src="https://images.unsplash.com/photo-1528181304800-259b08848526?q=80&w=700" alt="Tailandia" loading="lazy" class="dcard-img">
+              <div class="dcard-body">
+                <p class="eyebrow">Asia</p>
+                <h3>Tailandia</h3>
+                <p class="dcard-desc">Bangkok, templos dorados y playas paradisíacas del sudeste asiático.</p>
+                <a href="/destinos/tailandia" class="dcard-link">Ver destino →</a>
+              </div>
+            </article>
+
+            <article class="dcard" aria-hidden="true">
+              <img src="https://images.unsplash.com/photo-1552832230-c0197dd311b5?q=80&w=700" alt="Italia" loading="lazy" class="dcard-img">
+              <div class="dcard-body">
+                <p class="eyebrow">Europa</p>
+                <h3>Italia</h3>
+                <p class="dcard-desc">Roma, Venecia y la Toscana: arte, historia y la mejor gastronomía.</p>
+                <a href="/destinos/italia" class="dcard-link">Ver destino →</a>
+              </div>
+            </article>
+
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- SOBRE NOSOTROS / POR QUÉ ELEGIRNOS -->
+    <section id="SobreNosotros" class="section-padding bg-white">
+      <div class="container">
+        <div class="row align-items-center g-5">
+          <div class="col-lg-6">
+            <p class="eyebrow mb-2" style="text-transform: uppercase; letter-spacing: 2px; font-size: 0.8rem; font-weight: 700; color: var(--brand-primary);">Sobre nosotros</p>
+            <h2 class="display-5 fw-800 mb-4">¿Por qué viajar<br>con nosotros?</h2>
+            <p class="fw-light text-muted mb-4" style="font-size: 1.15rem;">
+              En Viajes LM-REPS convertimos cada viaje en una experiencia segura, sencilla y memorable.
+              Somos una agencia <strong>registrada y autorizada</strong>, con un equipo que te asesora de
+              principio a fin para que viajes con total confianza.
+            </p>
+            <div class="d-flex flex-column gap-3">
+              <div class="d-flex align-items-start gap-3">
+                <i class="bi bi-patch-check-fill fs-4" style="color: var(--brand-primary);"></i>
+                <div>
+                  <p class="fw-bold mb-0">Agencia registrada y autorizada</p>
+                  <p class="small text-muted mb-0">Operamos bajo los lineamientos del sector turismo peruano.</p>
+                </div>
+              </div>
+              <div class="d-flex align-items-start gap-3">
+                <i class="bi bi-headset fs-4" style="color: var(--brand-primary);"></i>
+                <div>
+                  <p class="fw-bold mb-0">Atención personalizada</p>
+                  <p class="small text-muted mb-0">Te acompañamos antes, durante y después de tu viaje.</p>
+                </div>
+              </div>
+              <div class="d-flex align-items-start gap-3">
+                <i class="bi bi-shield-lock fs-4" style="color: var(--brand-primary);"></i>
+                <div>
+                  <p class="fw-bold mb-0">Pagos seguros, incluso a crédito</p>
+                  <p class="small text-muted mb-0">Compra tus paquetes al contado o en cuotas directas con nosotros.</p>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-lg-6">
+            <img src="https://images.unsplash.com/photo-1499856871958-5b9627545d1a?q=80&w=600" alt="Viajeros felices" loading="lazy"
+              class="img-fluid rounded-4 shadow-sm" style="width: 100%; height: 380px; object-fit: cover;">
+            <p class="small text-muted text-uppercase mt-4 mb-2" style="letter-spacing: 1px;">Certificados y respaldados por</p>
+            <div class="trust-badges-row">
+              <img src="Assets/img/agencia_registrada.jpeg" alt="Agencia Registrada" title="Agencia Registrada">
+              <img src="Assets/img/promperu.jpeg" alt="Marca Perú" title="Marca Perú">
+              <img src="Assets/img/minter.jpeg" alt="MINCETUR" title="MINCETUR">
+              <img src="Assets/img/logo-protegeme.webp" alt="Protección al Turista" title="Protección al Turista">
+            </div>
+          </div>
+        </div>
+
+        <!-- Estadisticas de confianza (cifras de ejemplo: ajustar a los numeros reales) -->
+        <div class="row stats-row text-center g-4">
+          <div class="col-6 col-lg-3">
+            <div class="stat-number" data-target="12000" data-suffix="+">0</div>
+            <div class="stat-label">Viajeros felices</div>
+          </div>
+          <div class="col-6 col-lg-3">
+            <div class="stat-number" data-target="60" data-suffix="+">0</div>
+            <div class="stat-label">Destinos en el mundo</div>
+          </div>
+          <div class="col-6 col-lg-3">
+            <div class="stat-number" data-target="24" data-suffix="/7">0</div>
+            <div class="stat-label">Atención al cliente</div>
+          </div>
+          <div class="col-6 col-lg-3">
+            <div class="stat-number" data-target="100" data-suffix="%">0</div>
+            <div class="stat-label">Compra protegida</div>
+          </div>
         </div>
       </div>
     </section>
 
     <!-- SECCIONES VACÍAS (JS LAS LLENARÁ) -->
-    <section id="Promociones" class="section-padding bg-white hidden-section">
+    <section id="DestinosPromociones" class="section-padding bg-white">
       <div class="container">
-        <h2 class="text-center promo-title">PROMOCIONES</h2>
-        <div id="carouselPromos" class="carousel slide" data-bs-ride="carousel" data-bs-interval="3000">
-          <div class="carousel-indicators" style="bottom: -50px;"></div>
-          <div class="carousel-inner"></div>
-          <button class="carousel-control-prev promo-control" type="button" data-bs-target="#carouselPromos"
-            data-bs-slide="prev"><span class="carousel-control-prev-icon"></span></button>
-          <button class="carousel-control-next promo-control" type="button" data-bs-target="#carouselPromos"
-            data-bs-slide="next"><span class="carousel-control-next-icon"></span></button>
+        <div class="text-center mb-4">
+          <h2 class="promo-title">DESTINOS Y <span style="color: var(--brand-primary);">Promociones</span></h2>
+        </div>
+
+        <ul class="nav nav-pills destinos-pills justify-content-center flex-wrap gap-2 mb-5" id="destinosTabs">
+          <li class="nav-item"><button class="nav-link active" data-bs-toggle="pill" data-bs-target="#tab-carouselPromos" type="button">Promociones</button></li>
+          <li class="nav-item"><button class="nav-link" data-bs-toggle="pill" data-bs-target="#tab-carouselNorteamerica" type="button">Norteamérica</button></li>
+          <li class="nav-item"><button class="nav-link" data-bs-toggle="pill" data-bs-target="#tab-carouselCentroamerica" type="button">Centroamérica</button></li>
+          <li class="nav-item"><button class="nav-link" data-bs-toggle="pill" data-bs-target="#tab-carouselSudamerica" type="button">Sudamérica</button></li>
+          <li class="nav-item"><button class="nav-link" data-bs-toggle="pill" data-bs-target="#tab-carouselAsia" type="button">Asia</button></li>
+          <li class="nav-item"><button class="nav-link" data-bs-toggle="pill" data-bs-target="#tab-carouselEuropa" type="button">Europa</button></li>
+        </ul>
+
+        <div class="tab-content">
+
+          <div class="tab-pane fade show active hidden-section" id="tab-carouselPromos">
+            <div id="carouselPromos" class="row g-4"></div>
+          </div>
+
+          <div class="tab-pane fade hidden-section" id="tab-carouselNorteamerica">
+            <div id="carouselNorteamerica" class="row g-4"></div>
+          </div>
+
+          <div class="tab-pane fade hidden-section" id="tab-carouselCentroamerica">
+            <div id="carouselCentroamerica" class="row g-4"></div>
+          </div>
+
+          <div class="tab-pane fade hidden-section" id="tab-carouselSudamerica">
+            <div id="carouselSudamerica" class="row g-4"></div>
+          </div>
+
+          <div class="tab-pane fade hidden-section" id="tab-carouselAsia">
+            <div id="carouselAsia" class="row g-4"></div>
+          </div>
+
+          <div class="tab-pane fade hidden-section" id="tab-carouselEuropa">
+            <div id="carouselEuropa" class="row g-4"></div>
+          </div>
+
         </div>
       </div>
     </section>
 
-    <section id="Norteamerica" class="section-padding bg-white hidden-section">
+    <!-- ============================================================
+         Cinta de testimonios: nombres y comentarios FICTICIOS pero
+         realistas, mostrados en un marquee que gira automaticamente
+         (no es clickable). Si en el futuro hay reseñas reales, basta
+         con reemplazar el texto/iniciales de cada .tcard y su copia.
+         ============================================================ -->
+    <section id="Testimonios" class="section-padding bg-light">
       <div class="container">
-        <h2 class="text-center promo-title">Norteamérica</h2>
-        <div id="carouselNorteamerica" class="carousel slide" data-bs-ride="carousel" data-bs-interval="3000">
-          <div class="carousel-indicators" style="bottom: -50px;"></div>
-          <div class="carousel-inner"></div>
-          <button class="carousel-control-prev promo-control" type="button" data-bs-target="#carouselNorteamerica"
-            data-bs-slide="prev"><span class="carousel-control-prev-icon"></span></button>
-          <button class="carousel-control-next promo-control" type="button" data-bs-target="#carouselNorteamerica"
-            data-bs-slide="next"><span class="carousel-control-next-icon"></span></button>
+        <div class="text-center mb-5">
+          <h2 class="promo-title">LO QUE DICEN <span style="color: var(--brand-primary);">NUESTROS CLIENTES</span></h2>
+        </div>
+
+        <div class="testimonials-marquee">
+          <div class="testimonials-track">
+
+            <article class="tcard">
+              <div class="tcard-stars" aria-label="5 de 5 estrellas"><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i></div>
+              <p class="tcard-text">"Reservé mi viaje a Cancún con ellos y todo salió impecable. Me dieron facilidades para pagar en cuotas y eso me dio muchísima tranquilidad."</p>
+              <div class="tcard-author"><span class="tcard-avatar">MQ</span><span><span class="tcard-name">María Fernanda Quispe</span><span class="tcard-meta">Cliente verificado</span></span></div>
+            </article>
+
+            <article class="tcard">
+              <div class="tcard-stars" aria-label="5 de 5 estrellas"><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i></div>
+              <p class="tcard-text">"La atención por WhatsApp fue rapidísima. Me armaron un paquete a Cusco a la medida de mi presupuesto. Totalmente recomendados."</p>
+              <div class="tcard-author"><span class="tcard-avatar">LR</span><span><span class="tcard-name">Luis Alberto Rojas</span><span class="tcard-meta">Cliente verificado</span></span></div>
+            </article>
+
+            <article class="tcard">
+              <div class="tcard-stars" aria-label="5 de 5 estrellas"><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i></div>
+              <p class="tcard-text">"Tenía miedo de comprar por internet, pero me explicaron todo con paciencia. Mi luna de miel en Punta Cana fue un verdadero sueño."</p>
+              <div class="tcard-author"><span class="tcard-avatar">CM</span><span><span class="tcard-name">Carla Mendoza</span><span class="tcard-meta">Cliente verificado</span></span></div>
+            </article>
+
+            <article class="tcard">
+              <div class="tcard-stars" aria-label="5 de 5 estrellas"><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i></div>
+              <p class="tcard-text">"Lo que más valoro es la confianza. Pagué mi viaje a Europa en partes y cumplieron con cada detalle del itinerario."</p>
+              <div class="tcard-author"><span class="tcard-avatar">JC</span><span><span class="tcard-name">Jorge Castillo</span><span class="tcard-meta">Cliente verificado</span></span></div>
+            </article>
+
+            <article class="tcard">
+              <div class="tcard-stars" aria-label="5 de 5 estrellas"><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i></div>
+              <p class="tcard-text">"Excelente servicio de principio a fin. Vuelos, hotel y tours perfectamente coordinados. Gracias por nuestro viaje familiar."</p>
+              <div class="tcard-author"><span class="tcard-avatar">AS</span><span><span class="tcard-name">Andrea Salazar</span><span class="tcard-meta">Cliente verificado</span></span></div>
+            </article>
+
+            <article class="tcard">
+              <div class="tcard-stars" aria-label="5 de 5 estrellas"><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i></div>
+              <p class="tcard-text">"Coticé en varias agencias y LM-REPS me dio el mejor precio y facilidades de pago. Ya estoy planeando mi próximo destino con ellos."</p>
+              <div class="tcard-author"><span class="tcard-avatar">DP</span><span><span class="tcard-name">Diego Paredes</span><span class="tcard-meta">Cliente verificado</span></span></div>
+            </article>
+
+            <!-- Copia para el bucle continuo (oculta a lectores de pantalla) -->
+            <article class="tcard" aria-hidden="true">
+              <div class="tcard-stars"><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i></div>
+              <p class="tcard-text">"Reservé mi viaje a Cancún con ellos y todo salió impecable. Me dieron facilidades para pagar en cuotas y eso me dio muchísima tranquilidad."</p>
+              <div class="tcard-author"><span class="tcard-avatar">MQ</span><span><span class="tcard-name">María Fernanda Quispe</span><span class="tcard-meta">Cliente verificado</span></span></div>
+            </article>
+
+            <article class="tcard" aria-hidden="true">
+              <div class="tcard-stars"><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i></div>
+              <p class="tcard-text">"La atención por WhatsApp fue rapidísima. Me armaron un paquete a Cusco a la medida de mi presupuesto. Totalmente recomendados."</p>
+              <div class="tcard-author"><span class="tcard-avatar">LR</span><span><span class="tcard-name">Luis Alberto Rojas</span><span class="tcard-meta">Cliente verificado</span></span></div>
+            </article>
+
+            <article class="tcard" aria-hidden="true">
+              <div class="tcard-stars"><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i></div>
+              <p class="tcard-text">"Tenía miedo de comprar por internet, pero me explicaron todo con paciencia. Mi luna de miel en Punta Cana fue un verdadero sueño."</p>
+              <div class="tcard-author"><span class="tcard-avatar">CM</span><span><span class="tcard-name">Carla Mendoza</span><span class="tcard-meta">Cliente verificado</span></span></div>
+            </article>
+
+            <article class="tcard" aria-hidden="true">
+              <div class="tcard-stars"><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i></div>
+              <p class="tcard-text">"Lo que más valoro es la confianza. Pagué mi viaje a Europa en partes y cumplieron con cada detalle del itinerario."</p>
+              <div class="tcard-author"><span class="tcard-avatar">JC</span><span><span class="tcard-name">Jorge Castillo</span><span class="tcard-meta">Cliente verificado</span></span></div>
+            </article>
+
+            <article class="tcard" aria-hidden="true">
+              <div class="tcard-stars"><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i></div>
+              <p class="tcard-text">"Excelente servicio de principio a fin. Vuelos, hotel y tours perfectamente coordinados. Gracias por nuestro viaje familiar."</p>
+              <div class="tcard-author"><span class="tcard-avatar">AS</span><span><span class="tcard-name">Andrea Salazar</span><span class="tcard-meta">Cliente verificado</span></span></div>
+            </article>
+
+            <article class="tcard" aria-hidden="true">
+              <div class="tcard-stars"><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i></div>
+              <p class="tcard-text">"Coticé en varias agencias y LM-REPS me dio el mejor precio y facilidades de pago. Ya estoy planeando mi próximo destino con ellos."</p>
+              <div class="tcard-author"><span class="tcard-avatar">DP</span><span><span class="tcard-name">Diego Paredes</span><span class="tcard-meta">Cliente verificado</span></span></div>
+            </article>
+
+          </div>
         </div>
       </div>
     </section>
 
-    <section id="Centroamerica" class="section-padding bg-white hidden-section">
+    <!-- FINANCIA TU VIAJE: banner CTA hacia el portal de cuentas de credito -->
+    <section class="section-padding finance-cta">
       <div class="container">
-        <h2 class="text-center promo-title">Centroamérica</h2>
-        <div id="carouselCentroamerica" class="carousel slide" data-bs-ride="carousel" data-bs-interval="3000">
-          <div class="carousel-indicators" style="bottom: -50px;"></div>
-          <div class="carousel-inner"></div>
-          <button class="carousel-control-prev promo-control" type="button" data-bs-target="#carouselCentroamerica"
-            data-bs-slide="prev"><span class="carousel-control-prev-icon"></span></button>
-          <button class="carousel-control-next promo-control" type="button" data-bs-target="#carouselCentroamerica"
-            data-bs-slide="next"><span class="carousel-control-next-icon"></span></button>
+        <div class="row justify-content-center text-center">
+          <div class="col-lg-9">
+            <span class="finance-badge"><i class="bi bi-credit-card-2-front me-2"></i>Financiamiento propio</span>
+            <h2 class="finance-title mt-3 mb-3">Viaja ahora, <span>paga en cuotas</span></h2>
+            <p class="finance-lead mb-5">Crea tu cuenta y financia tu viaje directamente con nosotros, sin bancos ni
+              trámites complicados. Tú eliges el destino y nosotros armamos un plan de pagos a tu medida.</p>
+          </div>
         </div>
-      </div>
-    </section>
 
-    <section id="Sudamerica" class="section-padding bg-white hidden-section">
-      <div class="container">
-        <h2 class="text-center promo-title">Sudamérica</h2>
-        <div id="carouselSudamerica" class="carousel slide" data-bs-ride="carousel" data-bs-interval="3000">
-          <div class="carousel-indicators" style="bottom: -50px;"></div>
-          <div class="carousel-inner"></div>
-          <button class="carousel-control-prev promo-control" type="button" data-bs-target="#carouselSudamerica"
-            data-bs-slide="prev"><span class="carousel-control-prev-icon"></span></button>
-          <button class="carousel-control-next promo-control" type="button" data-bs-target="#carouselSudamerica"
-            data-bs-slide="next"><span class="carousel-control-next-icon"></span></button>
+        <div class="row g-4 justify-content-center finance-steps mb-5">
+          <div class="col-md-4">
+            <div class="finance-step">
+              <div class="finance-step-num">1</div>
+              <h3 class="finance-step-title">Crea tu cuenta</h3>
+              <p class="finance-step-desc">Regístrate en minutos y accede a tu portal de cliente.</p>
+            </div>
+          </div>
+          <div class="col-md-4">
+            <div class="finance-step">
+              <div class="finance-step-num">2</div>
+              <h3 class="finance-step-title">Elige tu paquete</h3>
+              <p class="finance-step-desc">Selecciona el destino y el viaje que sueñas realizar.</p>
+            </div>
+          </div>
+          <div class="col-md-4">
+            <div class="finance-step">
+              <div class="finance-step-num">3</div>
+              <h3 class="finance-step-title">Paga en cuotas</h3>
+              <p class="finance-step-desc">Acordamos un plan de pagos a tu medida y ¡a viajar!</p>
+            </div>
+          </div>
         </div>
-      </div>
-    </section>
 
-    <section id="Asia" class="section-padding bg-white hidden-section">
-      <div class="container">
-        <h2 class="text-center promo-title">Asia</h2>
-        <div id="carouselAsia" class="carousel slide" data-bs-ride="carousel" data-bs-interval="3000">
-          <div class="carousel-indicators" style="bottom: -50px;"></div>
-          <div class="carousel-inner"></div>
-          <button class="carousel-control-prev promo-control" type="button" data-bs-target="#carouselAsia"
-            data-bs-slide="prev"><span class="carousel-control-prev-icon"></span></button>
-          <button class="carousel-control-next promo-control" type="button" data-bs-target="#carouselAsia"
-            data-bs-slide="next"><span class="carousel-control-next-icon"></span></button>
-        </div>
-      </div>
-    </section>
-
-    <section id="Europa" class="section-padding bg-white hidden-section">
-      <div class="container">
-        <h2 class="text-center promo-title">Europa</h2>
-        <div id="carouselEuropa" class="carousel slide" data-bs-ride="carousel" data-bs-interval="3000">
-          <div class="carousel-indicators" style="bottom: -50px;"></div>
-          <div class="carousel-inner"></div>
-          <button class="carousel-control-prev promo-control" type="button" data-bs-target="#carouselEuropa"
-            data-bs-slide="prev"><span class="carousel-control-prev-icon"></span></button>
-          <button class="carousel-control-next promo-control" type="button" data-bs-target="#carouselEuropa"
-            data-bs-slide="next"><span class="carousel-control-next-icon"></span></button>
+        <div class="text-center">
+          <a href="/registro" class="btn btn-finance btn-lg">Abrir mi cuenta de viaje <i
+              class="bi bi-arrow-right ms-2"></i></a>
+          <p class="finance-login mt-3 mb-0">¿Ya tienes cuenta? <a href="/login">Inicia sesión</a></p>
         </div>
       </div>
     </section>
@@ -371,43 +1036,31 @@
           <h6>VIAJES LM-REPS</h6>
           <p class="small">Tu agencia de viajes especialista en crear memorias inolvidables.</p>
           <img src="Assets/img/og-image.png" alt="Logo" style="max-height: 60px;" class="mt-2 rounded p-1 shadow-sm">
+          <div class="footer-social mt-3">
+            <a href="https://www.facebook.com/lmreps" target="_blank"><i class="bi bi-facebook"></i></a>
+            <a href="https://www.instagram.com/viajes_lm_reps/" target="_blank"><i class="bi bi-instagram"></i></a>
+            <a href="https://www.tiktok.com/@viajes.lm.reps" target="_blank"><i class="bi bi-tiktok"></i></a>
+            <a href="https://wa.me/51987594032" target="_blank"><i class="bi bi-whatsapp"></i></a>
+          </div>
         </div>
         <div class="col-md-2">
           <h6>EXPLORA</h6>
           <ul class="list-unstyled small">
-            <li><a href="#Promociones">Promociones</a></li>
+            <li><a href="/paquetes">Paquetes</a></li>
             <li><a target="_blank" href="https://wa.me/51987594032">Reserva</a></li>
-            <li><a target="_blank" href="Pages/libro-de-reclamaciones.html">Libro de Reclamaciones</a></li>
-            <li><a target="_blank" href="Pages/politicas-de-privacidad.html">Políticas de Privacidad</a></li>
+            <li><a target="_blank" href="/libro-de-reclamaciones">Libro de Reclamaciones</a></li>
+            <li><a target="_blank" href="/politicas-de-privacidad">Políticas de Privacidad</a></li>
           </ul>
         </div>
         <div class="col-md-3">
           <h6>CONTACTO</h6>
-          <p class="small mb-1"><i class="bi bi-geo-alt text-warning me-2"></i>JR. TARATA NRO. 135, Pucallpa</p>
           <p class="small mb-1"><i class="bi bi-envelope text-warning me-2"></i>reservas@lm-reps.com</p>
           <p class="small"><i class="bi bi-telephone text-warning me-2"></i>(+51) 987 594 032</p>
         </div>
         <div class="col-md-3">
           <h6>PAGOS SEGUROS</h6>
-          <img src="Assets/img/medios_de_pago.jpeg" style="max-height: 140px;" alt="Pagos"
+          <img src="Assets/img/medios_de_pago.jpeg" style="max-height: 140px;" alt="Pagos" loading="lazy"
             class="img-fluid rounded shadow-sm p-2">
-        </div>
-
-        <div class="row footer-partners text-center align-items-center g-4">
-          <div class="col-6 col-md-3">
-            <img src="Assets/img/agencia_registrada.jpeg" style="max-height: 80px;" class="partner-logo img-fluid"
-              alt="gencia_registrada">
-          </div>
-          <div class="col-6 col-md-3">
-            <img src="Assets/img/promperu.jpeg" class="partner-logo img-fluid" alt="Marca Perú">
-          </div>
-          <div class="col-6 col-md-3">
-            <img src="Assets/img/minter.jpeg" class="partner-logo img-fluid" alt="mintur">
-          </div>
-          <div class="col-6 col-md-3">
-            <img src="Assets/img/logo-protegeme.webp" style="max-height: 60px;" class="partner-logo img-fluid"
-              alt="logo-protegeme">
-          </div>
         </div>
       </div>
 
@@ -421,8 +1074,27 @@
 
   </footer>
 
-  <a href="https://wa.me/51987594032" class="whatsapp-float" target="_blank"><i class="bi bi-whatsapp"></i></a>
+  <div class="asesor-fab" id="asesorFab">
+    <div class="asesor-card">
+      <button type="button" class="asesor-card-close" aria-label="Cerrar">&times;</button>
+      <div class="asesor-card-head">
+        <img src="/Assets/img/call-center.webp" alt="Asesora de viajes" class="asesor-card-img">
+        <div class="asesor-card-id">
+          <strong>Asesora de viajes</strong>
+          <span class="asesor-online"><span class="asesor-dot"></span>En línea ahora</span>
+        </div>
+      </div>
+      <p class="asesor-card-text">👋 ¡Hola! ¿Te ayudo a planear o cotizar tu próximo viaje?</p>
+      <a href="https://wa.me/51987594032" target="_blank" rel="noopener noreferrer" class="btn btn-success w-100"><i class="bi bi-whatsapp me-2"></i>Chatear por WhatsApp</a>
+    </div>
+    <button type="button" class="asesor-toggle" aria-label="Chatear con una asesora">
+      <img src="/Assets/img/call-center.webp" alt="Asesora" class="asesor-toggle-img">
+      <span class="asesor-badge"><i class="bi bi-whatsapp"></i></span>
+      <span class="asesor-ping"></span>
+    </button>
+  </div>
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="/Assets/scripts/asesor-fab.js" defer></script>
 </body>
 
 </html>

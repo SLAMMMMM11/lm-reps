@@ -1,0 +1,11 @@
+# Config para Netlify (sitio estatico en la raiz + funciones serverless).
+# El comando de build regenera las paginas de paquete desde Supabase en cada
+# deploy (incluido el que dispara el boton "Publicar cambios" del panel).
+[build]
+  publish = "."
+  functions = "netlify/functions"
+  command = "node tools/gen-paquetes.cjs"
+
+[dev]
+  framework = "#static"
+  port = 8888

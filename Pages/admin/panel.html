@@ -1,0 +1,531 @@
+<!doctype html>
+<html lang="es">
+
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Panel Admin — VIAJES LM-REPS</title>
+  <meta name="robots" content="noindex, nofollow">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;800&family=Outfit:wght@500;600;700;800&display=swap"
+    rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+
+  <link rel="stylesheet" href="../../Assets/css/style.css">
+</head>
+
+<body class="bg-light">
+
+  <nav class="navbar navbar-expand-lg bg-white shadow-sm sticky-top app-navbar">
+    <div class="container">
+      <a class="navbar-brand d-flex align-items-center" href="/">
+        <img src="../../Assets/img/og-image.png" alt="Logo">
+      </a>
+      <span class="panel-tag d-none d-sm-inline">Panel Admin</span>
+      <div class="ms-auto dropdown">
+        <a class="panel-account dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+          <span class="panel-avatar panel-avatar-admin"><i class="bi bi-shield-lock-fill"></i></span>
+          <span class="panel-account-sub d-none d-md-inline" id="userEmailLabel"></span>
+        </a>
+        <ul class="dropdown-menu dropdown-menu-end account-menu border-0 shadow">
+          <li><button type="button" class="dropdown-item" id="perfilButton" data-bs-toggle="modal" data-bs-target="#perfilModal"><i class="bi bi-person-gear me-2"></i>Mi perfil</button></li>
+          <li><button type="button" class="dropdown-item" id="mfaButton" data-bs-toggle="modal" data-bs-target="#mfaModal"><i class="bi bi-shield-lock me-2"></i><span id="mfaButtonLabel">Verificación en 2 pasos</span></button></li>
+          <li><a class="dropdown-item" href="/"><i class="bi bi-house me-2"></i>Volver al sitio</a></li>
+          <li>
+            <hr class="dropdown-divider">
+          </li>
+          <li><button type="button" class="dropdown-item text-danger" id="logoutBtn"><i class="bi bi-box-arrow-right me-2"></i>Cerrar sesión</button></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <main class="container py-5 app-shell">
+    <div id="loadingState" class="text-center py-5">
+      <div class="spinner-border" role="status"></div>
+      <p class="text-muted small mt-3">Cargando panel...</p>
+    </div>
+
+    <div id="panelContent" class="row g-4 d-none">
+      <div class="col-12 col-lg-3">
+        <div class="app-sidebar">
+          <div class="sidebar-user">
+            <div class="sidebar-avatar"><i class="bi bi-shield-lock-fill"></i></div>
+            <div>
+              <p class="fw-bold mb-0">Panel Admin</p>
+              <p class="small text-muted mb-0">Administrador</p>
+            </div>
+          </div>
+          <ul class="nav nav-pills flex-column">
+            <li class="nav-item"><a class="nav-link active" data-tab="clientes" href="#"><i class="bi bi-people"></i>Clientes</a></li>
+            <li class="nav-item">
+              <a class="nav-link" data-tab="vouchers" href="#">
+                <i class="bi bi-receipt"></i>Vouchers Pendientes
+                <span class="badge bg-danger ms-auto d-none" id="pendingVouchersBadge">0</span>
+              </a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" data-tab="solicitudes" href="#">
+                <i class="bi bi-inbox"></i>Solicitudes
+                <span class="badge bg-danger ms-auto d-none" id="leadsBadge">0</span>
+              </a>
+            </li>
+            <li class="nav-item"><a class="nav-link" data-tab="auditoria" href="#"><i class="bi bi-clock-history"></i>Auditoría</a></li>
+            <li class="nav-item"><a class="nav-link" data-tab="promociones" href="#"><i class="bi bi-megaphone"></i>Paquetes</a></li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="col-12 col-lg-9">
+
+        <!-- KPIs -->
+        <div class="row g-3 mb-4">
+          <div class="col-6 col-md-3">
+            <div class="kpi-card">
+              <div class="kpi-icon"><i class="bi bi-cash-stack"></i></div>
+              <div>
+                <div class="kpi-value" id="kpiTotalPrestado">S/ 0.00</div>
+                <div class="kpi-label">Total prestado</div>
+              </div>
+            </div>
+          </div>
+          <div class="col-6 col-md-3">
+            <div class="kpi-card kpi-cobrado">
+              <div class="kpi-icon"><i class="bi bi-check2-circle"></i></div>
+              <div>
+                <div class="kpi-value" id="kpiTotalCobrado">S/ 0.00</div>
+                <div class="kpi-label">Total cobrado</div>
+              </div>
+            </div>
+          </div>
+          <div class="col-6 col-md-3">
+            <div class="kpi-card kpi-pendiente">
+              <div class="kpi-icon"><i class="bi bi-hourglass-split"></i></div>
+              <div>
+                <div class="kpi-value" id="kpiTotalPendiente">S/ 0.00</div>
+                <div class="kpi-label">Total pendiente</div>
+              </div>
+            </div>
+          </div>
+          <div class="col-6 col-md-3">
+            <div class="kpi-card kpi-vencido">
+              <div class="kpi-icon"><i class="bi bi-exclamation-triangle"></i></div>
+              <div>
+                <div class="kpi-value" id="kpiTotalVencido">S/ 0.00</div>
+                <div class="kpi-label">Total vencido</div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div id="tab-clientes">
+          <div class="d-flex justify-content-between align-items-center mb-3">
+            <h5 class="fw-bold mb-0">Clientes</h5>
+            <button class="btn btn-brand-primary border-0" data-bs-toggle="modal" data-bs-target="#nuevoCreditoModal">
+              <i class="bi bi-plus-lg me-1"></i>Nuevo Cliente con Crédito
+            </button>
+          </div>
+          <div class="table-responsive">
+            <table class="table bg-white rounded shadow-sm align-middle">
+              <thead>
+                <tr>
+                  <th>Cliente</th>
+                  <th>Teléfono</th>
+                  <th>Saldo pendiente</th>
+                  <th>Vencido</th>
+                  <th></th>
+                </tr>
+              </thead>
+              <tbody id="clientesTableBody"></tbody>
+            </table>
+          </div>
+        </div>
+
+        <div id="tab-vouchers" class="d-none">
+          <h5 class="fw-bold mb-3">Vouchers Pendientes de Revisión</h5>
+          <div id="vouchersActionAlert" class="alert d-none"></div>
+          <div id="vouchersQueue"></div>
+        </div>
+
+        <div id="tab-auditoria" class="d-none">
+          <h5 class="fw-bold mb-3">Auditoría de acciones</h5>
+          <div class="table-responsive">
+            <table class="table table-sm bg-white rounded shadow-sm align-middle">
+              <thead>
+                <tr>
+                  <th>Fecha</th>
+                  <th>Quién</th>
+                  <th>Acción</th>
+                  <th>Detalle</th>
+                </tr>
+              </thead>
+              <tbody id="auditLogTableBody"></tbody>
+            </table>
+          </div>
+        </div>
+
+        <div id="tab-promociones" class="d-none">
+          <div class="d-flex justify-content-between align-items-center mb-2 flex-wrap gap-2">
+            <h5 class="fw-bold mb-0">Paquetes / Flyers</h5>
+            <div class="d-flex gap-2 flex-wrap">
+              <select class="form-select form-select-sm" id="promoCategoryFilter" style="width:auto;">
+                <option value="">Todas las categorías</option>
+                <option value="carouselpromos">Promociones</option>
+                <option value="carouselnorteamerica">Norteamérica</option>
+                <option value="carouselcentroamerica">Caribe / Centroamérica</option>
+                <option value="carouselsudamerica">Sudamérica</option>
+                <option value="carouselasia">Asia</option>
+                <option value="carouseleuropa">Europa</option>
+              </select>
+              <button class="btn btn-sm btn-brand-primary border-0" id="nuevaPromoBtn" data-bs-toggle="modal" data-bs-target="#promocionModal">
+                <i class="bi bi-plus-lg me-1"></i>Agregar Paquete
+              </button>
+              <button class="btn btn-sm btn-success" id="publicarBtn">
+                <i class="bi bi-cloud-arrow-up me-1"></i>Publicar cambios
+              </button>
+            </div>
+          </div>
+          <div id="publicarStatus" class="alert d-none small py-2"></div>
+          <p class="text-muted small mb-3"><i class="bi bi-info-circle me-1"></i>Tus cambios se guardan al instante en el panel. Toca <strong>"Publicar cambios"</strong> para que se vean en el sitio (catálogo y páginas de paquete) en ~2 minutos.</p>
+          <div class="table-responsive">
+            <table class="table table-sm bg-white rounded shadow-sm align-middle">
+              <thead>
+                <tr>
+                  <th>Img</th>
+                  <th>Categoría</th>
+                  <th>Título</th>
+                  <th>Orden</th>
+                  <th>Activa</th>
+                  <th></th>
+                </tr>
+              </thead>
+              <tbody id="promocionesTableBody"></tbody>
+            </table>
+          </div>
+        </div>
+
+        <div id="tab-solicitudes" class="d-none">
+          <div class="d-flex justify-content-between align-items-center mb-3 flex-wrap gap-2">
+            <h5 class="fw-bold mb-0">Solicitudes de cotización</h5>
+            <select class="form-select form-select-sm" id="leadsStatusFilter" style="width:auto;">
+              <option value="">Todos los estados</option>
+              <option value="nuevo">Nuevos</option>
+              <option value="contactado">Contactados</option>
+              <option value="cotizado">Cotizados</option>
+              <option value="cerrado">Cerrados</option>
+            </select>
+          </div>
+          <div class="table-responsive">
+            <table class="table table-sm bg-white rounded shadow-sm align-middle">
+              <thead>
+                <tr>
+                  <th>Fecha</th>
+                  <th>Cliente</th>
+                  <th>Interés</th>
+                  <th>Financia</th>
+                  <th>Estado</th>
+                  <th></th>
+                </tr>
+              </thead>
+              <tbody id="leadsTableBody"></tbody>
+            </table>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </main>
+
+  <!-- Modal: Nuevo Cliente con Crédito -->
+  <div class="modal fade" id="nuevoCreditoModal" tabindex="-1" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered modal-lg">
+      <div class="modal-content rounded-4">
+        <div class="modal-header">
+          <h5 class="modal-title fw-bold">Nueva cuenta de crédito</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+        </div>
+        <div class="modal-body">
+          <div id="nuevoCreditoAlert" class="alert d-none"></div>
+
+          <div class="mb-3">
+            <label class="form-label small fw-bold">Cliente (debe estar registrado)</label>
+            <select class="form-select" id="clienteSelect" required>
+              <option value="">Selecciona un cliente...</option>
+            </select>
+          </div>
+          <div class="mb-3">
+            <label class="form-label small fw-bold">Descripción</label>
+            <input type="text" class="form-control" id="descripcionInput" placeholder="Ej. Paquete Cancún 5D/4N" required>
+          </div>
+          <div class="row g-3 mb-3">
+            <div class="col-md-4">
+              <label class="form-label small fw-bold">Monto total (S/)</label>
+              <input type="number" class="form-control" id="montoInput" min="1" step="0.01" required>
+            </div>
+            <div class="col-md-4">
+              <label class="form-label small fw-bold">N° de cuotas</label>
+              <input type="number" class="form-control" id="numCuotasInput" min="1" max="36" value="3" required>
+            </div>
+            <div class="col-md-4">
+              <label class="form-label small fw-bold">Primera fecha de pago</label>
+              <input type="date" class="form-control" id="primeraFechaInput" required>
+            </div>
+          </div>
+          <div class="mb-3">
+            <label class="form-label small fw-bold">Frecuencia</label>
+            <select class="form-select" id="frecuenciaSelect">
+              <option value="monthly">Mensual</option>
+              <option value="biweekly">Quincenal</option>
+            </select>
+          </div>
+
+          <button type="button" class="btn btn-outline-secondary btn-sm mb-3" id="generarCuotasBtn">Generar cronograma</button>
+
+          <div class="table-responsive">
+            <table class="table table-sm">
+              <thead><tr><th>#</th><th>Fecha</th><th>Monto (S/)</th></tr></thead>
+              <tbody id="cuotasPreviewBody"></tbody>
+            </table>
+          </div>
+
+          <button type="button" class="btn btn-brand-primary w-100 border-0 mt-2" id="guardarCreditoBtn">
+            <i class="bi bi-check-lg me-1"></i>Guardar cuenta de crédito
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Modal: Nueva/Editar Promocion -->
+  <div class="modal fade" id="promocionModal" tabindex="-1" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered modal-lg">
+      <div class="modal-content rounded-4">
+        <div class="modal-header">
+          <h5 class="modal-title fw-bold" id="promocionModalTitle">Nueva promoción</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+        </div>
+        <div class="modal-body">
+          <div id="promocionAlert" class="alert d-none"></div>
+          <input type="hidden" id="promocionId">
+
+          <!-- Afiche con vista previa -->
+          <div class="mb-3">
+            <label class="form-label small fw-bold">Afiche (imagen)</label>
+            <div class="d-flex gap-3 align-items-start">
+              <img id="promoImagenPreview" src="" alt="" class="rounded border" style="width:90px;height:120px;object-fit:cover;background:#f1f3f5;flex-shrink:0;">
+              <div class="flex-grow-1">
+                <input type="file" class="form-control form-control-sm mb-2" id="promoImagenUpload" accept="image/*">
+                <input type="text" class="form-control form-control-sm" id="promoImagenInput" placeholder="o pega una URL https://..." required>
+                <div class="form-text">Sube tu afiche (mejor vertical) o pega una URL. La vista previa aparece al lado.</div>
+              </div>
+            </div>
+          </div>
+          <div class="mb-3">
+            <label class="form-label small fw-bold">Título del paquete *</label>
+            <input type="text" class="form-control" id="promoTituloInput" required placeholder="Ej: China Milenaria">
+          </div>
+          <div class="mb-3">
+            <label class="form-label small fw-bold">Descripción corta</label>
+            <input type="text" class="form-control" id="promoDescripcionInput" placeholder="Frase corta que resume el viaje">
+          </div>
+          <div class="mb-3">
+            <label class="form-label small fw-bold">Lo que vivirás <span class="text-muted fw-normal">(un punto por línea)</span></label>
+            <textarea class="form-control" id="promoHighlightsInput" rows="4" placeholder="La Gran Muralla China&#10;Pekín y la Ciudad Prohibida&#10;Shanghái moderna"></textarea>
+          </div>
+          <div class="row g-3 mb-3">
+            <div class="col-md-6">
+              <label class="form-label small fw-bold">Región (continente)</label>
+              <select class="form-select" id="promoCategoriaInput" required>
+                <option value="carouselpromos">Promociones</option>
+                <option value="carouselnorteamerica">Norteamérica</option>
+                <option value="carouselcentroamerica">Caribe / Centroamérica</option>
+                <option value="carouselsudamerica">Sudamérica</option>
+                <option value="carouselasia">Asia</option>
+                <option value="carouseleuropa">Europa</option>
+              </select>
+            </div>
+            <div class="col-md-6">
+              <label class="form-label small fw-bold">Destino (país visible)</label>
+              <input type="text" class="form-control" id="promoDestinoInput" placeholder="Ej: China">
+              <div class="form-text">Se usa para filtrar por país en el catálogo.</div>
+            </div>
+          </div>
+          <div class="row g-3 mb-3">
+            <div class="col-md-6">
+              <label class="form-label small fw-bold">Página de país</label>
+              <select class="form-select" id="promoPaisInput">
+                <option value="">Ninguna</option>
+                <option value="peru">Perú</option>
+                <option value="mexico">México</option>
+                <option value="espana">España</option>
+                <option value="estados-unidos">Estados Unidos</option>
+                <option value="argentina">Argentina</option>
+                <option value="emiratos-arabes">Emiratos Árabes</option>
+                <option value="china">China</option>
+                <option value="japon">Japón</option>
+                <option value="tailandia">Tailandia</option>
+                <option value="italia">Italia</option>
+              </select>
+              <div class="form-text">Si aplica, el paquete aparece en esa página de país.</div>
+            </div>
+            <div class="col-md-3">
+              <label class="form-label small fw-bold">Duración</label>
+              <input type="text" class="form-control" id="promoDurationInput" placeholder="13 días / 10 noches">
+            </div>
+            <div class="col-md-3">
+              <label class="form-label small fw-bold">Orden</label>
+              <input type="number" class="form-control" id="promoOrdenInput" value="0">
+            </div>
+          </div>
+          <div class="form-check mb-3">
+            <input class="form-check-input" type="checkbox" id="promoActivaInput" checked>
+            <label class="form-check-label small" for="promoActivaInput">Activo (visible en el sitio)</label>
+          </div>
+
+          <button type="button" class="btn btn-brand-primary w-100 border-0" id="guardarPromoBtn">
+            <i class="bi bi-check-lg me-1"></i>Guardar promoción
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Modal: Rechazar Voucher -->
+  <div class="modal fade" id="rechazarVoucherModal" tabindex="-1" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered">
+      <div class="modal-content rounded-4">
+        <div class="modal-header">
+          <h5 class="modal-title fw-bold">Rechazar voucher</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+        </div>
+        <div class="modal-body">
+          <input type="hidden" id="rechazarVoucherId">
+          <label class="form-label small fw-bold">Motivo del rechazo</label>
+          <textarea class="form-control" id="rechazoMotivo" rows="3" required></textarea>
+          <button type="button" class="btn btn-brand-primary w-100 border-0 mt-3" id="confirmarRechazoBtn">
+            Confirmar rechazo
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Modal: Verificacion en 2 pasos (MFA) -->
+  <div class="modal fade" id="mfaModal" tabindex="-1" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered">
+      <div class="modal-content rounded-4">
+        <div class="modal-header">
+          <h5 class="modal-title fw-bold">Verificación en 2 pasos</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+        </div>
+        <div class="modal-body">
+          <div id="mfaAlert" class="alert d-none"></div>
+
+          <!-- Estado: ya activada -->
+          <div id="mfaEnabledState" class="d-none">
+            <p class="text-success"><i class="bi bi-check-circle-fill me-2"></i>La verificación en 2 pasos ya está activa en tu cuenta.</p>
+            <button type="button" class="btn btn-outline-danger w-100" id="mfaDisableBtn">Desactivar</button>
+          </div>
+
+          <!-- Estado: enrolar -->
+          <div id="mfaEnrollState" class="d-none">
+            <p class="small text-muted">Escanea este código con Google Authenticator, Authy o similar:</p>
+            <div class="text-center mb-3">
+              <img id="mfaQrImg" src="" alt="Código QR" style="max-width: 200px;">
+            </div>
+            <p class="small text-muted">¿No puedes escanear? Ingresa esta clave manualmente: <code id="mfaSecret"></code></p>
+            <label class="form-label small fw-bold">Código de 6 dígitos</label>
+            <input type="text" class="form-control mb-3" id="mfaVerifyCode" inputmode="numeric" maxlength="6" placeholder="123456">
+            <button type="button" class="btn btn-brand-primary w-100 border-0" id="mfaVerifyBtn">
+              Activar
+            </button>
+          </div>
+
+          <div id="mfaLoadingState" class="text-center py-3">
+            <div class="spinner-border spinner-border-sm" role="status"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Modal: Preview de imagen del voucher -->
+  <div class="modal fade" id="voucherPreviewModal" tabindex="-1" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered modal-lg">
+      <div class="modal-content" style="background: rgba(0,0,0,0.9); border:none;">
+        <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" style="position:absolute; right:15px; top:15px; z-index:10;"></button>
+        <div class="modal-body p-0 text-center">
+          <img src="" id="voucherPreviewImg" class="img-fluid" alt="Voucher">
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Modal: Mi perfil (datos + contraseña del admin) -->
+  <div class="modal fade" id="perfilModal" tabindex="-1" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered modal-lg">
+      <div class="modal-content rounded-4">
+        <div class="modal-header">
+          <h5 class="modal-title fw-bold">Mi perfil</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+        </div>
+        <div class="modal-body">
+          <h6 class="fw-bold mb-3"><i class="bi bi-person-vcard me-2"></i>Datos personales</h6>
+          <div id="perfilAlert" class="alert d-none"></div>
+          <form id="perfilForm" class="row g-3 mb-2">
+            <div class="col-md-6">
+              <label class="form-label small fw-bold">Nombre completo</label>
+              <input type="text" class="form-control" id="perfilNombre">
+            </div>
+            <div class="col-md-6">
+              <label class="form-label small fw-bold">Teléfono / WhatsApp</label>
+              <input type="text" class="form-control" id="perfilTelefono">
+            </div>
+            <div class="col-12">
+              <label class="form-label small fw-bold">Correo electrónico</label>
+              <input type="email" class="form-control" id="perfilCorreo">
+              <div class="form-text">Si cambias el correo, te enviaremos un enlace de confirmación a la nueva dirección.
+              </div>
+            </div>
+            <div class="col-12">
+              <button type="submit" class="btn btn-brand-primary border-0" id="perfilSubmitBtn"><i
+                  class="bi bi-check-lg me-1"></i>Guardar cambios</button>
+            </div>
+          </form>
+
+          <hr class="my-4">
+
+          <h6 class="fw-bold mb-3"><i class="bi bi-key me-2"></i>Cambiar contraseña</h6>
+          <div id="passwordAlert" class="alert d-none"></div>
+          <form id="passwordForm" class="row g-3">
+            <div class="col-md-6">
+              <label class="form-label small fw-bold">Nueva contraseña</label>
+              <input type="password" class="form-control" id="newPassword" autocomplete="new-password">
+            </div>
+            <div class="col-md-6">
+              <label class="form-label small fw-bold">Repetir contraseña</label>
+              <input type="password" class="form-control" id="newPasswordConfirm" autocomplete="new-password">
+            </div>
+            <div class="col-12">
+              <button type="submit" class="btn btn-brand-primary border-0" id="passwordSubmitBtn"><i
+                  class="bi bi-shield-check me-1"></i>Actualizar contraseña</button>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+  <script type="module" src="../../Assets/scripts/admin.js"></script>
+  <script type="module" src="../../Assets/scripts/mfa.js"></script>
+  <script type="module" src="../../Assets/scripts/admin-promociones.js"></script>
+  <script type="module" src="../../Assets/scripts/admin-leads.js"></script>
+  <script type="module" src="../../Assets/scripts/perfil.js"></script>
+</body>
+
+</html>

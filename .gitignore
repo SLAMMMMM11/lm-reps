@@ -1,0 +1,5 @@
+# Local Netlify folder
+.netlify
+
+# Archivos temporales/caché del generador de paquetes
+tools/_*

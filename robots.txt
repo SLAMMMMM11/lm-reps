@@ -1,0 +1,15 @@
+User-agent: *
+Allow: /
+
+# Rutas de archivos internos (se sirven via URLs limpias, ver _redirects)
+Disallow: /Pages/
+
+# Zonas privadas (cuenta de cliente y panel admin)
+Disallow: /login
+Disallow: /registro
+Disallow: /recuperar-password
+Disallow: /actualizar-password
+Disallow: /cuenta
+Disallow: /admin
+
+Sitemap: https://lm-reps.com/sitemap.xml
