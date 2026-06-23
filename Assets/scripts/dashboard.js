@@ -260,6 +260,14 @@ async function init() {
   session = await requireAuth();
   if (!session) return;
 
+  // Las cuentas admin no tienen panel de cliente; editan su perfil desde el
+  // panel admin. Si llegan aqui directo por URL, se les redirige.
+  const { data: profile } = await supabase.from('profiles').select('is_admin').eq('id', session.user.id).single();
+  if (profile?.is_admin) {
+    window.location.href = '/admin';
+    return;
+  }
+
   document.getElementById('userEmailLabel').textContent = session.user.email;
 
   creditAccounts = await loadAccounts();

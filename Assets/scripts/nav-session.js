@@ -36,6 +36,13 @@ if (toggle) {
 
     if (!profile?.is_admin) hide(adminItems);
 
+    // Las cuentas admin editan sus datos desde "Mi perfil" en el panel admin,
+    // no desde el dashboard de cliente (que ademas les mostraria un estado
+    // vacio confuso de "no tienes cuenta de credito").
+    const clientAccountLink = document.querySelector('.account-in a[href="/cuenta"]');
+    const clientAccountItem = clientAccountLink?.closest('li');
+    if (clientAccountItem) clientAccountItem.classList.toggle('d-none', Boolean(profile?.is_admin));
+
     const fullName = profile?.full_name || '';
     if (greeting) greeting.textContent = fullName || session.user.email;
     if (label) label.textContent = fullName.split(' ')[0] || 'Mi cuenta';
