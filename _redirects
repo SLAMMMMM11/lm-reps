@@ -1,5 +1,6 @@
 /api/suggest               /.netlify/functions/suggest          200
 /api/publish               /.netlify/functions/publish          200
+/api/extract-flyer-metadata /.netlify/functions/extract-flyer-metadata 200
 /login                     /Pages/login.html                    200
 /registro                  /Pages/registro.html                 200
 /recuperar-password        /Pages/recuperar-password.html       200

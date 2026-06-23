@@ -86,6 +86,7 @@ function resetForm() {
   document.getElementById('promoOrdenInput').value = '0';
   document.getElementById('promoActivaInput').checked = true;
   setPreview('');
+  toggleAutocompletarIaBtn();
   alertBox.className = 'alert d-none';
   document.getElementById('promocionModalTitle').textContent = 'Nuevo paquete';
 }
@@ -105,6 +106,7 @@ function openEditModal(promo) {
   document.getElementById('promoOrdenInput').value = promo.display_order;
   document.getElementById('promoActivaInput').checked = promo.is_active;
   setPreview(promo.image_url);
+  toggleAutocompletarIaBtn();
   alertBox.className = 'alert d-none';
   document.getElementById('promocionModalTitle').textContent = 'Editar paquete';
   promocionModal.show();
@@ -122,6 +124,12 @@ document.getElementById('nuevaPromoBtn').addEventListener('click', resetForm);
 // Vista previa al pegar/escribir una URL de imagen.
 document.getElementById('promoImagenInput').addEventListener('input', (e) => setPreview(e.target.value.trim()));
 
+const autocompletarIaBtn = document.getElementById('autocompletarIaBtn');
+
+function toggleAutocompletarIaBtn() {
+  autocompletarIaBtn.disabled = !document.getElementById('promoImagenInput').value.trim();
+}
+
 document.getElementById('promoImagenUpload').addEventListener('change', async (e) => {
   const file = e.target.files[0];
   if (!file) return;
@@ -133,6 +141,48 @@ document.getElementById('promoImagenUpload').addEventListener('change', async (e
   const { data } = supabase.storage.from('promo-images').getPublicUrl(path);
   document.getElementById('promoImagenInput').value = data.publicUrl;
   setPreview(data.publicUrl);
+  toggleAutocompletarIaBtn();
+});
+
+document.getElementById('promoImagenInput').addEventListener('input', toggleAutocompletarIaBtn);
+
+// "Autocompletar con IA": sugiere título/categoría/destino/duración/descripción
+// a partir del afiche subido. Solo rellena los campos -- nada se guarda en
+// `promotions` hasta que se haga clic en "Guardar paquete".
+autocompletarIaBtn.addEventListener('click', async () => {
+  const imageUrl = document.getElementById('promoImagenInput').value.trim();
+  if (!imageUrl) return;
+
+  const orig = autocompletarIaBtn.innerHTML;
+  autocompletarIaBtn.disabled = true;
+  autocompletarIaBtn.innerHTML = '<span class="spinner-border spinner-border-sm me-1" role="status" aria-hidden="true"></span>Analizando...';
+
+  try {
+    const { data: { session } } = await supabase.auth.getSession();
+    const res = await fetch('/api/extract-flyer-metadata', {
+      method: 'POST',
+      headers: { Authorization: 'Bearer ' + (session?.access_token || ''), 'content-type': 'application/json' },
+      body: JSON.stringify({ imageUrl }),
+    });
+    if (!res.ok) throw new Error('http ' + res.status);
+    const sugerido = await res.json();
+
+    if (sugerido.title) document.getElementById('promoTituloInput').value = sugerido.title;
+    if (sugerido.category) document.getElementById('promoCategoriaInput').value = sugerido.category;
+    if (sugerido.description) document.getElementById('promoDescripcionInput').value = sugerido.description;
+    if (Array.isArray(sugerido.highlights)) document.getElementById('promoHighlightsInput').value = sugerido.highlights.join('\n');
+    if (sugerido.destino) document.getElementById('promoDestinoInput').value = sugerido.destino;
+    if (sugerido.pais) document.getElementById('promoPaisInput').value = sugerido.pais;
+    if (sugerido.duration) document.getElementById('promoDurationInput').value = sugerido.duration;
+
+    showAlert('Campos sugeridos por IA, revísalos antes de guardar.', 'info');
+  } catch (e) {
+    console.error('autocompletar-ia', e);
+    showAlert('No se pudo autocompletar. Completa los campos manualmente.');
+  } finally {
+    autocompletarIaBtn.disabled = false;
+    autocompletarIaBtn.innerHTML = orig;
+  }
 });
 
 document.getElementById('guardarPromoBtn').addEventListener('click', async () => {
