@@ -84,7 +84,10 @@ export default async (req) => {
       }
     );
 
-    if (!aiRes.ok) return json({ error: 'gemini_api_error', status: aiRes.status }, 502);
+    if (!aiRes.ok) {
+      const errBody = await aiRes.text();
+      return json({ error: 'gemini_api_error', status: aiRes.status, detail: errBody.slice(0, 300) }, 502);
+    }
 
     const aiData = await aiRes.json();
     const text = aiData?.candidates?.[0]?.content?.parts?.[0]?.text || '';

@@ -165,7 +165,10 @@ autocompletarIaBtn.addEventListener('click', async () => {
       body: JSON.stringify({ imageUrl }),
     });
     const sugerido = await res.json();
-    if (!res.ok) throw new Error(sugerido?.error || ('http ' + res.status));
+    if (!res.ok) {
+      const detail = sugerido?.detail ? `: ${sugerido.detail}` : '';
+      throw new Error((sugerido?.error || ('http ' + res.status)) + detail);
+    }
 
     if (sugerido.title) document.getElementById('promoTituloInput').value = sugerido.title;
     if (sugerido.category) document.getElementById('promoCategoriaInput').value = sugerido.category;
