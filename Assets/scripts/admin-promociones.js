@@ -164,8 +164,8 @@ autocompletarIaBtn.addEventListener('click', async () => {
       headers: { Authorization: 'Bearer ' + (session?.access_token || ''), 'content-type': 'application/json' },
       body: JSON.stringify({ imageUrl }),
     });
-    if (!res.ok) throw new Error('http ' + res.status);
     const sugerido = await res.json();
+    if (!res.ok) throw new Error(sugerido?.error || ('http ' + res.status));
 
     if (sugerido.title) document.getElementById('promoTituloInput').value = sugerido.title;
     if (sugerido.category) document.getElementById('promoCategoriaInput').value = sugerido.category;
@@ -178,7 +178,7 @@ autocompletarIaBtn.addEventListener('click', async () => {
     showAlert('Campos sugeridos por IA, revísalos antes de guardar.', 'info');
   } catch (e) {
     console.error('autocompletar-ia', e);
-    showAlert('No se pudo autocompletar. Completa los campos manualmente.');
+    showAlert(`No se pudo autocompletar (${e.message}). Completa los campos manualmente.`);
   } finally {
     autocompletarIaBtn.disabled = false;
     autocompletarIaBtn.innerHTML = orig;
