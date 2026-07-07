@@ -1,0 +1,460 @@
+/* ============================================================
+   PAQUETES PREMIUM — Overlay stylesheet
+   Solo se carga en páginas de detalle de paquetes.
+   Extiende style.css sin modificarlo.
+   Prefijo de clases nuevas: pq-
+   ============================================================ */
+
+/* ── 1. TOKENS DE DISEÑO ────────────────────────────────────── */
+:root {
+  --pm-navy:       #0F1E2B;
+  --pm-ivory:      #F8F4EE;
+  --pm-gold:       #C49A3C;
+  --pm-gold-light: #F5E9C8;
+  --pm-teal-deep:  #155F7A;
+  --pm-text-muted: #5C6775;
+  --font-serif:    'Cormorant Garamond', Georgia, serif;
+}
+
+/* ── 2. HERO ────────────────────────────────────────────────── */
+.espana-hero {
+  min-height: 680px;
+  align-items: center;
+  background-position: center 40%;
+}
+
+.espana-hero::before {
+  background:
+    linear-gradient(to right, rgba(8,18,28,0.78) 0%, rgba(8,18,28,0.30) 55%, rgba(8,18,28,0.0) 100%),
+    linear-gradient(to top,   rgba(8,18,28,0.65) 0%, rgba(8,18,28,0.0) 50%);
+}
+
+.espana-hero .hero-content {
+  padding: 7rem 0 3rem;
+}
+
+/* Eyebrow */
+.espana-hero .hero-content > p:first-of-type {
+  color: rgba(255,255,255,0.75);
+  letter-spacing: 2.5px;
+  font-size: 0.72rem;
+}
+
+/* Título principal */
+.espana-hero h1 {
+  font-family: var(--font-serif);
+  font-size: clamp(2.8rem, 6vw, 4.8rem);
+  font-weight: 600;
+  letter-spacing: -0.5px;
+  line-height: 1.05;
+}
+
+/* Route pills */
+.route-pill {
+  background: rgba(255,255,255,0.08);
+  border: 1px solid rgba(255,255,255,0.22);
+  backdrop-filter: blur(6px);
+  -webkit-backdrop-filter: blur(6px);
+  font-size: 0.74rem;
+  letter-spacing: 0.3px;
+  padding: 0.3rem 0.8rem;
+}
+
+/* CTA buttons en hero */
+.espana-hero .btn {
+  border-radius: 6px;
+  font-size: 0.88rem;
+  font-weight: 700;
+  letter-spacing: 0.3px;
+  padding: 0.8rem 1.8rem;
+}
+
+/* ── 3. STATS BAR ───────────────────────────────────────────── */
+.pq-stats-bar {
+  background: var(--pm-navy) !important;
+  border-bottom: none !important;
+}
+
+.pq-stats-bar .stat-chip {
+  background: rgba(255,255,255,0.07);
+  border: 1px solid rgba(255,255,255,0.15);
+  color: rgba(255,255,255,0.9);
+  border-radius: 4px;
+  font-size: 0.77rem;
+  letter-spacing: 0.2px;
+}
+
+.pq-stats-bar .stat-chip i {
+  color: var(--pm-gold);
+}
+
+/* ── 4. TÍTULOS DE SECCIÓN ──────────────────────────────────── */
+.pq-section-title {
+  font-family: var(--font-serif);
+  font-size: clamp(1.9rem, 3.5vw, 2.6rem);
+  font-weight: 700;
+  letter-spacing: -0.2px;
+}
+
+/* Eyebrows de sección (p con text-uppercase encima de h2) */
+.pq-eyebrow {
+  color: var(--pm-gold) !important;
+  font-style: italic;
+  font-family: var(--font-serif);
+  letter-spacing: 1.5px;
+  font-size: 0.82rem !important;
+  font-weight: 600 !important;
+}
+
+/* ── 5. GALERÍA DE CIUDADES ─────────────────────────────────── */
+.pq-gallery-section {
+  background: var(--pm-ivory);
+}
+
+.city-gallery {
+  grid-template-columns: 1fr 1.2fr 1fr;
+  grid-template-rows: 320px;
+  gap: 3px;
+}
+
+.city-gallery .city-card img {
+  transition: transform 0.5s ease;
+}
+
+.city-gallery .city-card:hover img {
+  transform: scale(1.04);
+}
+
+.city-gallery .city-label {
+  font-family: var(--font-serif);
+  font-style: italic;
+  font-size: 0.88rem;
+  letter-spacing: 0;
+  text-transform: none;
+  padding: 0.6rem 1rem;
+}
+
+/* ── 6. SECCIÓN DESTACADOS ──────────────────────────────────── */
+.pq-highlights-section {
+  background: var(--pm-ivory);
+}
+
+.pq-highlights-section .bi-check-circle-fill {
+  color: var(--pm-gold) !important;
+}
+
+/* ── 7. ITINERARIO — ACCORDION ──────────────────────────────── */
+.pq-itinerary-section {
+  background: #fff;
+}
+
+/* Número de día circular */
+.pq-day-num {
+  width: 36px;
+  height: 36px;
+  min-width: 36px;
+  border-radius: 50%;
+  background: var(--pm-ivory);
+  border: 1.5px solid var(--pm-gold);
+  color: var(--pm-navy);
+  font-family: var(--font-serif);
+  font-weight: 700;
+  font-size: 0.9rem;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  margin-right: 0.85rem;
+  flex-shrink: 0;
+  transition: background 0.2s, color 0.2s;
+}
+
+/* Número activo (día abierto) */
+.accordion-button:not(.collapsed) .pq-day-num {
+  background: var(--pm-gold);
+  color: #fff;
+  border-color: var(--pm-gold);
+}
+
+/* Botón del accordion */
+.pq-itinerary-section .accordion-button {
+  font-family: var(--font-display, 'Outfit', sans-serif);
+  font-weight: 600;
+  font-size: 0.95rem;
+  color: var(--pm-navy);
+}
+
+.pq-itinerary-section .accordion-button:not(.collapsed) {
+  background: #fdfcfa;
+  color: var(--pm-navy);
+  box-shadow: none;
+}
+
+/* Borde izq dorado en item abierto */
+.pq-itinerary-section .accordion-item {
+  border-left: 2px solid transparent;
+  transition: border-color 0.2s;
+}
+
+.pq-itinerary-section .accordion-item:has(.accordion-button:not(.collapsed)) {
+  border-left-color: var(--pm-gold);
+}
+
+/* Imágenes inline del itinerario */
+.itinerary-img {
+  height: 220px;
+  border-radius: 6px;
+}
+
+/* ── 8. INCLUYE / NO INCLUYE ────────────────────────────────── */
+.pq-includes-section {
+  background: var(--pm-ivory);
+}
+
+.pq-includes-section .pq-section-title {
+  text-align: center;
+}
+
+/* Borde top de cards */
+.pq-includes-card {
+  border-top: 3px solid var(--pm-gold) !important;
+}
+
+.pq-excludes-card {
+  border-top: 3px solid #dc3545 !important;
+}
+
+/* Headings de las cards */
+.pq-includes-section h5 {
+  font-family: var(--font-serif);
+  font-size: 1.2rem;
+}
+
+/* Íconos check → dorado */
+.pq-includes-section .bi-check2 {
+  color: var(--pm-gold) !important;
+}
+
+/* ── 9. PLUS PACKAGE CARD ───────────────────────────────────── */
+.pq-plus-card {
+  background: linear-gradient(135deg, #FDFAF5, #F9F3E2) !important;
+  border: 2px solid var(--pm-gold) !important;
+}
+
+.pq-plus-card .bi-stars {
+  color: var(--pm-gold) !important;
+}
+
+.pq-plus-card h3 {
+  font-family: var(--font-serif);
+  font-size: 1.6rem;
+  font-weight: 600;
+}
+
+.pq-plus-card h6 i {
+  color: var(--pm-gold) !important;
+}
+
+/* Precio $390 mantiene naranja (brand-primary) */
+.pq-plus-card .pq-plus-price {
+  color: var(--brand-primary);
+  font-family: var(--font-serif);
+  font-size: 2.4rem;
+  font-weight: 700;
+  line-height: 1;
+}
+
+/* Botón CTA dentro de la card: navy, no naranja */
+.pq-plus-card .btn-brand-primary,
+.pq-plus-card [class*="btn-brand"] {
+  background: var(--pm-navy) !important;
+  border-color: var(--pm-navy) !important;
+}
+
+.pq-plus-card .btn-brand-primary:hover,
+.pq-plus-card [class*="btn-brand"]:hover {
+  background: var(--pm-teal-deep) !important;
+  border-color: var(--pm-teal-deep) !important;
+}
+
+/* ── 10. TABLA DE PRECIOS ───────────────────────────────────── */
+.pq-prices-section {
+  background: var(--pm-ivory);
+}
+
+.pq-prices-section .pq-section-title {
+  text-align: center;
+}
+
+.pq-price-table {
+  border-collapse: collapse;
+}
+
+/* Eliminar bordes verticales */
+.pq-price-table td,
+.pq-price-table th {
+  border-left: none !important;
+  border-right: none !important;
+}
+
+.pq-price-table thead th {
+  background: var(--pm-navy) !important;
+  color: #fff !important;
+  font-family: var(--font-display, 'Outfit', sans-serif);
+  font-weight: 600;
+  font-size: 0.78rem;
+  letter-spacing: 0.5px;
+  text-transform: uppercase;
+  border-top: none !important;
+  border-color: rgba(255,255,255,0.1) !important;
+}
+
+/* Columna mejor precio */
+.pq-price-table td.pq-best-col {
+  background: var(--pm-gold-light) !important;
+}
+
+.pq-price-table thead th.pq-best-col {
+  background: var(--pm-gold) !important;
+}
+
+/* Hover fila: tinte dorado */
+.pq-price-table tbody tr:hover td {
+  background-color: rgba(196,154,60,0.05) !important;
+}
+
+/* Quitar el bg de striped/light en filas alternas */
+.pq-price-table tbody tr.table-light td {
+  background-color: rgba(0,0,0,0.02);
+}
+
+.pq-price-table tbody tr.table-light td.pq-best-col {
+  background: var(--pm-gold-light) !important;
+}
+
+/* ── 11. HOTELES Y FECHAS ───────────────────────────────────── */
+.pq-hotels-section {
+  background: #fff;
+}
+
+/* Header de tabla de hoteles */
+.pq-hotel-table thead {
+  background: var(--pm-navy) !important;
+  color: #fff !important;
+}
+
+.pq-hotel-table thead th {
+  color: #fff !important;
+  font-size: 0.78rem;
+  font-weight: 600;
+  letter-spacing: 0.5px;
+  text-transform: uppercase;
+}
+
+/* Boxes de años */
+.pq-year-box {
+  background: var(--pm-ivory) !important;
+}
+
+.pq-year-label {
+  color: var(--pm-gold) !important;
+}
+
+/* ── 12. PAQUETES RELACIONADOS ──────────────────────────────── */
+.pq-related-section {
+  background: var(--pm-ivory);
+}
+
+/* ── 13. CTA FINAL ──────────────────────────────────────────── */
+.pq-cta-final {
+  position: relative;
+  background: var(--pm-navy) !important;
+  overflow: hidden;
+}
+
+.pq-cta-final::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: radial-gradient(ellipse 80% 60% at 50% 110%, rgba(28,122,158,0.18) 0%, transparent 70%);
+  pointer-events: none;
+}
+
+.pq-cta-final > .container {
+  position: relative;
+  z-index: 1;
+}
+
+.pq-cta-final h2 {
+  font-family: var(--font-serif);
+  font-size: clamp(1.9rem, 3.5vw, 2.6rem);
+  font-weight: 600;
+}
+
+.pq-cta-final p {
+  color: rgba(255,255,255,0.65) !important;
+  font-size: 1.05rem;
+}
+
+.pq-cta-final .btn-brand-primary {
+  border-radius: 6px;
+  padding: 0.9rem 2.5rem;
+  font-size: 0.9rem;
+  font-weight: 700;
+  letter-spacing: 0.3px;
+}
+
+.pq-cta-final a.link-light {
+  color: rgba(255,255,255,0.5) !important;
+  transition: color 0.2s;
+}
+
+.pq-cta-final a.link-light:hover {
+  color: rgba(255,255,255,0.9) !important;
+}
+
+/* ── 14. RESPONSIVE ─────────────────────────────────────────── */
+@media (max-width: 767px) {
+  .espana-hero {
+    min-height: 440px;
+    align-items: flex-end;
+  }
+
+  .espana-hero h1 {
+    font-size: clamp(2rem, 8vw, 3rem);
+  }
+
+  .city-gallery {
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 190px;
+  }
+
+  .city-gallery .city-card:last-child {
+    display: none;
+  }
+
+  .pq-day-num {
+    width: 30px;
+    height: 30px;
+    min-width: 30px;
+    font-size: 0.8rem;
+  }
+
+  .itinerary-img {
+    height: 160px;
+  }
+
+  .pq-plus-card .pq-plus-price {
+    font-size: 2rem;
+  }
+}
+
+/* ── 15. REDUCED MOTION ─────────────────────────────────────── */
+@media (prefers-reduced-motion: reduce) {
+  .city-gallery .city-card img {
+    transition: none;
+  }
+
+  .pq-day-num {
+    transition: none;
+  }
+}

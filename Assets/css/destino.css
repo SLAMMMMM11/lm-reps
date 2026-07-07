@@ -1,0 +1,476 @@
+/* ============================================================
+   DESTINO — Páginas overview de país
+   Prefix: dt-
+   Carga solo en Pages/destinos/*.html
+   Extiende style.css sin modificarlo.
+   ============================================================ */
+
+/* ── 0. TOKENS (sin depender de paquetes-premium.css) ───────── */
+:root {
+  --dt-navy:   #0F1E2B;
+  --dt-gold:   #C49A3C;
+  --dt-ivory:  #F8F4EE;
+  --dt-muted:  #5C6775;
+  --dt-serif:  'Cormorant Garamond', Georgia, serif;
+}
+
+/* Smooth scroll global para esta página */
+html { scroll-behavior: smooth; }
+
+/* scroll-margin-top se aplica dinámicamente desde destino-gallery.js
+   para compensar la altura real de navbar + subnav */
+#resumen, #destacados, #galeria, #mas-info, #itinerarios {
+  scroll-margin-top: 138px; /* fallback hasta que JS calcule el valor real */
+}
+
+/* ── 1. HERO FULL-BLEED ──────────────────────────────────────── */
+.dt-hero {
+  position: relative;
+  height: 100vh;
+  min-height: 580px;
+  display: flex;
+  align-items: center;
+  background-size: cover;
+  background-position: center center;
+  background-attachment: fixed;
+}
+
+/* iOS no soporta fixed attachment */
+@supports (-webkit-touch-callout: none) {
+  .dt-hero { background-attachment: scroll; }
+}
+
+.dt-hero::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background:
+    linear-gradient(to right,  rgba(8,18,28,.85) 0%, rgba(8,18,28,.40) 55%, rgba(8,18,28,.10) 100%),
+    linear-gradient(to top,    rgba(8,18,28,.65) 0%, transparent 50%);
+}
+
+.dt-hero-content {
+  position: relative;
+  z-index: 1;
+  color: #fff;
+  animation: dt-rise 1.1s cubic-bezier(.16,1,.3,1) both;
+}
+
+@keyframes dt-rise {
+  from { opacity: 0; transform: translateY(30px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+
+.dt-country-eyebrow {
+  display: block;
+  font-size: .7rem;
+  font-weight: 700;
+  letter-spacing: 4px;
+  text-transform: uppercase;
+  color: var(--dt-gold);
+  margin-bottom: .9rem;
+}
+
+.dt-country-name {
+  font-family: var(--dt-serif);
+  font-size: clamp(5rem, 14vw, 11rem);
+  font-weight: 700;
+  line-height: .9;
+  letter-spacing: -3px;
+  margin-bottom: 1rem;
+}
+
+.dt-hero-tagline {
+  font-family: var(--dt-serif);
+  font-style: italic;
+  font-size: clamp(1.15rem, 2.4vw, 1.85rem);
+  font-weight: 500;
+  color: rgba(255,255,255,.8);
+  margin-bottom: 2.25rem;
+}
+
+.dt-hero-cta-group {
+  display: flex;
+  flex-wrap: wrap;
+  gap: .75rem;
+}
+
+.dt-hero-cta-group .btn {
+  border-radius: 4px;
+  font-size: .85rem;
+  font-weight: 700;
+  letter-spacing: .4px;
+  padding: .8rem 1.9rem;
+}
+
+/* Indicador de scroll */
+.dt-scroll-hint {
+  position: absolute;
+  bottom: 2rem;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 1;
+  color: rgba(255,255,255,.4);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: .2rem;
+  font-size: .6rem;
+  letter-spacing: 2.5px;
+  text-transform: uppercase;
+  animation: dt-bounce 2.2s ease infinite;
+  pointer-events: none;
+}
+
+@keyframes dt-bounce {
+  0%, 100% { transform: translateX(-50%) translateY(0); }
+  55%       { transform: translateX(-50%) translateY(7px); }
+}
+
+/* ── 2. SUBNAV FIXED LUXURY ──────────────────────────────────── */
+/* position: fixed elimina el gap con el navbar — JS controla top
+   y visibilidad (aparece al salir el hero del viewport).           */
+.dt-subnav {
+  position: fixed;
+  top: 80px;          /* JS lo sobreescribe con la altura real */
+  left: 0;
+  right: 0;
+  z-index: 899;       /* justo debajo del navbar (z-index ≥ 900) */
+  background: var(--dt-navy);
+  border-bottom: 1px solid rgba(255,255,255,.06);
+  box-shadow: 0 6px 24px rgba(0,0,0,.35);
+  /* entrada suave */
+  opacity: 0;
+  transform: translateY(-6px);
+  pointer-events: none;
+  transition: opacity .3s ease, transform .3s ease;
+}
+
+/* visible = hero ha salido del viewport */
+.dt-subnav.dt-subnav--visible {
+  opacity: 1;
+  transform: translateY(0);
+  pointer-events: auto;
+}
+
+.dt-subnav .nav {
+  flex-wrap: nowrap;
+  overflow-x: auto;
+  scrollbar-width: none;
+}
+
+.dt-subnav .nav::-webkit-scrollbar { display: none; }
+
+.dt-subnav .nav-link {
+  color: rgba(255,255,255,.42);
+  font-size: .63rem;
+  font-weight: 700;
+  letter-spacing: 2.8px;
+  text-transform: uppercase;
+  padding: 1rem 1.3rem;
+  border-bottom: 1.5px solid transparent;
+  border-radius: 0;
+  white-space: nowrap;
+  transition: color .22s, border-color .22s;
+}
+
+.dt-subnav .nav-link:hover   { color: rgba(255,255,255,.82); }
+
+.dt-subnav .nav-link.active  {
+  color: var(--dt-gold) !important;
+  border-bottom-color: var(--dt-gold) !important;
+  background: none !important;
+}
+
+/* ── 3. SECCIONES ────────────────────────────────────────────── */
+.dt-section { padding: 100px 0; }
+
+.dt-section-eyebrow {
+  display: block;
+  font-family: var(--dt-serif);
+  font-style: italic;
+  color: var(--dt-gold);
+  font-size: .85rem;
+  letter-spacing: 1px;
+  margin-bottom: .5rem;
+}
+
+.dt-section-title {
+  font-family: var(--dt-serif);
+  font-size: clamp(2rem, 3.8vw, 3rem);
+  font-weight: 700;
+  line-height: 1.08;
+  color: var(--dt-navy);
+  margin-bottom: 1.25rem;
+}
+
+.dt-section-title-center { text-align: center; }
+
+.dt-section-text {
+  font-size: 1.05rem;
+  line-height: 1.82;
+  color: var(--dt-muted);
+  max-width: 560px;
+}
+
+/* ── 4. SPLIT 2 COLUMNAS ─────────────────────────────────────── */
+.dt-split-img {
+  width: 100%;
+  height: 500px;
+  object-fit: cover;
+  border-radius: 10px;
+  display: block;
+}
+
+/* ── 5. STATS ────────────────────────────────────────────────── */
+.dt-stat-row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2rem;
+  margin-top: 2.5rem;
+  padding-top: 2rem;
+  border-top: 1px solid rgba(0,0,0,.08);
+}
+
+.dt-stat-num {
+  display: block;
+  font-family: var(--dt-serif);
+  font-size: 2.4rem;
+  font-weight: 700;
+  color: var(--dt-navy);
+  line-height: 1;
+}
+
+.dt-stat-label {
+  display: block;
+  font-size: .68rem;
+  text-transform: uppercase;
+  letter-spacing: 1.2px;
+  color: #9aa2ad;
+  margin-top: .25rem;
+}
+
+/* ── 6. GALERÍA HORIZONTAL SCROLL-SNAP ──────────────────────── */
+
+/* Outer wrapper — posición relativa para las flechas */
+.dt-gallery-outer {
+  position: relative;
+}
+
+/* Flechas prev / next */
+.dt-gallery-nav {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  z-index: 10;
+  width: 46px;
+  height: 46px;
+  border-radius: 50%;
+  background: #fff;
+  border: none;
+  box-shadow: 0 3px 14px rgba(0,0,0,.18);
+  color: var(--dt-navy);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  font-size: 1.1rem;
+  transition: background .2s, color .2s, box-shadow .2s, opacity .25s;
+}
+
+.dt-gallery-nav:hover:not(:disabled) {
+  background: var(--dt-gold);
+  color: #fff;
+  box-shadow: 0 5px 20px rgba(196,154,60,.38);
+}
+
+.dt-gallery-nav--prev { left:  1rem; }
+.dt-gallery-nav--next { right: 1rem; }
+
+/* En móvil las flechas se ocultan — el touch-drag es suficiente */
+@media (max-width: 767px) {
+  .dt-gallery-nav { display: none; }
+}
+
+.dt-gallery-wrap {
+  overflow-x: auto;
+  scroll-snap-type: x proximity;   /* menos agresivo que mandatory en desktop */
+  -webkit-overflow-scrolling: touch;
+  scrollbar-width: none;
+  cursor: grab;
+  touch-action: pan-x;             /* no bloquear scroll vertical en táctil */
+}
+
+.dt-gallery-wrap::-webkit-scrollbar { display: none; }
+.dt-gallery-wrap.dragging            { cursor: grabbing; scroll-snap-type: none; }
+
+.dt-gallery-track {
+  display: flex;
+  gap: 10px;
+  padding: 0 1.5rem;
+  width: max-content;
+}
+
+.dt-gallery-item {
+  scroll-snap-align: start;
+  flex-shrink: 0;
+  position: relative;
+  overflow: hidden;
+  border-radius: 10px;
+  width: clamp(260px, 30vw, 420px);
+  height: 300px;
+}
+
+.dt-gallery-item img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform .55s ease;
+  display: block;
+}
+
+.dt-gallery-item:hover img { transform: scale(1.05); }
+
+.dt-gallery-caption {
+  position: absolute;
+  bottom: 0; left: 0; right: 0;
+  background: linear-gradient(transparent, rgba(8,18,28,.78));
+  color: #fff;
+  padding: 2rem 1rem .85rem;
+  font-family: var(--dt-serif);
+  font-style: italic;
+  font-size: .92rem;
+}
+
+/* ── 7. HIGHLIGHT CARDS ──────────────────────────────────────── */
+.dt-highlight-card {
+  padding: 2rem 1.5rem 1.75rem;
+  border-radius: 8px;
+  background: #fff;
+  border-top: 3px solid var(--dt-gold);
+  height: 100%;
+  transition: transform .25s ease, box-shadow .25s ease;
+}
+
+.dt-highlight-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 14px 36px rgba(0,0,0,.10);
+}
+
+.dt-card-icon {
+  font-size: 1.75rem;
+  color: var(--dt-gold);
+  margin-bottom: 1rem;
+  display: block;
+}
+
+.dt-highlight-card h5 {
+  font-family: var(--dt-serif);
+  font-size: 1.2rem;
+  font-weight: 700;
+  color: var(--dt-navy);
+  margin-bottom: .45rem;
+}
+
+.dt-highlight-card p {
+  font-size: .9rem;
+  color: var(--dt-muted);
+  margin: 0;
+  line-height: 1.65;
+}
+
+/* ── 8. PULL QUOTE ───────────────────────────────────────────── */
+.dt-pull-quote {
+  font-family: var(--dt-serif);
+  font-style: italic;
+  font-size: clamp(1.3rem, 2.2vw, 1.8rem);
+  color: var(--dt-navy);
+  line-height: 1.45;
+  border-left: 3px solid var(--dt-gold);
+  padding-left: 1.4rem;
+  margin: 1.75rem 0 1.75rem;
+}
+
+/* ── 9. SEARCH BOX ───────────────────────────────────────────── */
+.dt-search-box {
+  background: var(--dt-ivory) !important;
+  border: 1px solid rgba(196,154,60,.2);
+}
+
+.dt-search-box h5 {
+  font-family: var(--dt-serif);
+  font-size: 1.35rem;
+  color: var(--dt-navy);
+}
+
+/* ── 10. CTA FINAL ───────────────────────────────────────────── */
+.dt-cta-final {
+  position: relative;
+  background: var(--dt-navy);
+  padding: 110px 0;
+  overflow: hidden;
+  text-align: center;
+  color: #fff;
+}
+
+.dt-cta-final::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: radial-gradient(ellipse 80% 55% at 50% 110%, rgba(28,122,158,.20), transparent 70%);
+  pointer-events: none;
+}
+
+.dt-cta-final > .container { position: relative; z-index: 1; }
+
+.dt-cta-final .dt-section-eyebrow { color: rgba(255,255,255,.35); }
+
+.dt-cta-final h2 {
+  font-family: var(--dt-serif);
+  font-size: clamp(2rem, 3.8vw, 3rem);
+  font-weight: 600;
+  color: #fff;
+  margin-bottom: 1rem;
+}
+
+.dt-cta-final p {
+  color: rgba(255,255,255,.6);
+  font-size: 1.05rem;
+  max-width: 480px;
+  margin: 0 auto 2.25rem;
+}
+
+.dt-cta-final .btn {
+  border-radius: 4px;
+  font-size: .88rem;
+  font-weight: 700;
+  letter-spacing: .3px;
+  padding: .9rem 2.2rem;
+}
+
+/* ── 11. FONDOS ──────────────────────────────────────────────── */
+.dt-bg-ivory { background: var(--dt-ivory); }
+
+/* ── 12. RESPONSIVE ──────────────────────────────────────────── */
+@media (max-width: 991px) {
+  .dt-section    { padding: 72px 0; }
+  .dt-split-img  { height: 360px; }
+  .dt-cta-final  { padding: 80px 0; }
+}
+
+@media (max-width: 575px) {
+  .dt-section       { padding: 52px 0; }
+  .dt-country-name  { letter-spacing: -1px; }
+  .dt-split-img     { height: 260px; }
+  .dt-cta-final     { padding: 60px 0; }
+  .dt-gallery-item  { width: 78vw; height: 220px; }
+}
+
+/* ── 13. REDUCED MOTION ──────────────────────────────────────── */
+@media (prefers-reduced-motion: reduce) {
+  .dt-hero-content  { animation: none; }
+  .dt-scroll-hint   { animation: none; }
+  .dt-gallery-item img,
+  .dt-highlight-card { transition: none; }
+  html { scroll-behavior: auto; }
+}
