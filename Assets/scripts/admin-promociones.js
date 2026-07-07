@@ -16,6 +16,12 @@ const CATEGORY_LABEL = {
   carouseleuropa: 'Europa',
 };
 
+const PAIS_OPTIONS = [
+  ['peru', 'Perú'], ['mexico', 'México'], ['espana', 'España'], ['estados-unidos', 'Estados Unidos'],
+  ['argentina', 'Argentina'], ['emiratos-arabes', 'Emiratos Árabes'], ['china', 'China'], ['japon', 'Japón'],
+  ['tailandia', 'Tailandia'], ['italia', 'Italia'],
+];
+
 // slug que se mantiene al editar (los flyers "principales" tienen slug = página).
 let currentSlug = '';
 
@@ -261,5 +267,229 @@ if (publicarBtn) {
     }
   });
 }
+
+// ---- Carga masiva de flyers ----
+// Permite seleccionar varios afiches a la vez: cada uno se sube y se pasa
+// por el mismo autocompletado con IA que el flujo individual, pero en
+// paralelo. Nada se guarda en `promotions` hasta que se revisan los datos
+// (o se corrigen a mano si la IA falló) y se hace clic en "Guardar todos".
+const bulkModalEl = document.getElementById('promocionBulkModal');
+const bulkFileInput = document.getElementById('bulkImagenUpload');
+const bulkRowsEl = document.getElementById('bulkRows');
+const bulkSummaryEl = document.getElementById('bulkSummary');
+const bulkAlertEl = document.getElementById('bulkAlert');
+const guardarBulkBtn = document.getElementById('guardarBulkBtn');
+
+let bulkItems = [];
+let bulkSeq = 0;
+
+function showBulkAlert(message, type = 'danger') {
+  bulkAlertEl.textContent = message;
+  bulkAlertEl.className = `alert alert-${type}`;
+}
+
+function bulkStatusBadge(item) {
+  if (item.status === 'uploading') return '<span class="badge bg-secondary">Subiendo...</span>';
+  if (item.status === 'processing') return '<span class="badge bg-info text-dark">Analizando con IA...</span>';
+  if (item.status === 'error') return `<span class="badge bg-danger" title="${escapeHtml(item.error || '')}">Revisar a mano</span>`;
+  return '<span class="badge bg-success">Listo</span>';
+}
+
+function updateBulkSummary() {
+  const total = bulkItems.length;
+  const done = bulkItems.filter((it) => it.status === 'ready' || it.status === 'error').length;
+  bulkSummaryEl.textContent = total ? `${done}/${total} procesados` : '';
+  guardarBulkBtn.disabled = total === 0 || bulkItems.some((it) => it.status === 'uploading' || it.status === 'processing');
+}
+
+function renderBulkRows() {
+  bulkRowsEl.innerHTML = bulkItems.map((item) => `
+    <div class="border rounded-3 p-2 d-flex gap-3 align-items-start">
+      <img src="${item.imageUrl || item.previewUrl || ''}" class="rounded border flex-shrink-0" style="width:70px;height:95px;object-fit:cover;background:#f1f3f5;">
+      <div class="flex-grow-1">
+        <div class="d-flex justify-content-between align-items-center mb-1">
+          ${bulkStatusBadge(item)}
+          <button type="button" class="btn btn-sm btn-outline-danger bulk-remove-btn" data-row-id="${item.id}"><i class="bi bi-trash"></i></button>
+        </div>
+        <div class="row g-2">
+          <div class="col-md-4">
+            <input type="text" class="form-control form-control-sm bulk-title" data-row-id="${item.id}" placeholder="Título *" value="${escapeHtml(item.title || '')}">
+          </div>
+          <div class="col-md-4">
+            <select class="form-select form-select-sm bulk-category" data-row-id="${item.id}">
+              ${Object.entries(CATEGORY_LABEL).map(([v, l]) => `<option value="${v}" ${item.category === v ? 'selected' : ''}>${l}</option>`).join('')}
+            </select>
+          </div>
+          <div class="col-md-4">
+            <input type="text" class="form-control form-control-sm bulk-destino" data-row-id="${item.id}" placeholder="Destino" value="${escapeHtml(item.destino || '')}">
+          </div>
+          <div class="col-md-4">
+            <select class="form-select form-select-sm bulk-pais" data-row-id="${item.id}">
+              <option value="">Página de país: ninguna</option>
+              ${PAIS_OPTIONS.map(([v, l]) => `<option value="${v}" ${item.pais === v ? 'selected' : ''}>${l}</option>`).join('')}
+            </select>
+          </div>
+          <div class="col-md-4">
+            <input type="text" class="form-control form-control-sm bulk-duration" data-row-id="${item.id}" placeholder="Duración" value="${escapeHtml(item.duration || '')}">
+          </div>
+          <div class="col-md-2">
+            <input type="number" class="form-control form-control-sm bulk-order" data-row-id="${item.id}" placeholder="Orden" value="${item.order ?? 0}">
+          </div>
+          <div class="col-md-2 d-flex align-items-center">
+            <div class="form-check">
+              <input class="form-check-input bulk-active" type="checkbox" data-row-id="${item.id}" ${item.active ? 'checked' : ''}>
+              <label class="form-check-label small">Activo</label>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  `).join('') || '<p class="text-muted small text-center py-4">Selecciona uno o más afiches arriba para empezar.</p>';
+
+  updateBulkSummary();
+}
+
+function resetBulkModal() {
+  bulkItems.forEach((it) => { if (it.previewUrl) URL.revokeObjectURL(it.previewUrl); });
+  bulkItems = [];
+  bulkFileInput.value = '';
+  bulkAlertEl.className = 'alert d-none';
+  renderBulkRows();
+}
+
+async function processBulkItem(item) {
+  try {
+    const path = `${Date.now()}-${item.file.name}`;
+    const { error: uploadError } = await supabase.storage.from('promo-images').upload(path, item.file);
+    if (uploadError) throw uploadError;
+    const { data } = supabase.storage.from('promo-images').getPublicUrl(path);
+    item.imageUrl = data.publicUrl;
+    item.status = 'processing';
+    renderBulkRows();
+
+    const { data: { session } } = await supabase.auth.getSession();
+    const res = await fetch('/api/extract-flyer-metadata', {
+      method: 'POST',
+      headers: { Authorization: 'Bearer ' + (session?.access_token || ''), 'content-type': 'application/json' },
+      body: JSON.stringify({ imageUrl: item.imageUrl }),
+    });
+    const sugerido = await res.json();
+    if (!res.ok) throw new Error(sugerido?.error || ('http ' + res.status));
+
+    item.title = sugerido.title || '';
+    item.category = sugerido.category || item.category;
+    item.destino = sugerido.destino || '';
+    item.pais = sugerido.pais || '';
+    item.duration = sugerido.duration || '';
+    item.description = sugerido.description || '';
+    item.highlights = Array.isArray(sugerido.highlights) ? sugerido.highlights : [];
+    item.status = 'ready';
+  } catch (e) {
+    console.error('bulk-process', item.file?.name, e);
+    item.status = 'error';
+    item.error = e.message || 'No se pudo procesar';
+  } finally {
+    renderBulkRows();
+  }
+}
+
+bulkModalEl?.addEventListener('show.bs.modal', () => { if (!bulkItems.length) resetBulkModal(); });
+
+bulkFileInput.addEventListener('change', async (e) => {
+  const files = Array.from(e.target.files || []);
+  if (!files.length) return;
+  const newItems = files.map((file) => ({
+    id: `b${Date.now()}_${bulkSeq++}`,
+    file,
+    previewUrl: URL.createObjectURL(file),
+    imageUrl: '',
+    status: 'uploading',
+    error: '',
+    title: '',
+    category: 'carouselpromos',
+    destino: '',
+    pais: '',
+    duration: '',
+    order: 0,
+    active: true,
+  }));
+  bulkItems = bulkItems.concat(newItems);
+  bulkFileInput.value = '';
+  renderBulkRows();
+  await Promise.all(newItems.map(processBulkItem));
+});
+
+// Delegación: los inputs de cada fila se re-crean al renderizar, así que
+// escuchamos en el contenedor. `input` solo actualiza el estado (sin volver
+// a renderizar) para no perder el foco mientras se escribe.
+bulkRowsEl.addEventListener('input', (e) => {
+  const id = e.target.dataset.rowId;
+  const item = bulkItems.find((it) => it.id === id);
+  if (!item) return;
+  if (e.target.classList.contains('bulk-title')) item.title = e.target.value;
+  else if (e.target.classList.contains('bulk-destino')) item.destino = e.target.value;
+  else if (e.target.classList.contains('bulk-duration')) item.duration = e.target.value;
+  else if (e.target.classList.contains('bulk-order')) item.order = Number(e.target.value) || 0;
+});
+
+bulkRowsEl.addEventListener('change', (e) => {
+  const id = e.target.dataset.rowId;
+  const item = bulkItems.find((it) => it.id === id);
+  if (!item) return;
+  if (e.target.classList.contains('bulk-category')) item.category = e.target.value;
+  else if (e.target.classList.contains('bulk-pais')) item.pais = e.target.value || null;
+  else if (e.target.classList.contains('bulk-active')) item.active = e.target.checked;
+});
+
+bulkRowsEl.addEventListener('click', (e) => {
+  const btn = e.target.closest('.bulk-remove-btn');
+  if (!btn) return;
+  const id = btn.dataset.rowId;
+  const item = bulkItems.find((it) => it.id === id);
+  if (item?.previewUrl) URL.revokeObjectURL(item.previewUrl);
+  bulkItems = bulkItems.filter((it) => it.id !== id);
+  renderBulkRows();
+});
+
+guardarBulkBtn.addEventListener('click', async () => {
+  if (!bulkItems.length) return;
+  const missingTitle = bulkItems.find((it) => !it.title?.trim());
+  if (missingTitle) { showBulkAlert('Todos los paquetes necesitan un título antes de guardar.'); return; }
+  const missingImage = bulkItems.find((it) => !it.imageUrl);
+  if (missingImage) { showBulkAlert('Espera a que todas las imágenes terminen de subirse.'); return; }
+
+  const orig = guardarBulkBtn.innerHTML;
+  guardarBulkBtn.disabled = true;
+  guardarBulkBtn.innerHTML = '<span class="spinner-border spinner-border-sm me-1" role="status" aria-hidden="true"></span>Guardando...';
+
+  const payload = bulkItems.map((it) => ({
+    category: it.category,
+    title: it.title.trim(),
+    subtitle: it.description || null,
+    description: it.description || null,
+    image_url: it.imageUrl,
+    highlights: it.highlights || [],
+    destino: it.destino?.trim() || null,
+    pais: it.pais || null,
+    duration: it.duration?.trim() || null,
+    slug: slugify(it.title) || null,
+    display_order: Number(it.order) || 0,
+    is_active: !!it.active,
+  }));
+
+  const { error } = await supabase.from('promotions').insert(payload);
+  if (error) {
+    console.error(error);
+    showBulkAlert('No se pudieron guardar. Revisa la consola e intenta de nuevo.');
+    guardarBulkBtn.disabled = false;
+    guardarBulkBtn.innerHTML = orig;
+    return;
+  }
+
+  resetBulkModal();
+  guardarBulkBtn.innerHTML = orig;
+  bootstrap.Modal.getInstance(bulkModalEl)?.hide();
+  loadPromotions();
+});
 
 await requireAdmin();

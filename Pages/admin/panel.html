@@ -191,6 +191,9 @@
               <button class="btn btn-sm btn-brand-primary border-0" id="nuevaPromoBtn" data-bs-toggle="modal" data-bs-target="#promocionModal">
                 <i class="bi bi-plus-lg me-1"></i>Agregar Paquete
               </button>
+              <button class="btn btn-sm btn-outline-primary" id="cargaMasivaBtn" data-bs-toggle="modal" data-bs-target="#promocionBulkModal">
+                <i class="bi bi-images me-1"></i>Carga masiva
+              </button>
               <button class="btn btn-sm btn-success" id="publicarBtn">
                 <i class="bi bi-cloud-arrow-up me-1"></i>Publicar cambios
               </button>
@@ -439,6 +442,33 @@
 
           <button type="button" class="btn btn-brand-primary w-100 border-0" id="guardarPromoBtn">
             <i class="bi bi-check-lg me-1"></i>Guardar promoción
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Modal: Carga masiva de flyers -->
+  <div class="modal fade" id="promocionBulkModal" tabindex="-1" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered modal-xl">
+      <div class="modal-content rounded-4">
+        <div class="modal-header">
+          <h5 class="modal-title fw-bold">Carga masiva de flyers</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+        </div>
+        <div class="modal-body">
+          <div id="bulkAlert" class="alert d-none"></div>
+          <div class="mb-3">
+            <label class="form-label small fw-bold">Selecciona varios afiches a la vez</label>
+            <input type="file" class="form-control form-control-sm" id="bulkImagenUpload" accept="image/*" multiple>
+            <div class="form-text">Sube todos los flyers de una vez. Cada uno se analiza con IA y aparece abajo para que revises los datos antes de guardar.</div>
+          </div>
+          <div id="bulkRows" class="d-flex flex-column gap-3"></div>
+        </div>
+        <div class="modal-footer">
+          <span id="bulkSummary" class="small text-muted me-auto"></span>
+          <button type="button" class="btn btn-brand-primary border-0" id="guardarBulkBtn" disabled>
+            <i class="bi bi-check-lg me-1"></i>Guardar todos
           </button>
         </div>
       </div>
