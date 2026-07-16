@@ -14,6 +14,16 @@ module.exports = [
     countries: ['espana'],
   },
   {
+    slug: 'espana-encantadora',
+    title: 'España Encantadora',
+    subtitle: 'Madrid, Andalucía, Valencia y Barcelona — salidas los sábados.',
+    image: 'https://images.unsplash.com/photo-1583422409516-2895a77efded?q=80&w=800',
+    duration: '10 u 11 días',
+    regionKey: 'carouseleuropa',
+    destino: 'España',
+    countries: ['espana'],
+  },
+  {
     slug: 'espana-y-portugal',
     title: 'España y Portugal',
     subtitle: 'Madrid, Salamanca, Santiago, Oporto, Lisboa, Andalucía, Valencia y Barcelona — salidas los domingos.',
