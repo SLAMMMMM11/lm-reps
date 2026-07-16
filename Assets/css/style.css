@@ -9,6 +9,12 @@
         --font-display: 'Outfit', sans-serif;
     }
 
+    /* Corta el desborde horizontal en móvil (ej. columnas AOS aún
+       trasladadas antes de animar) sin romper position:sticky/fixed. */
+    html, body {
+        overflow-x: clip;
+    }
+
     body {
         font-family: var(--font-body);
         color: var(--text-dark);
