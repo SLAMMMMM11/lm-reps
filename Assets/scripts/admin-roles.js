@@ -1,5 +1,4 @@
 import { supabase } from './supabase-client.js';
-import { requireSuperAdmin } from './auth-guard.js';
 
 const tableBody = document.getElementById('adminsTableBody');
 const alertBox = document.getElementById('adminRolesAlert');
@@ -89,20 +88,34 @@ async function quitarAdmin(id) {
   await loadAdmins();
 }
 
-form.addEventListener('submit', async (e) => {
-  e.preventDefault();
-  alertBox.className = 'alert d-none';
-  submitBtn.disabled = true;
-  try {
-    await asignarRol(emailInput.value.trim(), roleSelect.value);
-  } catch (err) {
-    console.error(err);
-    showAlert('No se pudo asignar el rol. Intenta de nuevo.');
-  } finally {
-    submitBtn.disabled = false;
+// Este script maneja solo la pestaña "Gestión de admins" del panel, asi que
+// NO debe redirigir a nadie: para roles admin/asesor la pestaña ya esta
+// oculta (applyRoleVisibility en admin.js), y expulsarlos desde aqui los
+// atrapaba en un bucle /admin <-> /cuenta. La proteccion real la dan RLS y
+// el trigger de la base de datos; aqui solo se decide si se activa la UI.
+const { data: { session } } = await supabase.auth.getSession();
+if (session) {
+  const { data: profile } = await supabase
+    .from('profiles')
+    .select('is_admin, admin_role')
+    .eq('id', session.user.id)
+    .single();
+
+  if (profile?.is_admin && profile.admin_role === 'super_admin') {
+    form.addEventListener('submit', async (e) => {
+      e.preventDefault();
+      alertBox.className = 'alert d-none';
+      submitBtn.disabled = true;
+      try {
+        await asignarRol(emailInput.value.trim(), roleSelect.value);
+      } catch (err) {
+        console.error(err);
+        showAlert('No se pudo asignar el rol. Intenta de nuevo.');
+      } finally {
+        submitBtn.disabled = false;
+      }
+    });
+
+    document.addEventListener('admin:show-admins', loadAdmins);
   }
-});
-
-document.addEventListener('admin:show-admins', loadAdmins);
-
-await requireSuperAdmin();
+}

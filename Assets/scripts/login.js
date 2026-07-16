@@ -11,6 +11,14 @@ function showAlert(message, type = 'danger') {
   alertBox.className = `alert alert-${type}`;
 }
 
+// Si el guard de una pagina protegida te trajo aqui, ?next= guarda a donde
+// volver tras el login. Solo se aceptan rutas internas (que empiecen con "/"
+// pero no "//") para que nadie pueda armar un enlace que redirija afuera.
+function postLoginDestination() {
+  const next = new URLSearchParams(window.location.search).get('next');
+  return next && next.startsWith('/') && !next.startsWith('//') ? next : '/cuenta';
+}
+
 async function goToAccountIfFullyAuthenticated() {
   const { data, error } = await supabase.auth.mfa.getAuthenticatorAssuranceLevel();
   if (error) return false;
@@ -21,7 +29,7 @@ async function goToAccountIfFullyAuthenticated() {
     return false;
   }
 
-  window.location.href = '/cuenta';
+  window.location.href = postLoginDestination();
   return true;
 }
 
@@ -106,5 +114,5 @@ mfaForm.addEventListener('submit', async (e) => {
     return;
   }
 
-  window.location.href = '/cuenta';
+  window.location.href = postLoginDestination();
 });

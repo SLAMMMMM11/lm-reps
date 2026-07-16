@@ -7,22 +7,41 @@ import { supabase } from './supabase-client.js';
 export async function requireAuth(loginPath = '/login') {
   const { data: { session } } = await supabase.auth.getSession();
   if (!session) {
-    window.location.href = loginPath;
+    // next= permite que el login te devuelva a la pagina que intentabas abrir.
+    const next = encodeURIComponent(window.location.pathname + window.location.search);
+    window.location.href = `${loginPath}?next=${next}`;
     return null;
   }
   return session;
+}
+
+// Un error en la consulta del perfil NO significa "no es admin": puede ser
+// un fallo transitorio (token venciendo justo al cargar la pagina, red).
+// Se reintenta una vez con la sesion renovada antes de decidir; sin esto,
+// el guard expulsaba admins legitimos y provocaba rebotes entre paginas.
+async function fetchOwnProfile(userId, columns) {
+  let { data: profile, error } = await supabase
+    .from('profiles')
+    .select(columns)
+    .eq('id', userId)
+    .single();
+
+  if (error) {
+    await supabase.auth.refreshSession();
+    ({ data: profile, error } = await supabase
+      .from('profiles')
+      .select(columns)
+      .eq('id', userId)
+      .single());
+  }
+  return { profile, error };
 }
 
 export async function requireAdmin(dashboardPath = '/cuenta', loginPath = '/login') {
   const session = await requireAuth(loginPath);
   if (!session) return null;
 
-  const { data: profile, error } = await supabase
-    .from('profiles')
-    .select('is_admin')
-    .eq('id', session.user.id)
-    .single();
-
+  const { profile, error } = await fetchOwnProfile(session.user.id, 'is_admin');
   if (error || !profile?.is_admin) {
     window.location.href = dashboardPath;
     return null;
@@ -34,14 +53,12 @@ export async function requireSuperAdmin(dashboardPath = '/cuenta', loginPath = '
   const session = await requireAuth(loginPath);
   if (!session) return null;
 
-  const { data: profile, error } = await supabase
-    .from('profiles')
-    .select('is_admin, admin_role')
-    .eq('id', session.user.id)
-    .single();
-
+  const { profile, error } = await fetchOwnProfile(session.user.id, 'is_admin, admin_role');
   if (error || !profile?.is_admin || profile.admin_role !== 'super_admin') {
-    window.location.href = dashboardPath;
+    // Un admin sin rango super_admin pertenece al panel admin, no a /cuenta:
+    // mandarlo a /cuenta lo devuelve aqui en bucle (dashboard.js redirige
+    // admins a /admin).
+    window.location.href = profile?.is_admin ? '/admin' : dashboardPath;
     return null;
   }
   return session;
