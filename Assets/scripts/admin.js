@@ -35,7 +35,10 @@ let profiles = [];
 let accounts = [];
 
 async function loadProfiles() {
-  const { data, error } = await supabase.from('profiles').select('id, full_name, phone, email, is_admin');
+  const { data, error } = await supabase
+    .from('profiles')
+    .select('id, full_name, phone, email, is_admin, created_at')
+    .order('created_at', { ascending: false });
   if (error) { console.error(error); return []; }
   return data;
 }
@@ -87,20 +90,21 @@ function renderClientes() {
     }
   }
 
-  const customersWithAccounts = profiles.filter((p) => byCustomer.has(p.id));
+  const clientes = profiles.filter((p) => !p.is_admin);
 
-  clientesTableBody.innerHTML = customersWithAccounts.map((p) => {
+  clientesTableBody.innerHTML = clientes.map((p) => {
     const agg = byCustomer.get(p.id);
     return `
       <tr>
         <td>${escapeHtml(p.full_name)}<br><span class="small text-muted">${escapeHtml(p.email)}</span></td>
         <td>${escapeHtml(p.phone)}</td>
-        <td>${formatMoney(agg.pending)}</td>
-        <td>${agg.overdue > 0 ? `<span class="text-danger fw-bold">${formatMoney(agg.overdue)}</span>` : '—'}</td>
+        <td class="small text-muted">${new Date(p.created_at).toLocaleDateString('es-PE')}</td>
+        <td>${agg ? formatMoney(agg.pending) : '<span class="badge bg-light text-muted border">Sin crédito</span>'}</td>
+        <td>${agg && agg.overdue > 0 ? `<span class="text-danger fw-bold">${formatMoney(agg.overdue)}</span>` : '—'}</td>
         <td><a href="/admin/cliente?id=${p.id}" class="btn btn-sm btn-outline-secondary">Ver / Gestionar</a></td>
       </tr>
     `;
-  }).join('') || '<tr><td colspan="5" class="text-center text-muted py-4">Sin clientes con cuentas de crédito aún</td></tr>';
+  }).join('') || '<tr><td colspan="6" class="text-center text-muted py-4">Aún no hay clientes registrados</td></tr>';
 }
 
 function populateClienteSelect() {
