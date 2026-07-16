@@ -125,6 +125,29 @@ function buildPage(pkg, related) {
                         </a>
                     </div>`).join('');
 
+  // Datos estructurados para Google (TouristTrip + migas de pan)
+  const ldJson = JSON.stringify([
+    {
+      '@context': 'https://schema.org',
+      '@type': 'TouristTrip',
+      name: pkg.title,
+      description: desc,
+      image: pkg.image,
+      url: canonical,
+      touristType: 'Viajeros desde Perú',
+      provider: { '@type': 'TravelAgency', name: 'Viajes LM-REPS', url: 'https://lm-reps.com', telephone: '+51 987 594 032' },
+    },
+    {
+      '@context': 'https://schema.org',
+      '@type': 'BreadcrumbList',
+      itemListElement: [
+        { '@type': 'ListItem', position: 1, name: 'Inicio', item: 'https://lm-reps.com/' },
+        { '@type': 'ListItem', position: 2, name: 'Paquetes', item: 'https://lm-reps.com/paquetes' },
+        { '@type': 'ListItem', position: 3, name: pkg.title, item: canonical },
+      ],
+    },
+  ]).replace(/</g, '\\u003c');
+
   const relatedSection = related.length ? `
         <section class="section-padding bg-white">
             <div class="container">
@@ -169,6 +192,7 @@ function buildPage(pkg, related) {
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
     <link rel="stylesheet" href="../../Assets/css/style.css">
+    <script type="application/ld+json">${ldJson}</script>
 </head>
 
 <body>
@@ -523,8 +547,9 @@ ${relatedSection}
   const sitemapPath = path.join(ROOT, 'sitemap.xml');
   let xml = fs.readFileSync(sitemapPath, 'utf8');
   xml = xml.replace(/\s*<url>\s*<loc>https:\/\/lm-reps\.com\/paquete\/[^<]*<\/loc>[\s\S]*?<\/url>/g, '');
+  const hoy = new Date().toISOString().slice(0, 10);
   const block = packages.map((p) =>
-    `  <url>\n    <loc>https://lm-reps.com/paquete/${p.slug}</loc>\n    <changefreq>monthly</changefreq>\n    <priority>0.6</priority>\n  </url>`
+    `  <url>\n    <loc>https://lm-reps.com/paquete/${p.slug}</loc>\n    <lastmod>${hoy}</lastmod>\n    <changefreq>monthly</changefreq>\n    <priority>0.6</priority>\n  </url>`
   ).join('\n');
   xml = xml.replace('</urlset>', block + '\n</urlset>');
   fs.writeFileSync(sitemapPath, xml);

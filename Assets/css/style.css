@@ -1645,6 +1645,26 @@
     animation-play-state: paused;
 }
 
+/* Modo interactivo (dest-marquee.js): scroll arrastrable reemplaza a la
+   animación CSS; sin JS la cinta conserva el marquee automático de arriba. */
+.dest-marquee.dest-marquee--drag {
+    overflow-x: auto;
+    scrollbar-width: none;
+    cursor: grab;
+}
+
+.dest-marquee.dest-marquee--drag::-webkit-scrollbar {
+    display: none;
+}
+
+.dest-marquee.dest-marquee--drag .dest-track {
+    animation: none;
+}
+
+.dest-marquee.dest-marquee--drag.dragging {
+    cursor: grabbing;
+}
+
 @keyframes dest-scroll {
     from {
         transform: translateX(0);
