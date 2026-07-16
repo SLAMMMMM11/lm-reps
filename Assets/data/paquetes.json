@@ -1,9 +1,24 @@
 [
   {
+    "slug": "circuitos-usa-2026-06",
+    "title": "Circuitos USA 2026 - 06",
+    "subtitle": "Explora las ciudades más emblemáticas de Estados Unidos con circuitos especializados por la Costa Este y Las Vegas.",
+    "image": "https://fwpuzvevenwhylryljjh.supabase.co/storage/v1/object/public/promo-images/1782412021632-WhatsApp%20Image%202026-06-23%20at%203.56.00%20AM.jpeg",
+    "images": [
+      "https://fwpuzvevenwhylryljjh.supabase.co/storage/v1/object/public/promo-images/1782412021632-WhatsApp%20Image%202026-06-23%20at%203.56.00%20AM.jpeg"
+    ],
+    "region": "Norteamérica",
+    "regionKey": "carouselnorteamerica",
+    "destino": "Estados Unidos",
+    "countries": [
+      "estados-unidos"
+    ]
+  },
+  {
     "slug": "usa-los-angeles-las-vegas-gran-canon",
     "title": "Los Ángeles, Las Vegas y el Gran Cañón",
     "subtitle": "Lo mejor del oeste americano en un solo viaje.",
-    "image": "https://i.postimg.cc/fygYthsP/Angeles-Vegas-Canon-USA.jpg",
+    "image": "https://i.postimg.cc/vm3bfzSS/Angeles-Vegas-Canon-USA.jpg",
     "images": [
       "https://i.postimg.cc/fygYthsP/Angeles-Vegas-Canon-USA.jpg",
       "https://i.postimg.cc/vm3bfzSS/Angeles-Vegas-Canon-USA.jpg"
@@ -22,21 +37,6 @@
     "image": "https://i.postimg.cc/nzrZkDyG/Mundial-2026.jpg",
     "images": [
       "https://i.postimg.cc/nzrZkDyG/Mundial-2026.jpg"
-    ],
-    "region": "Norteamérica",
-    "regionKey": "carouselnorteamerica",
-    "destino": "Estados Unidos",
-    "countries": [
-      "estados-unidos"
-    ]
-  },
-  {
-    "slug": "circuitos-usa",
-    "title": "Circuitos Turísticos por USA",
-    "subtitle": "Varias rutas para descubrir lo mejor de Estados Unidos.",
-    "image": "https://i.postimg.cc/MT319HDh/NA-Circuitos-Turisticos-USA.jpg",
-    "images": [
-      "https://i.postimg.cc/MT319HDh/NA-Circuitos-Turisticos-USA.jpg"
     ],
     "region": "Norteamérica",
     "regionKey": "carouselnorteamerica",
@@ -132,8 +132,7 @@
     "regionKey": "carouselasia",
     "destino": "China y Japón",
     "countries": [
-      "china",
-      "japon"
+      "china"
     ]
   },
   {
@@ -185,7 +184,7 @@
     "slug": "mega-turquia-y-dubai",
     "title": "Mega Turquía y Dubái",
     "subtitle": "Estambul, Capadocia y el brillo de Dubái.",
-    "image": "https://i.postimg.cc/HLCX7zGb/Turquia-y-Dubai.jpg",
+    "image": "https://i.postimg.cc/xCZQFdQP/Turquia-y-Dubai.jpg",
     "images": [
       "https://i.postimg.cc/HLCX7zGb/Turquia-y-Dubai.jpg",
       "https://i.postimg.cc/xCZQFdQP/Turquia-y-Dubai.jpg"
@@ -261,15 +260,14 @@
     "regionKey": "carouseleuropa",
     "destino": "Europa",
     "countries": [
-      "espana",
-      "italia"
+      "espana"
     ]
   },
   {
     "slug": "gran-tour-de-europa",
     "title": "Gran Tour de Europa",
     "subtitle": "Las capitales imprescindibles del viejo continente.",
-    "image": "https://i.postimg.cc/JzXjng2N/Gran-Tour-Europa.jpg",
+    "image": "https://i.postimg.cc/k4G9cb0D/Gran-Tour-Europa.jpg",
     "images": [
       "https://i.postimg.cc/JzXjng2N/Gran-Tour-Europa.jpg",
       "https://i.postimg.cc/k4G9cb0D/Gran-Tour-Europa.jpg"
@@ -278,8 +276,7 @@
     "regionKey": "carouseleuropa",
     "destino": "Europa",
     "countries": [
-      "espana",
-      "italia"
+      "espana"
     ]
   },
   {
@@ -294,8 +291,7 @@
     "regionKey": "carouseleuropa",
     "destino": "Europa",
     "countries": [
-      "espana",
-      "italia"
+      "espana"
     ]
   },
   {
@@ -310,8 +306,7 @@
     "regionKey": "carouseleuropa",
     "destino": "Europa",
     "countries": [
-      "espana",
-      "italia"
+      "espana"
     ]
   },
   {
@@ -372,7 +367,7 @@
     "slug": "carnavales-peruanos",
     "title": "Carnavales Peruanos",
     "subtitle": "Vive la fiesta y la tradición del Perú.",
-    "image": "https://i.postimg.cc/3JdXMWCQ/Carnavales-Peruanos.jpg",
+    "image": "https://i.postimg.cc/rsz612tg/Carnavales-Peruanos.jpg",
     "images": [
       "https://i.postimg.cc/3JdXMWCQ/Carnavales-Peruanos.jpg",
       "https://i.postimg.cc/rsz612tg/Carnavales-Peruanos.jpg"
