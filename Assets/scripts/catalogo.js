@@ -1,6 +1,7 @@
-// Catálogo de paquetes (/paquetes): lee el manifiesto generado y filtra por
-// continente (region) y país (destino). Acepta ?region=asia en la URL para
-// entrar prefiltrado desde el mega-menú "Destinos".
+// Catálogo de paquetes (/paquetes): muestra SOLO los paquetes con página hecha
+// a mano (custom, creados desde los PDF del mayorista — ej. Colores de España);
+// los afiches/flyers viven en /promociones. Filtra por continente (region) y
+// país (destino); acepta ?region=asia en la URL.
 (function () {
   const grid = document.getElementById('catalogoGrid');
   if (!grid) return;
@@ -74,7 +75,7 @@
   fetch('/Assets/data/paquetes.json')
     .then((r) => (r.ok ? r.json() : []))
     .then((list) => {
-      all = list || [];
+      all = (list || []).filter((p) => p.custom);
       const sp = new URLSearchParams(location.search).get('region');
       if (sp && REGION_SLUG[sp.toLowerCase()]) region = REGION_SLUG[sp.toLowerCase()];
       renderChips();

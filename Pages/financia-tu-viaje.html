@@ -50,7 +50,23 @@
                 <div class="collapse navbar-collapse" id="navbarNav">
                     <ul class="navbar-nav ms-auto align-items-center gap-1">
                         <li class="nav-item"><a class="nav-link" href="/">Inicio</a></li>
+                        <li class="nav-item dropdown" id="navDestinos">
+                          <a class="nav-link dropdown-toggle" href="#" id="navDestinosToggle" role="button" data-bs-toggle="dropdown" aria-expanded="false">Destinos</a>
+                          <ul class="dropdown-menu border-0 shadow-sm" aria-labelledby="navDestinosToggle" id="navDestinosMenu">
+                            <li data-country="peru"><a class="dropdown-item" href="/destinos/peru">Perú</a></li>
+                            <li data-country="mexico"><a class="dropdown-item" href="/destinos/mexico">México</a></li>
+                            <li data-country="espana"><a class="dropdown-item" href="/destinos/espana">España</a></li>
+                            <li data-country="estados-unidos"><a class="dropdown-item" href="/destinos/estados-unidos">Estados Unidos</a></li>
+                            <li data-country="argentina"><a class="dropdown-item" href="/destinos/argentina">Argentina</a></li>
+                            <li data-country="emiratos-arabes"><a class="dropdown-item" href="/destinos/emiratos-arabes">Emiratos Árabes</a></li>
+                            <li data-country="china"><a class="dropdown-item" href="/destinos/china">China</a></li>
+                            <li data-country="japon"><a class="dropdown-item" href="/destinos/japon">Japón</a></li>
+                            <li data-country="tailandia"><a class="dropdown-item" href="/destinos/tailandia">Tailandia</a></li>
+                            <li data-country="italia"><a class="dropdown-item" href="/destinos/italia">Italia</a></li>
+                          </ul>
+                        </li>
                         <li class="nav-item"><a class="nav-link" href="/paquetes">Paquetes</a></li>
+                        <li class="nav-item"><a class="nav-link" href="/promociones">Promociones</a></li>
                         <li class="nav-item"><a class="nav-link" href="/informacion-de-viaje">Información de viaje</a></li>
                         <li class="nav-item"><a class="nav-link" href="/contactanos">Contáctanos</a></li>
                         <li class="nav-item dropdown account-dropdown ms-lg-1" id="navAccount">
@@ -220,6 +236,7 @@
     <script type="module" src="../Assets/scripts/nav-session.js"></script>
     <script src="../Assets/scripts/navbar-scroll.js" defer></script>
   <script src="/Assets/scripts/asesor-fab.js" defer></script>
+  <script src="/Assets/scripts/nav-destinos.js" defer></script>
 </body>
 
 </html>

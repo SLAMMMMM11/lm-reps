@@ -10,19 +10,19 @@
   <meta name="apple-mobile-web-app-title" content="Viajes LM" />
   <link rel="manifest" href="/site.webmanifest" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Paquetes de viaje | VIAJES LM-REPS</title>
-  <meta name="description" content="Explora nuestros paquetes de viaje por continente y país: Norteamérica, Caribe, Sudamérica, Asia y Europa. Cotiza con financiamiento propio en Viajes LM-REPS.">
-  <link rel="canonical" href="https://lm-reps.com/paquetes">
+  <title>Promociones y ofertas de viaje | VIAJES LM-REPS</title>
+  <meta name="description" content="Las promociones y ofertas de viaje vigentes de Viajes LM-REPS: afiches con destinos, fechas y beneficios. Cotiza por WhatsApp con financiamiento propio.">
+  <link rel="canonical" href="https://lm-reps.com/promociones">
   <meta property="og:type" content="website">
   <meta property="og:locale" content="es_PE">
   <meta property="og:site_name" content="Viajes LM-REPS">
-  <meta property="og:title" content="Paquetes de viaje | VIAJES LM-REPS">
-  <meta property="og:description" content="Explora nuestros paquetes por continente y país. Cotiza con financiamiento propio.">
-  <meta property="og:url" content="https://lm-reps.com/paquetes">
+  <meta property="og:title" content="Promociones y ofertas de viaje | VIAJES LM-REPS">
+  <meta property="og:description" content="Las promociones vigentes: afiches con destinos, fechas y beneficios. Cotiza por WhatsApp.">
+  <meta property="og:url" content="https://lm-reps.com/promociones">
   <meta property="og:image" content="https://lm-reps.com/Assets/img/og-cover.png">
   <meta name="twitter:card" content="summary_large_image">
-  <meta name="twitter:title" content="Paquetes de viaje | VIAJES LM-REPS">
-  <meta name="twitter:description" content="Explora nuestros paquetes por continente y país.">
+  <meta name="twitter:title" content="Promociones y ofertas de viaje | VIAJES LM-REPS">
+  <meta name="twitter:description" content="Las promociones vigentes: afiches con destinos, fechas y beneficios.">
   <meta name="twitter:image" content="https://lm-reps.com/Assets/img/og-cover.png">
 
   <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -59,8 +59,8 @@
                 <li data-country="italia"><a class="dropdown-item" href="/destinos/italia">Italia</a></li>
               </ul>
             </li>
-            <li class="nav-item"><a class="nav-link active" href="/paquetes">Paquetes</a></li>
-            <li class="nav-item"><a class="nav-link" href="/promociones">Promociones</a></li>
+            <li class="nav-item"><a class="nav-link" href="/paquetes">Paquetes</a></li>
+            <li class="nav-item"><a class="nav-link active" href="/promociones">Promociones</a></li>
             <li class="nav-item"><a class="nav-link" href="/informacion-de-viaje">Información de viaje</a></li>
             <li class="nav-item"><a class="nav-link" href="/contactanos">Contáctanos</a></li>
             <li class="nav-item dropdown account-dropdown ms-lg-1" id="navAccount">
@@ -87,23 +87,19 @@
   <main>
     <section class="paquete-hero">
       <div class="container">
-        <p class="paquete-eyebrow">Catálogo</p>
-        <h1 class="paquete-title">Nuestros Paquetes</h1>
-        <p class="lead mb-0">Elige por continente o país y arma tu próximo viaje. Fechas y precios los confirma tu asesor.</p>
+        <p class="paquete-eyebrow">Ofertas vigentes</p>
+        <h1 class="paquete-title">Promociones</h1>
+        <p class="lead mb-0">Los afiches con las ofertas activas de la agencia. Toca uno para ampliarlo o cotizar por WhatsApp.</p>
       </div>
     </section>
 
     <section class="section-padding bg-light">
       <div class="container">
         <div class="catalogo-filters">
-          <div class="catalogo-chips" id="catalogoRegions"></div>
-          <div class="catalogo-pais">
-            <label class="form-label small fw-bold mb-1">País</label>
-            <select class="form-select" id="catalogoPais"><option value="Todos">Todos los países</option></select>
-          </div>
+          <div class="catalogo-chips" id="promosChips"></div>
         </div>
-        <p class="text-muted small mt-3 mb-4"><span id="catalogoCount">—</span></p>
-        <div class="row g-4" id="catalogoGrid"></div>
+        <p class="text-muted small mt-3 mb-4"><span id="promosCount">Cargando promociones...</span></p>
+        <div class="row g-4" id="promosGrid"></div>
       </div>
     </section>
   </main>
@@ -127,6 +123,7 @@
           <ul class="list-unstyled small">
             <li><a href="/">Inicio</a></li>
             <li><a href="/paquetes">Paquetes</a></li>
+            <li><a href="/promociones">Promociones</a></li>
             <li><a href="/informacion-de-viaje">Información de viaje</a></li>
             <li><a href="/libro-de-reclamaciones">Libro de Reclamaciones</a></li>
           </ul>
@@ -145,6 +142,18 @@
       <div class="text-center small opacity-50">VIAJES LM-REPS &copy; 2024 Todos los derechos reservados.</div>
     </div>
   </footer>
+
+  <!-- MODAL DE PREVIEW -->
+  <div class="modal fade" id="previewModal" tabindex="-1" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered modal-xl">
+      <div class="modal-content" style="background: rgba(0,0,0,0.9); border: none;">
+        <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" style="position: absolute; right: 15px; top: 15px; z-index: 10;"></button>
+        <div class="modal-body p-0 text-center">
+          <img src="" id="fullResImage" class="img-fluid img-preview-custom" alt="Vista previa">
+        </div>
+      </div>
+    </div>
+  </div>
 
   <!-- Widget flotante de asesora -->
   <div class="asesor-fab" id="asesorFab">
@@ -171,8 +180,8 @@
   <script type="module" src="../Assets/scripts/nav-session.js"></script>
   <script src="../Assets/scripts/navbar-scroll.js" defer></script>
   <script src="/Assets/scripts/asesor-fab.js" defer></script>
-  <script src="../Assets/scripts/catalogo.js" defer></script>
   <script src="/Assets/scripts/nav-destinos.js" defer></script>
+  <script type="module" src="../Assets/scripts/promociones.js"></script>
 </body>
 
 </html>

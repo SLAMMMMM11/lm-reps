@@ -44,7 +44,23 @@
                 <div class="collapse navbar-collapse" id="navbarNav">
                     <ul class="navbar-nav ms-auto align-items-center gap-1">
                         <li class="nav-item"><a class="nav-link" href="/">Inicio</a></li>
+                        <li class="nav-item dropdown" id="navDestinos">
+                            <a class="nav-link dropdown-toggle" href="#" id="navDestinosToggle" role="button" data-bs-toggle="dropdown" aria-expanded="false">Destinos</a>
+                            <ul class="dropdown-menu border-0 shadow-sm" aria-labelledby="navDestinosToggle" id="navDestinosMenu">
+                                <li data-country="peru"><a class="dropdown-item" href="/destinos/peru">Perú</a></li>
+                                <li data-country="mexico"><a class="dropdown-item" href="/destinos/mexico">México</a></li>
+                                <li data-country="espana"><a class="dropdown-item" href="/destinos/espana">España</a></li>
+                                <li data-country="estados-unidos"><a class="dropdown-item" href="/destinos/estados-unidos">Estados Unidos</a></li>
+                                <li data-country="argentina"><a class="dropdown-item" href="/destinos/argentina">Argentina</a></li>
+                                <li data-country="emiratos-arabes"><a class="dropdown-item" href="/destinos/emiratos-arabes">Emiratos Árabes</a></li>
+                                <li data-country="china"><a class="dropdown-item" href="/destinos/china">China</a></li>
+                                <li data-country="japon"><a class="dropdown-item" href="/destinos/japon">Japón</a></li>
+                                <li data-country="tailandia"><a class="dropdown-item" href="/destinos/tailandia">Tailandia</a></li>
+                                <li data-country="italia"><a class="dropdown-item" href="/destinos/italia">Italia</a></li>
+                            </ul>
+                        </li>
                         <li class="nav-item"><a class="nav-link" href="/paquetes">Paquetes</a></li>
+                        <li class="nav-item"><a class="nav-link" href="/promociones">Promociones</a></li>
                         <li class="nav-item"><a class="nav-link" href="/informacion-de-viaje">Información de viaje</a></li>
                         <li class="nav-item"><a class="nav-link" href="/contactanos">Contáctanos</a></li>
                         <li class="nav-item dropdown account-dropdown ms-lg-1" id="navAccount">
@@ -127,10 +143,10 @@
                         </a>
                     </div>
                     <div class="col-6 col-md-4 col-lg-3">
-                        <a href="/paquete/china-clasica-y-tokio" class="flyer-card text-decoration-none d-block">
+                        <a href="/paquete/mega-turquia-y-dubai" class="flyer-card text-decoration-none d-block">
                             <div class="flyer-card-media">
-                                <img src="https://i.postimg.cc/ZqKFwbVd/China-Tokio.jpg" alt="China Clásica y Tokio" loading="lazy" class="flyer-card-img">
-                                <h3 class="flyer-card-title">China Clásica y Tokio</h3>
+                                <img src="https://i.postimg.cc/xCZQFdQP/Turquia-y-Dubai.jpg" alt="Mega Turquía y Dubái" loading="lazy" class="flyer-card-img">
+                                <h3 class="flyer-card-title">Mega Turquía y Dubái</h3>
                             </div>
                             <div class="flyer-card-body">
                                 <span class="flyer-card-link">Ver paquete →</span>
@@ -138,10 +154,10 @@
                         </a>
                     </div>
                     <div class="col-6 col-md-4 col-lg-3">
-                        <a href="/paquete/corea-y-japon-tradicional" class="flyer-card text-decoration-none d-block">
+                        <a href="/paquete/india-triangulo-dorado" class="flyer-card text-decoration-none d-block">
                             <div class="flyer-card-media">
-                                <img src="https://i.postimg.cc/zfXSxz0W/Corea-Japon.jpg" alt="Corea y Japón Tradicional" loading="lazy" class="flyer-card-img">
-                                <h3 class="flyer-card-title">Corea y Japón Tradicional</h3>
+                                <img src="https://i.postimg.cc/q7MX1Jjy/India-triangulo-dorado-7d.jpg" alt="India — Triángulo Dorado" loading="lazy" class="flyer-card-img">
+                                <h3 class="flyer-card-title">India — Triángulo Dorado</h3>
                             </div>
                             <div class="flyer-card-body">
                                 <span class="flyer-card-link">Ver paquete →</span>
@@ -149,10 +165,10 @@
                         </a>
                     </div>
                     <div class="col-6 col-md-4 col-lg-3">
-                        <a href="/paquete/corea-pekin-y-shanghai" class="flyer-card text-decoration-none d-block">
+                        <a href="/paquete/india-triangulo-dorado-con-varanasi" class="flyer-card text-decoration-none d-block">
                             <div class="flyer-card-media">
-                                <img src="https://i.postimg.cc/HLs46YBM/Coreo-Pekin-Shangai.jpg" alt="Corea con Pekín y Shanghái" loading="lazy" class="flyer-card-img">
-                                <h3 class="flyer-card-title">Corea con Pekín y Shanghái</h3>
+                                <img src="https://i.postimg.cc/TPYqtdC9/India-triangulo-dorado-con-varanasi.jpg" alt="India — Triángulo Dorado con Varanasi" loading="lazy" class="flyer-card-img">
+                                <h3 class="flyer-card-title">India — Triángulo Dorado con Varanasi</h3>
                             </div>
                             <div class="flyer-card-body">
                                 <span class="flyer-card-link">Ver paquete →</span>
@@ -296,6 +312,7 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
     <script type="module" src="../../Assets/scripts/nav-session.js"></script>
     <script src="../../Assets/scripts/navbar-scroll.js" defer></script>
+    <script src="/Assets/scripts/nav-destinos.js" defer></script>
     <script src="/Assets/scripts/asesor-fab.js" defer></script>
     <script type="module" src="../../Assets/scripts/solicitud.js"></script>
     <script>

@@ -1,8 +1,8 @@
-// Grilla "Paquetes a {país}" en las páginas de país (/destinos/...).
-// Lee el manifiesto generado (Assets/data/paquetes.json), filtra por el país
-// (data-country del contenedor) y pinta tarjetas-afiche que enlazan a la página
-// de cada paquete /paquete/{slug}. La sección está oculta (d-none) hasta que hay
-// resultados, así no se muestra un encabezado vacío.
+// Grilla "Itinerarios a {país}" en las páginas de país (/destinos/...).
+// Muestra SOLO los paquetes con página hecha a mano (custom, ej. Colores de
+// España, creados desde los PDF del mayorista) — los afiches/flyers van en su
+// propia sección al final de la página (destino-flyers.js). La sección está
+// oculta (d-none) hasta que hay resultados.
 (function () {
   const grid = document.getElementById('paquetesPais');
   if (!grid) return;
@@ -20,7 +20,7 @@
     .then((r) => (r.ok ? r.json() : []))
     .then((list) => {
       const items = (list || []).filter(
-        (p) => Array.isArray(p.countries) && p.countries.includes(country)
+        (p) => p.custom && Array.isArray(p.countries) && p.countries.includes(country)
       );
       if (!items.length) return;
       grid.innerHTML = items

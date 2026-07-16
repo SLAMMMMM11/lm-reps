@@ -64,6 +64,15 @@ const DESTINO_BY_SLUG = {
 };
 const WA = '51987594032';
 
+// Dropdown "Destinos" del navbar (mismos 10 países de PAIS_OPTIONS del panel;
+// nav-destinos.js oculta en runtime los que no tienen paquetes).
+const NAV_DESTINOS = `<li class="nav-item dropdown" id="navDestinos">
+                            <a class="nav-link dropdown-toggle" href="#" id="navDestinosToggle" role="button" data-bs-toggle="dropdown" aria-expanded="false">Destinos</a>
+                            <ul class="dropdown-menu border-0 shadow-sm" aria-labelledby="navDestinosToggle" id="navDestinosMenu">
+${Object.entries(COUNTRY_LABEL).map(([slug, label]) => `                                <li data-country="${slug}"><a class="dropdown-item" href="/destinos/${slug}">${label}</a></li>`).join('\n')}
+                            </ul>
+                        </li>`;
+
 const esc = (s) => String(s == null ? '' : s).replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;').replace(/"/g, '&quot;');
 
 async function getLivePromotions() {
@@ -173,7 +182,9 @@ function buildPage(pkg, related) {
                 <div class="collapse navbar-collapse" id="navbarNav">
                     <ul class="navbar-nav ms-auto align-items-center gap-1">
                         <li class="nav-item"><a class="nav-link" href="/">Inicio</a></li>
+                        ${NAV_DESTINOS}
                         <li class="nav-item"><a class="nav-link" href="/paquetes">Paquetes</a></li>
+                        <li class="nav-item"><a class="nav-link" href="/promociones">Promociones</a></li>
                         <li class="nav-item"><a class="nav-link" href="/informacion-de-viaje">Información de viaje</a></li>
                         <li class="nav-item"><a class="nav-link" href="/contactanos">Contáctanos</a></li>
                         <li class="nav-item dropdown account-dropdown ms-lg-1" id="navAccount">
@@ -369,6 +380,7 @@ ${relatedSection}
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
     <script type="module" src="../../Assets/scripts/nav-session.js"></script>
     <script src="../../Assets/scripts/navbar-scroll.js" defer></script>
+    <script src="/Assets/scripts/nav-destinos.js" defer></script>
     <script src="/Assets/scripts/asesor-fab.js" defer></script>
     <script type="module" src="../../Assets/scripts/solicitud.js"></script>
     <script>
@@ -451,16 +463,44 @@ ${relatedSection}
     }
   }
 
+  // Paquetes con página hecha a mano (tools/paquetes-custom.js): entran al
+  // manifiesto, catálogo, sitemap y relacionados, pero su HTML nunca se
+  // regenera. Si un flyer de la BD reutiliza el slug, gana la página manual.
+  const customPkgs = require('./paquetes-custom.js').map((c) => ({
+    ...c,
+    images: c.images || [c.image],
+    categories: c.categories || [c.regionKey],
+    regionLabel: REGION_LABEL[c.regionKey] || 'Promociones',
+    custom: true,
+  }));
+  const customSlugs = new Set(customPkgs.map((c) => c.slug));
+  packages = packages.filter((p) => !customSlugs.has(p.slug));
+  packages.push(...customPkgs);
+
   // Avisar flyers en vivo SIN slug ni respaldo curado (para agregarles contenido)
   const curatedFiles = new Set(curated.map((c) => c.file.toLowerCase()));
   const uncovered = [...byFile.entries()].filter(([f, e]) => !e.slugRow && !curatedFiles.has(f)).map(([f]) => f);
 
-  // Generar páginas
+  // Generar páginas (las hechas a mano no se tocan)
   const outDir = path.join(ROOT, 'Pages', 'paquetes');
   fs.mkdirSync(outDir, { recursive: true });
+  let generated = 0;
   for (const pkg of packages) {
+    if (pkg.custom) continue;
     const related = packages.filter((p) => p.regionKey === pkg.regionKey && p.slug !== pkg.slug).slice(0, 4);
     fs.writeFileSync(path.join(outDir, pkg.slug + '.html'), buildPage(pkg, related));
+    generated += 1;
+  }
+
+  // Podar HTML generados cuyo flyer ya no está en la base (promos vencidas que
+  // el equipo borra del panel). Las páginas hechas a mano están en `packages`
+  // (via paquetes-custom.js) así que nunca se podan.
+  const keep = new Set(packages.map((p) => p.slug + '.html'));
+  const pruned = [];
+  for (const f of fs.readdirSync(outDir)) {
+    if (!f.endsWith('.html') || keep.has(f)) continue;
+    fs.unlinkSync(path.join(outDir, f));
+    pruned.push(f);
   }
 
   // Manifiesto para el home y las grillas de país
@@ -474,6 +514,7 @@ ${relatedSection}
     regionKey: p.regionKey,
     destino: p.destino,
     countries: p.countries || [],
+    ...(p.custom ? { custom: true } : {}),
   }));
   fs.mkdirSync(path.join(ROOT, 'Assets', 'data'), { recursive: true });
   fs.writeFileSync(path.join(ROOT, 'Assets', 'data', 'paquetes.json'), JSON.stringify(manifest, null, 2));
@@ -488,7 +529,8 @@ ${relatedSection}
   xml = xml.replace('</urlset>', block + '\n</urlset>');
   fs.writeFileSync(sitemapPath, xml);
 
-  console.log(`Generadas ${packages.length} páginas en Pages/paquetes/`);
+  console.log(`Generadas ${generated} páginas en Pages/paquetes/ (+${customPkgs.length} hechas a mano, sin tocar)`);
+  if (pruned.length) console.log(`Podadas ${pruned.length} páginas sin flyer en la base:`, pruned.join(', '));
   console.log(`Manifiesto: Assets/data/paquetes.json (${manifest.length} paquetes)`);
   console.log(`Sitemap actualizado.`);
   if (missing.length) console.warn(`AVISO: ${missing.length} archivos curados no están en la base:`, missing);

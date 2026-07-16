@@ -84,51 +84,26 @@
 
                         <!-- Inicio -->
                         <li class="nav-item"><a class="nav-link active" href="/">Inicio</a></li>
-
-                        <!-- Mega-menú Destinos -->
-                        <li class="nav-item dropdown">
-                            <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
-                                aria-expanded="false">
-                                Destinos
-                            </a>
-                            <ul class="dropdown-menu mega-menu border-0 shadow">
-                                <li class="row g-2">
-                                    <div class="col-6" style="flex: 0 0 20%;">
-                                        <a class="mega-menu-item" href="/paquetes?region=norteamerica">
-                                            <img src="https://images.unsplash.com/photo-1496442226666-8d4d0e62e6e9?q=80&w=400" alt="Norteamérica">
-                                            <span>Norteamérica</span>
-                                        </a>
-                                    </div>
-                                    <div class="col-6" style="flex: 0 0 20%;">
-                                        <a class="mega-menu-item" href="/paquetes?region=caribe">
-                                            <img src="https://images.unsplash.com/photo-1507525428034-b723cf961d3e?q=80&w=400" alt="Centroamérica">
-                                            <span>Centroamérica</span>
-                                        </a>
-                                    </div>
-                                    <div class="col-6" style="flex: 0 0 20%;">
-                                        <a class="mega-menu-item" href="/paquetes?region=sudamerica">
-                                            <img src="https://images.unsplash.com/photo-1531968455001-5c5272a41129?q=80&w=400" alt="Sudamérica">
-                                            <span>Sudamérica</span>
-                                        </a>
-                                    </div>
-                                    <div class="col-6" style="flex: 0 0 20%;">
-                                        <a class="mega-menu-item" href="/paquetes?region=asia">
-                                            <img src="https://images.unsplash.com/photo-1512453979798-5ea266f8880c?q=80&w=400" alt="Asia">
-                                            <span>Asia</span>
-                                        </a>
-                                    </div>
-                                    <div class="col-6" style="flex: 0 0 20%;">
-                                        <a class="mega-menu-item" href="/paquetes?region=europa">
-                                            <img src="https://images.unsplash.com/photo-1500313830540-7b6650a74fd0?q=80&w=400" alt="Europa">
-                                            <span>Europa</span>
-                                        </a>
-                                    </div>
-                                </li>
-                            </ul>
+                        <li class="nav-item dropdown" id="navDestinos">
+                          <a class="nav-link dropdown-toggle" href="#" id="navDestinosToggle" role="button" data-bs-toggle="dropdown" aria-expanded="false">Destinos</a>
+                          <ul class="dropdown-menu border-0 shadow-sm" aria-labelledby="navDestinosToggle" id="navDestinosMenu">
+                            <li data-country="peru"><a class="dropdown-item" href="/destinos/peru">Perú</a></li>
+                            <li data-country="mexico"><a class="dropdown-item" href="/destinos/mexico">México</a></li>
+                            <li data-country="espana"><a class="dropdown-item" href="/destinos/espana">España</a></li>
+                            <li data-country="estados-unidos"><a class="dropdown-item" href="/destinos/estados-unidos">Estados Unidos</a></li>
+                            <li data-country="argentina"><a class="dropdown-item" href="/destinos/argentina">Argentina</a></li>
+                            <li data-country="emiratos-arabes"><a class="dropdown-item" href="/destinos/emiratos-arabes">Emiratos Árabes</a></li>
+                            <li data-country="china"><a class="dropdown-item" href="/destinos/china">China</a></li>
+                            <li data-country="japon"><a class="dropdown-item" href="/destinos/japon">Japón</a></li>
+                            <li data-country="tailandia"><a class="dropdown-item" href="/destinos/tailandia">Tailandia</a></li>
+                            <li data-country="italia"><a class="dropdown-item" href="/destinos/italia">Italia</a></li>
+                          </ul>
                         </li>
+
 
                         <!-- Promociones -->
                         <li class="nav-item"><a class="nav-link" href="/paquetes">Paquetes</a></li>
+                        <li class="nav-item"><a class="nav-link" href="/promociones">Promociones</a></li>
 
                         <!-- Visas -->
                         <li class="nav-item"><a class="nav-link" href="/informacion-de-viaje">Información de viaje</a></li>
@@ -472,6 +447,7 @@
     <script type="module" src="../Assets/scripts/nav-session.js"></script>
     <script src="../Assets/scripts/navbar-scroll.js" defer></script>
   <script src="/Assets/scripts/asesor-fab.js" defer></script>
+  <script src="/Assets/scripts/nav-destinos.js" defer></script>
 </body>
 
 </html>

@@ -121,51 +121,6 @@
     ]
   },
   {
-    "slug": "china-clasica-y-tokio",
-    "title": "China Clásica y Tokio",
-    "subtitle": "Lo mejor de China sumado a la vibrante Tokio.",
-    "image": "https://i.postimg.cc/ZqKFwbVd/China-Tokio.jpg",
-    "images": [
-      "https://i.postimg.cc/ZqKFwbVd/China-Tokio.jpg"
-    ],
-    "region": "Asia",
-    "regionKey": "carouselasia",
-    "destino": "China y Japón",
-    "countries": [
-      "china"
-    ]
-  },
-  {
-    "slug": "corea-y-japon-tradicional",
-    "title": "Corea y Japón Tradicional",
-    "subtitle": "Tradición y modernidad del Lejano Oriente.",
-    "image": "https://i.postimg.cc/zfXSxz0W/Corea-Japon.jpg",
-    "images": [
-      "https://i.postimg.cc/zfXSxz0W/Corea-Japon.jpg"
-    ],
-    "region": "Asia",
-    "regionKey": "carouselasia",
-    "destino": "Corea y Japón",
-    "countries": [
-      "japon"
-    ]
-  },
-  {
-    "slug": "corea-pekin-y-shanghai",
-    "title": "Corea con Pekín y Shanghái",
-    "subtitle": "Gran circuito por Corea y China.",
-    "image": "https://i.postimg.cc/HLs46YBM/Coreo-Pekin-Shangai.jpg",
-    "images": [
-      "https://i.postimg.cc/HLs46YBM/Coreo-Pekin-Shangai.jpg"
-    ],
-    "region": "Asia",
-    "regionKey": "carouselasia",
-    "destino": "Corea y China",
-    "countries": [
-      "china"
-    ]
-  },
-  {
     "slug": "lo-mejor-de-dubai",
     "title": "Lo Mejor de Dubái",
     "subtitle": "Lujo y modernidad en el desierto, oferta 2x1.",
@@ -364,22 +319,6 @@
     "countries": []
   },
   {
-    "slug": "carnavales-peruanos",
-    "title": "Carnavales Peruanos",
-    "subtitle": "Vive la fiesta y la tradición del Perú.",
-    "image": "https://i.postimg.cc/rsz612tg/Carnavales-Peruanos.jpg",
-    "images": [
-      "https://i.postimg.cc/3JdXMWCQ/Carnavales-Peruanos.jpg",
-      "https://i.postimg.cc/rsz612tg/Carnavales-Peruanos.jpg"
-    ],
-    "region": "Sudamérica",
-    "regionKey": "carouselsudamerica",
-    "destino": "Perú",
-    "countries": [
-      "peru"
-    ]
-  },
-  {
     "slug": "escapada-iguazu",
     "title": "Escapada a Iguazú",
     "subtitle": "Las cataratas más impresionantes de Sudamérica.",
@@ -431,19 +370,6 @@
     "region": "Sudamérica",
     "regionKey": "carouselsudamerica",
     "destino": "Chile",
-    "countries": []
-  },
-  {
-    "slug": "cartagena-de-indias",
-    "title": "San Valentín en Cartagena",
-    "subtitle": "Romance y color en el Caribe colombiano.",
-    "image": "https://i.postimg.cc/KYJxBNsq/Cartagena.jpg",
-    "images": [
-      "https://i.postimg.cc/KYJxBNsq/Cartagena.jpg"
-    ],
-    "region": "Sudamérica",
-    "regionKey": "carouselsudamerica",
-    "destino": "Colombia",
     "countries": []
   },
   {
@@ -629,19 +555,6 @@
     "countries": []
   },
   {
-    "slug": "especial-caribe-sol-y-amor",
-    "title": "Especial Caribe — Donde el Sol y el Amor se Encuentran",
-    "subtitle": "Escapadas al Caribe y Colombia.",
-    "image": "https://i.postimg.cc/bJr8Tt7z/Donde-El-Sol.jpg",
-    "images": [
-      "https://i.postimg.cc/bJr8Tt7z/Donde-El-Sol.jpg"
-    ],
-    "region": "Promociones",
-    "regionKey": "carouselpromos",
-    "destino": "Caribe",
-    "countries": []
-  },
-  {
     "slug": "costa-mujeres-trs-coral",
     "title": "Costa Mujeres — TRS Coral (Solo Adultos)",
     "subtitle": "Lujo solo para adultos en la Riviera mexicana.",
@@ -715,16 +628,19 @@
     "countries": []
   },
   {
-    "slug": "febrero-en-pareja",
-    "title": "Febrero en Pareja",
-    "subtitle": "Escapadas internacionales para dos.",
-    "image": "https://i.postimg.cc/hjvgrdkf/Febrero-promos.jpg",
+    "slug": "colores-de-espana",
+    "title": "Colores de España",
+    "subtitle": "Madrid, Andalucía y Costa del Sol — salidas los sábados.",
+    "image": "/Assets/img/espana/espana-madrid.jpg",
     "images": [
-      "https://i.postimg.cc/hjvgrdkf/Febrero-promos.jpg"
+      "/Assets/img/espana/espana-madrid.jpg"
     ],
-    "region": "Promociones",
-    "regionKey": "carouselpromos",
-    "destino": "Varios destinos",
-    "countries": []
+    "region": "Europa",
+    "regionKey": "carouseleuropa",
+    "destino": "España",
+    "countries": [
+      "espana"
+    ],
+    "custom": true
   }
 ]
