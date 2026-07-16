@@ -642,5 +642,21 @@
       "espana"
     ],
     "custom": true
+  },
+  {
+    "slug": "espana-y-portugal",
+    "title": "España y Portugal",
+    "subtitle": "Madrid, Salamanca, Santiago, Oporto, Lisboa, Andalucía, Valencia y Barcelona — salidas los domingos.",
+    "image": "https://images.unsplash.com/photo-1585208798174-6cedd86e019a?q=80&w=800",
+    "images": [
+      "https://images.unsplash.com/photo-1585208798174-6cedd86e019a?q=80&w=800"
+    ],
+    "region": "Europa",
+    "regionKey": "carouseleuropa",
+    "destino": "España y Portugal",
+    "countries": [
+      "espana"
+    ],
+    "custom": true
   }
 ]

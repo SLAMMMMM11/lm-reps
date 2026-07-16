@@ -13,4 +13,14 @@ module.exports = [
     destino: 'España',
     countries: ['espana'],
   },
+  {
+    slug: 'espana-y-portugal',
+    title: 'España y Portugal',
+    subtitle: 'Madrid, Salamanca, Santiago, Oporto, Lisboa, Andalucía, Valencia y Barcelona — salidas los domingos.',
+    image: 'https://images.unsplash.com/photo-1585208798174-6cedd86e019a?q=80&w=800',
+    duration: '16 o 17 días',
+    regionKey: 'carouseleuropa',
+    destino: 'España y Portugal',
+    countries: ['espana'],
+  },
 ];
