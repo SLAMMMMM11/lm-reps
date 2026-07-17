@@ -628,6 +628,86 @@
     "countries": []
   },
   {
+    "slug": "barcelona-y-madrid",
+    "title": "Barcelona y Madrid",
+    "subtitle": "Barcelona, Zaragoza y Madrid — salidas los viernes.",
+    "image": "https://images.unsplash.com/photo-1562883676-8c7feb83f09b?q=80&w=800",
+    "images": [
+      "https://images.unsplash.com/photo-1562883676-8c7feb83f09b?q=80&w=800"
+    ],
+    "region": "Europa",
+    "regionKey": "carouseleuropa",
+    "destino": "España",
+    "countries": [
+      "espana"
+    ],
+    "custom": true
+  },
+  {
+    "slug": "espana-fabulosa",
+    "title": "España Fabulosa",
+    "subtitle": "Barcelona, Zaragoza, Madrid, Mérida, Sevilla, Córdoba y Granada.",
+    "image": "https://images.unsplash.com/photo-1583422409516-2895a77efded?q=80&w=800",
+    "images": [
+      "https://images.unsplash.com/photo-1583422409516-2895a77efded?q=80&w=800"
+    ],
+    "region": "Europa",
+    "regionKey": "carouseleuropa",
+    "destino": "España",
+    "countries": [
+      "espana"
+    ],
+    "custom": true
+  },
+  {
+    "slug": "experiencia-madrid",
+    "title": "Experiencia Madrid",
+    "subtitle": "Estancia en Madrid con visita guiada — combinable con cualquier circuito.",
+    "image": "/Assets/img/espana/espana-madrid.jpg",
+    "images": [
+      "/Assets/img/espana/espana-madrid.jpg"
+    ],
+    "region": "Europa",
+    "regionKey": "carouseleuropa",
+    "destino": "España",
+    "countries": [
+      "espana"
+    ],
+    "custom": true
+  },
+  {
+    "slug": "gran-tour-norte-de-espana",
+    "title": "Gran Tour Norte de España",
+    "subtitle": "Barcelona, Pamplona, San Sebastián, Bilbao, Covadonga, Oviedo, Santiago, Salamanca y Madrid.",
+    "image": "https://images.unsplash.com/photo-1543783207-ec64e4d95325?q=80&w=800",
+    "images": [
+      "https://images.unsplash.com/photo-1543783207-ec64e4d95325?q=80&w=800"
+    ],
+    "region": "Europa",
+    "regionKey": "carouseleuropa",
+    "destino": "España",
+    "countries": [
+      "espana"
+    ],
+    "custom": true
+  },
+  {
+    "slug": "madrid-y-andalucia",
+    "title": "Madrid y Andalucía",
+    "subtitle": "Madrid, Mérida, Sevilla, Córdoba y Granada — salidas los sábados.",
+    "image": "/Assets/img/espana/espana-sevilla.jpg",
+    "images": [
+      "/Assets/img/espana/espana-sevilla.jpg"
+    ],
+    "region": "Europa",
+    "regionKey": "carouseleuropa",
+    "destino": "España",
+    "countries": [
+      "espana"
+    ],
+    "custom": true
+  },
+  {
     "slug": "colores-de-espana",
     "title": "Colores de España",
     "subtitle": "Madrid, Andalucía y Costa del Sol — salidas los sábados.",

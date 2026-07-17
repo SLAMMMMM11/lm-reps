@@ -1,8 +1,29 @@
-// Paquetes con página hecha a mano (no nacen de un flyer del panel).
-// El generador los suma al manifiesto/catálogo/sitemap pero NUNCA sobrescribe
-// su HTML en Pages/paquetes/. Para agregar otro: crear la página a mano y
-// registrar aquí su entrada.
-module.exports = [
+// Paquetes con página propia (no nacen de un flyer del panel). El generador
+// de paquetes los suma al manifiesto/catálogo/sitemap pero NUNCA sobrescribe
+// su HTML en Pages/paquetes/. Dos orígenes:
+//   1. MANUALES: páginas escritas a mano, registradas abajo.
+//   2. CIRCUITOS: datos en tools/circuitos/{slug}.cjs (HTML producido por
+//      tools/gen-circuito.cjs) — se auto-registran, no tocar esta lista.
+const fs = require('fs');
+const path = require('path');
+
+const circuitos = fs.readdirSync(path.join(__dirname, 'circuitos'))
+  .filter((f) => f.endsWith('.cjs'))
+  .map((f) => {
+    const d = require(path.join(__dirname, 'circuitos', f));
+    return {
+      slug: d.slug,
+      title: d.title,
+      subtitle: d.subtitle,
+      image: d.card || d.hero,
+      duration: d.dias,
+      regionKey: d.region,
+      destino: d.destino,
+      countries: d.countries,
+    };
+  });
+
+module.exports = circuitos.concat([
   {
     slug: 'colores-de-espana',
     title: 'Colores de España',
@@ -33,4 +54,4 @@ module.exports = [
     destino: 'España y Portugal',
     countries: ['espana'],
   },
-];
+]);

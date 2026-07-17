@@ -1,0 +1,81 @@
+// Experiencia Madrid — catálogo MAPAPLUS España, Portugal y Marruecos 26/27, pág. 20.
+module.exports = {
+  slug: 'experiencia-madrid',
+  title: 'Experiencia Madrid',
+  dias: '4 días',
+  desde: '345',
+  subtitle: 'Estancia en Madrid con visita guiada — combinable con cualquier circuito.',
+  metaDescription: 'Escapada a Madrid desde Perú: 4 días con traslados, visita guiada y Toledo opcional. Desde $345. Combinable con otros circuitos. Cotiza en cuotas.',
+  eyebrow: 'Paquete · Europa / España',
+  region: 'carouseleuropa',
+  destino: 'España',
+  countries: ['espana'],
+  hero: 'https://lm-reps.com/Assets/img/espana/madrid-hero.jpg',
+  card: '/Assets/img/espana/espana-madrid.jpg',
+  salidasChip: 'Salidas 5 días por semana',
+  ruta: ['Madrid', 'Toledo (opcional)'],
+  subtituloHighlights: 'Madrid en esencia, a tu ritmo',
+  highlights: [
+    '<strong>Visita guiada de Madrid:</strong> monumentos y Madrid moderno',
+    '<strong>Madrid iluminado:</strong> recorrido nocturno con cena de tapas (Plus P+)',
+    '<strong>Toledo:</strong> excursión opcional a la ciudad imperial',
+    '<strong>Traslados incluidos</strong> aeropuerto ↔ hotel',
+    '<strong>Ideal como escala:</strong> combinable con cualquier circuito europeo',
+  ],
+  galeria: [
+    ['../../Assets/img/espana/espana-madrid.jpg', 'Plaza Mayor, Madrid'],
+    ['https://images.unsplash.com/photo-1543783207-ec64e4d95325?q=80&w=800', 'Gran Vía, Madrid'],
+    ['https://images.unsplash.com/photo-1558370781-d6196949e317?q=80&w=800', 'Centro histórico de Madrid'],
+    ['https://images.unsplash.com/photo-1539037116277-4db20889f2d4?q=80&w=800', 'Gran Vía al atardecer'],
+    ['../../Assets/img/espana/madrid-hero.jpg', 'Skyline de Madrid'],
+  ],
+  itinerario: [
+    { titulo: 'América → Vuelo a Madrid', texto: 'Salida en vuelo intercontinental con destino a Madrid.' },
+    {
+      titulo: 'Madrid — Llegada y primera noche',
+      img: '../../Assets/img/espana/espana-madrid.jpg',
+      texto: 'Llegada y traslado al hotel. Tiempo libre para el primer contacto con la ciudad: sus avenidas, paseos y la Plaza Mayor. A última hora de la tarde, recorrido opcional por el Madrid iluminado con degustación de tapas en un mesón típico. <em class="small">(Cena de tapas + visita nocturna: Paquete Plus P+.)</em>',
+    },
+    {
+      titulo: 'Madrid — Visita de ciudad + Toledo opcional',
+      texto: 'Desayuno buffet. Visita de la ciudad, sus principales monumentos y el Madrid moderno. Por la tarde, excursión opcional a la imperial Toledo: calles medievales, catedral y la pintura de El Greco. <em class="small">(Visita a Toledo + almuerzo: Paquete Plus P+.)</em>',
+    },
+    { titulo: 'Madrid → Vuelo de regreso', texto: 'Desayuno buffet. Traslado al aeropuerto para tomar el vuelo de regreso. Fin del viaje y de nuestros servicios.' },
+  ],
+  incluye: [
+    'Traslados aeropuerto ↔ hotel',
+    'Alojamiento + desayuno buffet',
+    'Transporte en autobús de turismo',
+    'Visita guiada de Madrid',
+    'Audífonos individuales',
+    'Seguro MAPAPLUS',
+  ],
+  noIncluye: [
+    'Vuelos internacionales',
+    'Comidas no indicadas',
+    'Excursiones opcionales (Toledo sin Plus P+)',
+    'Gastos personales',
+  ],
+  plus: {
+    precio: '255',
+    comidas: ['Cena de tapas en Madrid', 'Almuerzo en Toledo'],
+    extras: ['Visita a Toledo (Catedral + Santo Tomé)', 'Recorrido nocturno de Madrid'],
+  },
+  precios: {
+    columnas: ['May – Jun', 'Jul – Ago', 'Sep – Oct', 'Nov – Mar 27', '23–28 Dic', 'Abr 27'],
+    mejorCol: 3, // índice 0-based dentro de `columnas` a resaltar (temporada más barata)
+    filas: [
+      { tour: '4 días<br><small class="text-muted fw-normal">Madrid</small>', categoria: 'Confort 3*/4*', valores: ['385', '355', '385', '345', '355', '395'] },
+      { tour: '', categoria: 'Superior 4*', valores: ['445', '395', '445', '390', '395', '455'] },
+    ],
+    nota: 'Suplemento por habitación individual disponible · Temporada baja excepto 23–28 dic',
+  },
+  hoteles: null,
+  fechas: { libre: 'Salidas <strong>todas las semanas</strong> hacia Madrid: miércoles, viernes, sábados, domingos y lunes, todo el año 2026-2027.' },
+  relacionados: [
+    { slug: 'colores-de-espana', title: 'Colores de España', img: '../../Assets/img/espana/espana-madrid.jpg' },
+    { slug: 'espana-encantadora', title: 'España Encantadora', img: 'https://images.unsplash.com/photo-1583422409516-2895a77efded?q=80&w=800' },
+    { slug: 'espana-y-portugal', title: 'España y Portugal', img: 'https://images.unsplash.com/photo-1585208798174-6cedd86e019a?q=80&w=800' },
+  ],
+  cta: '¿Te animas a vivir Madrid?',
+};
