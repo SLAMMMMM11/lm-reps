@@ -17,6 +17,10 @@
 # El logo OSCE se renombro de .jpeg a .png (fondo transparente); los correos
 # ya enviados con la firma antigua siguen apuntando al .jpeg
 /Assets/img/osce.jpeg      /Assets/img/osce.png                 200
+
+# Documentacion interna del negocio (tracker de circuitos, guias): vive en el
+# repo pero NO se sirve al publico
+/docs/*                    /404.html                            404!
 /politicas-de-privacidad   /Pages/politicas-de-privacidad.html  200
 /libro-de-reclamaciones    /Pages/libro-de-reclamaciones.html   200
 /paquetes-turisticos       /Pages/paquetes-turisticos.html      200
