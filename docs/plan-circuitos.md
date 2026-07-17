@@ -1,4 +1,4 @@
-# Plan de circuitos MAPAPLUS 2026-2027
+﻿# Plan de circuitos MAPAPLUS 2026-2027
 
 Tracker de construcción de páginas de paquete desde los catálogos PDF.
 Orden por demanda peruana. Tandas de 5. Estados: `pendiente` → `construido` (en el repo) → `publicado` (en lm-reps.com).
@@ -9,13 +9,13 @@ Claude actualiza este archivo con cada tanda.
 
 | # | Pág. | Circuito | Días | Desde | Tanda | Estado | Slug |
 |---|---|---|---|---|---|---|---|
-| 1 | 4 | (ver PDF) | 4 | $345 | Tanda 1 | construido | experiencia-madrid |
-| 2 | 6 | (ver PDF) | 6 | $680 | Tanda 1 | construido | barcelona-y-madrid |
-| 3 | 7 | (ver PDF) | 8 | $1.145 | Tanda 1 | construido | madrid-y-andalucia |
+| 1 | 4 | (ver PDF) | 4 | $345 | Tanda 1 | publicado | experiencia-madrid |
+| 2 | 6 | (ver PDF) | 6 | $680 | Tanda 1 | publicado | barcelona-y-madrid |
+| 3 | 7 | (ver PDF) | 8 | $1.145 | Tanda 1 | publicado | madrid-y-andalucia |
 | 4 | 8 | (ver PDF) | 9 o 10 | $1.340 | — | publicado | colores-de-espana |
-| 5 | 9 | (ver PDF) | 10 | $1.460 | Tanda 1 | construido | espana-fabulosa |
+| 5 | 9 | (ver PDF) | 10 | $1.460 | Tanda 1 | publicado | espana-fabulosa |
 | 6 | 10 | (ver PDF) | 11 | $1.500 | — | publicado | espana-encantadora |
-| 7 | 11 | (ver PDF) | 11 | $1.535 | Tanda 1 | construido | gran-tour-norte-de-espana |
+| 7 | 11 | (ver PDF) | 11 | $1.535 | Tanda 1 | publicado | gran-tour-norte-de-espana |
 | 8 | 12 | (ver PDF) | 13 ó 14 | $1.795 | Tanda 2 | pendiente |  |
 | 9 | 14 | (ver PDF) | 16 | $2.690 | Tanda 2 | pendiente |  |
 | 10 | 16 | (ver PDF) | 7 o 9 | $1.160 | Tanda 2 | pendiente |  |
@@ -229,4 +229,4 @@ Claude actualiza este archivo con cada tanda.
 | 183 | 28 | Europa para Recordar 2 | 26 | $3.630 | Tanda 36 | pendiente |  |
 | 184 | 30 | Europa Artística | 23 ó 25 | $3.470 | Tanda 37 | pendiente |  |
 
-**Total: 184 circuitos** · Publicados: 3 · Construidos (tanda 1, pendientes de deploy): 5
+**Total: 184 circuitos** · Publicados: 8 (tanda 1 desplegada 2026-07-17)
