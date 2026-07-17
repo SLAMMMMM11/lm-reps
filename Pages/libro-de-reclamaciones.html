@@ -191,6 +191,7 @@
           <label class="form-label">Adjuntar archivos (opcional)</label>
           <input type="file" class="form-control" id="adjunto" name="adjunto" accept="image/*,application/pdf"
             multiple />
+          <div class="form-text">Hasta 3 archivos: fotos o PDF (PDF máx. 3 MB; las fotos se ajustan solas).</div>
         </div>
 
         <div class="col-md-6">
@@ -328,15 +329,21 @@
       // Script para el botón limpiar
       const limpiarBtn = document.getElementById('limpiarBtn');
       const form = document.getElementById('reclamoForm');
+      const submitBtn = document.getElementById('submitBtn');
+
+      const MAX_FILES = 3;
+      const MAX_BYTES = 3 * 1024 * 1024; // mismo límite que la función /api/reclamo
 
       detalle.addEventListener('input', () => {
         charcount.textContent = `${detalle.value.length} / ${detalle.maxLength}`;
       });
 
       adjunto.addEventListener('change', () => {
-        const files = [...adjunto.files];
-        for (const f of files) {
-          if (f.size > 5 * 1024 * 1024) { alert(`Archivo muy grande: ${f.name}`); adjunto.value = ''; return; }
+        if (adjunto.files.length > MAX_FILES) { alert(`Máximo ${MAX_FILES} archivos.`); adjunto.value = ''; return; }
+        for (const f of adjunto.files) {
+          const esImagen = f.type.startsWith('image/');
+          if (!esImagen && f.type !== 'application/pdf') { alert(`Solo se aceptan fotos o PDF: ${f.name}`); adjunto.value = ''; return; }
+          if (!esImagen && f.size > MAX_BYTES) { alert(`PDF muy grande (máx. 3 MB): ${f.name}`); adjunto.value = ''; return; }
         }
       });
 
@@ -344,13 +351,91 @@
         form.reset();
         charcount.textContent = `0 / ${detalle.maxLength}`;
         // Ponemos la fecha de nuevo después de limpiar
-        const d = new Date();
-        document.getElementById('fecha').value = `${String(d.getDate()).padStart(2, '0')}/${String(d.getMonth() + 1).padStart(2, '0')}/${d.getFullYear()}`;
+        ponerFecha();
       });
 
-      // Auto fecha
-      const d = new Date();
-      document.getElementById('fecha').value = `${String(d.getDate()).padStart(2, '0')}/${String(d.getMonth() + 1).padStart(2, '0')}/${d.getFullYear()}`;
+      function ponerFecha() {
+        const d = new Date();
+        document.getElementById('fecha').value = `${String(d.getDate()).padStart(2, '0')}/${String(d.getMonth() + 1).padStart(2, '0')}/${d.getFullYear()}`;
+      }
+      ponerFecha();
+
+      // Las fotos grandes se reducen en el navegador para pasar el límite.
+      function comprimirImagen(file) {
+        return new Promise((resolve) => {
+          if (!file.type.startsWith('image/') || file.size <= 1.5 * 1024 * 1024) return resolve(file);
+          const img = new Image();
+          const url = URL.createObjectURL(file);
+          img.onload = () => {
+            const escala = Math.min(1, 1800 / Math.max(img.width, img.height));
+            const c = document.createElement('canvas');
+            c.width = Math.round(img.width * escala);
+            c.height = Math.round(img.height * escala);
+            c.getContext('2d').drawImage(img, 0, 0, c.width, c.height);
+            c.toBlob((blob) => {
+              URL.revokeObjectURL(url);
+              resolve(blob && blob.size < file.size
+                ? new File([blob], file.name.replace(/\.\w+$/, '') + '.jpg', { type: 'image/jpeg' })
+                : file);
+            }, 'image/jpeg', 0.82);
+          };
+          img.onerror = () => { URL.revokeObjectURL(url); resolve(file); };
+          img.src = url;
+        });
+      }
+
+      async function archivoAPayload(file) {
+        const f = await comprimirImagen(file);
+        if (f.size > MAX_BYTES) { alert(`No se pudo reducir "${file.name}" a menos de 3 MB; el reclamo se enviará sin ese archivo.`); return null; }
+        const base64 = await new Promise((res, rej) => {
+          const r = new FileReader();
+          r.onload = () => res(String(r.result).split(',')[1]);
+          r.onerror = rej;
+          r.readAsDataURL(f);
+        });
+        return { nombre: f.name, tipo: f.type, base64 };
+      }
+
+      function mostrarExito(codigo) {
+        const card = document.createElement('div');
+        card.className = 'card p-4 mt-3 card-custom text-center';
+        card.innerHTML = `
+          <div style="font-size:3rem;">✅</div>
+          <h4 class="mt-2">Reclamo registrado</h4>
+          ${codigo ? `<p class="mb-1">Tu código de seguimiento es:</p><p class="fs-4 fw-bold" style="color:#FA8232;">${codigo}</p>` : ''}
+          <p class="text-muted mb-1">Te responderemos en un plazo máximo de <strong>15 días hábiles</strong> por el medio que indicaste.</p>
+          <p class="small text-muted mb-0">Guarda este código para cualquier consulta sobre tu reclamo.</p>`;
+        form.replaceWith(card);
+        card.scrollIntoView({ behavior: 'smooth', block: 'center' });
+      }
+
+      form.addEventListener('submit', async (e) => {
+        e.preventDefault();
+        submitBtn.disabled = true;
+        submitBtn.textContent = 'Enviando…';
+        try {
+          const adjuntos = [];
+          for (const f of [...adjunto.files].slice(0, MAX_FILES)) {
+            const p = await archivoAPayload(f);
+            if (p) adjuntos.push(p);
+          }
+          const payload = Object.fromEntries(new FormData(form).entries());
+          delete payload.adjunto;
+          payload.adjuntos = adjuntos;
+          const r = await fetch('/api/reclamo', {
+            method: 'POST',
+            headers: { 'content-type': 'application/json' },
+            body: JSON.stringify(payload),
+          });
+          const data = r.ok ? await r.json() : null;
+          if (!data || !data.ok) throw new Error('api_reclamo');
+          mostrarExito(data.codigo);
+        } catch (err) {
+          // Respaldo: si la vía nueva falla, se envía por Netlify Forms
+          // (form.submit() no vuelve a pasar por este listener).
+          form.submit();
+        }
+      });
     })();
   </script>
 

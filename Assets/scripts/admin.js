@@ -362,11 +362,13 @@ document.querySelectorAll('.app-sidebar .nav-link[data-tab]').forEach((link) => 
     document.getElementById('tab-auditoria').classList.toggle('d-none', link.dataset.tab !== 'auditoria');
     document.getElementById('tab-promociones').classList.toggle('d-none', link.dataset.tab !== 'promociones');
     document.getElementById('tab-solicitudes').classList.toggle('d-none', link.dataset.tab !== 'solicitudes');
+    document.getElementById('tab-reclamos')?.classList.toggle('d-none', link.dataset.tab !== 'reclamos');
     document.getElementById('tab-admins')?.classList.toggle('d-none', link.dataset.tab !== 'admins');
     if (link.dataset.tab === 'vouchers') renderVouchersQueue();
     if (link.dataset.tab === 'auditoria') renderAuditLog();
     if (link.dataset.tab === 'promociones') document.dispatchEvent(new CustomEvent('admin:show-promociones'));
     if (link.dataset.tab === 'solicitudes') document.dispatchEvent(new CustomEvent('admin:show-solicitudes'));
+    if (link.dataset.tab === 'reclamos') document.dispatchEvent(new CustomEvent('admin:show-reclamos'));
     if (link.dataset.tab === 'admins') document.dispatchEvent(new CustomEvent('admin:show-admins'));
   });
 });

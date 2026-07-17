@@ -80,6 +80,12 @@
                 <span class="badge bg-danger ms-auto d-none" id="leadsBadge">0</span>
               </a>
             </li>
+            <li class="nav-item">
+              <a class="nav-link" data-tab="reclamos" href="#">
+                <i class="bi bi-exclamation-octagon"></i>Reclamos
+                <span class="badge bg-danger ms-auto d-none" id="reclamosBadge">0</span>
+              </a>
+            </li>
             <li class="nav-item"><a class="nav-link" data-tab="auditoria" href="#"><i class="bi bi-clock-history"></i>Auditoría</a></li>
             <li class="nav-item"><a class="nav-link" data-tab="promociones" href="#"><i class="bi bi-megaphone"></i>Paquetes</a></li>
             <li class="nav-item"><a class="nav-link" data-tab="admins" href="#"><i class="bi bi-person-badge"></i>Gestión de admins</a></li>
@@ -243,6 +249,35 @@
                 </tr>
               </thead>
               <tbody id="leadsTableBody"></tbody>
+            </table>
+          </div>
+        </div>
+
+        <div id="tab-reclamos" class="d-none">
+          <div class="d-flex justify-content-between align-items-center mb-3 flex-wrap gap-2">
+            <h5 class="fw-bold mb-0">Libro de Reclamaciones</h5>
+            <select class="form-select form-select-sm" id="reclamosEstadoFilter" style="width:auto;">
+              <option value="">Todos los estados</option>
+              <option value="pendiente">Pendientes</option>
+              <option value="en_atencion">En atención</option>
+              <option value="respondido">Respondidos</option>
+            </select>
+          </div>
+          <p class="small text-muted">La ley exige responder cada reclamo en un máximo de <strong>15 días hábiles</strong>. El semáforo de "Plazo" avisa cuánto queda.</p>
+          <div class="table-responsive">
+            <table class="table table-sm bg-white rounded shadow-sm align-middle">
+              <thead>
+                <tr>
+                  <th>Código</th>
+                  <th>Fecha</th>
+                  <th>Cliente</th>
+                  <th>Tipo</th>
+                  <th>Plazo</th>
+                  <th>Estado</th>
+                  <th></th>
+                </tr>
+              </thead>
+              <tbody id="reclamosTableBody"></tbody>
             </table>
           </div>
         </div>
@@ -603,10 +638,24 @@
   </div>
 
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+  <!-- Detalle completo de un reclamo (fuera de las pestañas para que el modal no herede d-none) -->
+  <div class="modal fade" id="reclamoDetalleModal" tabindex="-1" aria-hidden="true">
+    <div class="modal-dialog modal-lg modal-dialog-scrollable">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="reclamoDetalleTitulo">Reclamo</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Cerrar"></button>
+        </div>
+        <div class="modal-body" id="reclamoDetalleBody"></div>
+      </div>
+    </div>
+  </div>
+
   <script type="module" src="../../Assets/scripts/admin.js"></script>
   <script type="module" src="../../Assets/scripts/mfa.js"></script>
   <script type="module" src="../../Assets/scripts/admin-promociones.js"></script>
   <script type="module" src="../../Assets/scripts/admin-leads.js"></script>
+  <script type="module" src="../../Assets/scripts/admin-reclamos.js"></script>
   <script type="module" src="../../Assets/scripts/admin-roles.js"></script>
   <script type="module" src="../../Assets/scripts/perfil.js"></script>
 </body>
