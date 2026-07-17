@@ -1,0 +1,89 @@
+{
+  "_doc": "Banco de imágenes VERIFICADAS VISUALMENTE (hoja de contactos) para galerías y páginas de paquete. Nunca usar una imagen nueva sin verla primero. Unsplash: agregar ?q=80&w=800 (galerías) o w=1600 (heros). Wikimedia: usar la variante 1280px.",
+  "espana": [
+    { "lugar": "Gran Vía, Madrid", "url": "https://images.unsplash.com/photo-1543783207-ec64e4d95325" },
+    { "lugar": "Gran Vía de Madrid al atardecer", "url": "https://images.unsplash.com/photo-1539037116277-4db20889f2d4" },
+    { "lugar": "Centro histórico de Madrid", "url": "https://images.unsplash.com/photo-1558370781-d6196949e317" },
+    { "lugar": "Barcelona y la Sagrada Familia (aérea)", "url": "https://images.unsplash.com/photo-1562883676-8c7feb83f09b" },
+    { "lugar": "Sagrada Familia, Barcelona", "url": "https://images.unsplash.com/photo-1583422409516-2895a77efded" },
+    { "lugar": "Tibidabo, Barcelona", "url": "https://images.unsplash.com/photo-1578912996078-305d92249aa6" },
+    { "lugar": "Calas del Mediterráneo", "url": "https://images.unsplash.com/photo-1504019347908-b45f9b0b8dd5" },
+    { "lugar": "Plaza de España, Sevilla", "url": "/Assets/img/espana/espana-sevilla.jpg" },
+    { "lugar": "Alhambra, Granada", "url": "/Assets/img/espana/espana-alhambra.jpg" },
+    { "lugar": "Plaza Mayor, Madrid", "url": "/Assets/img/espana/espana-madrid.jpg" },
+    { "lugar": "Costa del Sol, Málaga", "url": "/Assets/img/espana/espana-costa-sol.jpg" },
+    { "lugar": "Skyline de Madrid", "url": "/Assets/img/espana/madrid-hero.jpg" }
+  ],
+  "portugal": [
+    { "lugar": "Tranvía de Lisboa", "url": "https://images.unsplash.com/photo-1585208798174-6cedd86e019a" },
+    { "lugar": "Lisboa, Alfama", "url": "https://images.unsplash.com/photo-1536663815808-535e2280d2c2" },
+    { "lugar": "Ribeira de Oporto", "url": "https://images.unsplash.com/photo-1555881400-74d7acaacd8b" },
+    { "lugar": "Puente Don Luis I, Oporto", "url": "https://images.unsplash.com/photo-1569959220744-ff553533f492" }
+  ],
+  "peru": [
+    { "lugar": "Machu Picchu", "url": "https://images.unsplash.com/photo-1587595431973-160d0d94add1" },
+    { "lugar": "Costa Verde, Lima", "url": "https://images.unsplash.com/photo-1531968455001-5c5272a41129" },
+    { "lugar": "Montaña de Siete Colores, Vinicunca", "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/5/50/Monta%C3%B1a_Siete_Colores_Vinicunca.jpg/1280px-Monta%C3%B1a_Siete_Colores_Vinicunca.jpg" },
+    { "lugar": "Oasis de Huacachina, Ica", "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/7/7d/Oasis_Huacachina_Per%C3%BA_-_camilogaleano%28.%29com.jpg/1280px-Oasis_Huacachina_Per%C3%BA_-_camilogaleano%28.%29com.jpg" }
+  ],
+  "argentina": [
+    { "lugar": "Obelisco, Buenos Aires", "url": "https://images.unsplash.com/photo-1589909202802-8f4aadce1849" },
+    { "lugar": "Caminito, La Boca", "url": "https://images.unsplash.com/photo-1612294037637-ec328d0e075e" },
+    { "lugar": "Glaciar Perito Moreno", "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/c/c8/Perito_Moreno_Glacier_2023.jpg/1280px-Perito_Moreno_Glacier_2023.jpg" },
+    { "lugar": "Cataratas del Iguazú", "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/c/c4/Iguazu_Cataratas2.jpg/1280px-Iguazu_Cataratas2.jpg" }
+  ],
+  "mexico": [
+    { "lugar": "Chichén Itzá", "url": "https://images.unsplash.com/photo-1568402102990-bc541580b59f" },
+    { "lugar": "San Miguel de Allende", "url": "https://images.unsplash.com/photo-1518105779142-d975f22f1b0a" },
+    { "lugar": "Papel picado, fiesta mexicana", "url": "https://images.unsplash.com/photo-1512813195386-6cf811ad3542" },
+    { "lugar": "Cancún, Caribe mexicano", "url": "https://images.unsplash.com/photo-1552074284-5e88ef1aef18" },
+    { "lugar": "Guanajuato", "url": "https://images.unsplash.com/photo-1547995886-6dc09384c6e6" },
+    { "lugar": "Pirámide del Sol, Teotihuacán", "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/3/3b/2020-02-11_Teotihuacan_la_Avenida_de_los_Muertos_y_la_Pir%C3%A1mide_del_Sol.jpg/1280px-2020-02-11_Teotihuacan_la_Avenida_de_los_Muertos_y_la_Pir%C3%A1mide_del_Sol.jpg" }
+  ],
+  "estados-unidos": [
+    { "lugar": "Manhattan, Nueva York", "url": "https://images.unsplash.com/photo-1485871981521-5b1fd3805eee" },
+    { "lugar": "Nueva York clásico", "url": "https://images.unsplash.com/photo-1496442226666-8d4d0e62e6e9" },
+    { "lugar": "Golden Gate, San Francisco", "url": "https://images.unsplash.com/photo-1501594907352-04cda38ebc29" },
+    { "lugar": "Ruta por el Oeste americano", "url": "https://images.unsplash.com/photo-1469854523086-cc02fe5d8800" },
+    { "lugar": "Monument Valley, Arizona", "url": "https://images.unsplash.com/photo-1575408264798-b50b252663e6" },
+    { "lugar": "Las Vegas Strip", "url": "https://images.unsplash.com/photo-1581351721010-8cf859cb14a4" },
+    { "lugar": "Bienvenido a Las Vegas", "url": "https://images.unsplash.com/photo-1605833556294-ea5c7a74f57d" }
+  ],
+  "emiratos-arabes": [
+    { "lugar": "Burj Al Arab, Dubái (aéreo)", "url": "https://images.unsplash.com/photo-1518684079-3c830dcef090" },
+    { "lugar": "Sheikh Zayed Road, Dubái", "url": "https://images.unsplash.com/photo-1526495124232-a04e1849168c" },
+    { "lugar": "Burj Khalifa", "url": "https://images.unsplash.com/photo-1580674684081-7617fbf3d745" },
+    { "lugar": "Skyline de Dubái", "url": "https://images.unsplash.com/photo-1512453979798-5ea266f8880c" },
+    { "lugar": "Playa de Jumeirah", "url": "https://images.unsplash.com/photo-1546412414-e1885259563a" }
+  ],
+  "china": [
+    { "lugar": "Gran Muralla China", "url": "https://images.unsplash.com/photo-1508804185872-d7badad00f7d" },
+    { "lugar": "Ciudad Prohibida, Pekín", "url": "https://images.unsplash.com/photo-1547981609-4b6bfe67ca0b" },
+    { "lugar": "Arrozales de Guilin", "url": "https://images.unsplash.com/photo-1537531383496-f4749b8032cf" },
+    { "lugar": "Shanghái de noche", "url": "https://images.unsplash.com/photo-1474181487882-5abf3f0ba6c2" },
+    { "lugar": "Faroles rojos tradicionales", "url": "https://images.unsplash.com/photo-1517309230475-6736d926b979" }
+  ],
+  "japon": [
+    { "lugar": "Pagoda Yasaka, Kioto", "url": "https://images.unsplash.com/photo-1493976040374-85c8e12f0c0e" },
+    { "lugar": "Kioto, skyline con pagoda", "url": "https://images.unsplash.com/photo-1545569341-9eb8b30979d9" },
+    { "lugar": "Callejones de Tokio", "url": "https://images.unsplash.com/photo-1528360983277-13d401cdc186" },
+    { "lugar": "Torii de Hakone", "url": "https://images.unsplash.com/photo-1492571350019-22de08371fd3" },
+    { "lugar": "Monte Fuji y sakura", "url": "https://images.unsplash.com/photo-1490806843957-31f4c9a91c65" },
+    { "lugar": "Sakura en el canal Meguro", "url": "https://images.unsplash.com/photo-1524413840807-0c3cb6fa808d" }
+  ],
+  "tailandia": [
+    { "lugar": "Islas Phi Phi", "url": "https://images.unsplash.com/photo-1506665531195-3566af2b4dfa" },
+    { "lugar": "Railay, Krabi", "url": "https://images.unsplash.com/photo-1552465011-b4e21bf6e79a" },
+    { "lugar": "Templos de Chiang Mai", "url": "https://images.unsplash.com/photo-1528181304800-259b08848526" },
+    { "lugar": "Bahía de Phang Nga", "url": "https://images.unsplash.com/photo-1504214208698-ea1916a2195a" },
+    { "lugar": "Templos de Bangkok", "url": "https://images.unsplash.com/photo-1563492065599-3520f775eeed" }
+  ],
+  "italia": [
+    { "lugar": "Coliseo, Roma", "url": "https://images.unsplash.com/photo-1552832230-c0197dd311b5" },
+    { "lugar": "Coliseo Romano", "url": "https://images.unsplash.com/photo-1515542622106-78bda8ba0e5b" },
+    { "lugar": "Plaza San Pedro, Vaticano", "url": "https://images.unsplash.com/photo-1531572753322-ad063cecc140" },
+    { "lugar": "Puente de Rialto, Venecia", "url": "https://images.unsplash.com/photo-1523906834658-6e24ef2386f9" },
+    { "lugar": "Manarola, Cinque Terre", "url": "https://images.unsplash.com/photo-1516483638261-f4dbaf036963" },
+    { "lugar": "Roma y el río Tíber", "url": "https://images.unsplash.com/photo-1529260830199-42c24126f198" }
+  ]
+}

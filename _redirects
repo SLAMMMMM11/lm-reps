@@ -13,6 +13,10 @@
 /informacion-de-viaje      /Pages/tramites.html                  200
 /paquetes                  /Pages/paquetes.html                  200
 /promociones               /Pages/promociones.html              200
+
+# El logo OSCE se renombro de .jpeg a .png (fondo transparente); los correos
+# ya enviados con la firma antigua siguen apuntando al .jpeg
+/Assets/img/osce.jpeg      /Assets/img/osce.png                 200
 /politicas-de-privacidad   /Pages/politicas-de-privacidad.html  200
 /libro-de-reclamaciones    /Pages/libro-de-reclamaciones.html   200
 /paquetes-turisticos       /Pages/paquetes-turisticos.html      200
