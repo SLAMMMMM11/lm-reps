@@ -524,7 +524,31 @@
     <priority>0.6</priority>
   </url>
   <url>
+    <loc>https://lm-reps.com/paquete/londres-paris-e-italia</loc>
+    <lastmod>2026-07-18</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://lm-reps.com/paquete/londres-paris-y-el-rin</loc>
+    <lastmod>2026-07-18</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
     <loc>https://lm-reps.com/paquete/londres-y-paris</loc>
+    <lastmod>2026-07-18</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://lm-reps.com/paquete/madrid-burdeos-y-paris</loc>
+    <lastmod>2026-07-18</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://lm-reps.com/paquete/madrid-paris-y-el-rin</loc>
     <lastmod>2026-07-18</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
@@ -555,6 +579,12 @@
   </url>
   <url>
     <loc>https://lm-reps.com/paquete/oporto-lisboa-y-madrid</loc>
+    <lastmod>2026-07-18</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://lm-reps.com/paquete/paris-castillos-del-loira-y-bretana</loc>
     <lastmod>2026-07-18</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>

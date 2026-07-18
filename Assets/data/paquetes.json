@@ -1017,6 +1017,44 @@
     "custom": true
   },
   {
+    "slug": "londres-paris-e-italia",
+    "title": "Londres, París e Italia",
+    "subtitle": "Londres, París, Venecia, Florencia, Siena, Asís y Roma: de las islas británicas al corazón de Italia.",
+    "image": "https://images.unsplash.com/photo-1552832230-c0197dd311b5?q=80&w=800",
+    "images": [
+      "https://images.unsplash.com/photo-1552832230-c0197dd311b5?q=80&w=800"
+    ],
+    "region": "Europa",
+    "regionKey": "carouseleuropa",
+    "destino": "Reino Unido, Francia e Italia",
+    "countries": [
+      "reino-unido",
+      "francia",
+      "italia"
+    ],
+    "custom": true
+  },
+  {
+    "slug": "londres-paris-y-el-rin",
+    "title": "Londres, París y el Rin",
+    "subtitle": "Londres, París, Bélgica, Países Bajos y un crucero por el río Rin hasta Frankfurt: cuatro países en un solo viaje.",
+    "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/5/57/Imagen_de_los_canales_conc%C3%A9ntricos_en_%C3%81msterdam.png/1280px-Imagen_de_los_canales_conc%C3%A9ntricos_en_%C3%81msterdam.png",
+    "images": [
+      "https://upload.wikimedia.org/wikipedia/commons/thumb/5/57/Imagen_de_los_canales_conc%C3%A9ntricos_en_%C3%81msterdam.png/1280px-Imagen_de_los_canales_conc%C3%A9ntricos_en_%C3%81msterdam.png"
+    ],
+    "region": "Europa",
+    "regionKey": "carouseleuropa",
+    "destino": "Reino Unido, Francia, Bélgica, Países Bajos y Alemania",
+    "countries": [
+      "reino-unido",
+      "francia",
+      "belgica",
+      "paises-bajos",
+      "alemania"
+    ],
+    "custom": true
+  },
+  {
     "slug": "londres-y-paris",
     "title": "Londres y París",
     "subtitle": "Londres y París cruzando el Canal de la Mancha por el Eurotunnel: dos capitales en una sola escapada.",
@@ -1030,6 +1068,43 @@
     "countries": [
       "reino-unido",
       "francia"
+    ],
+    "custom": true
+  },
+  {
+    "slug": "madrid-burdeos-y-paris",
+    "title": "Madrid, Burdeos y París",
+    "subtitle": "Madrid, San Sebastián, Burdeos y la región del Loira hasta París: una escapada corta con lo mejor de España y Francia.",
+    "image": "/Assets/img/espana/espana-madrid.jpg",
+    "images": [
+      "/Assets/img/espana/espana-madrid.jpg"
+    ],
+    "region": "Europa",
+    "regionKey": "carouseleuropa",
+    "destino": "España y Francia",
+    "countries": [
+      "espana",
+      "francia"
+    ],
+    "custom": true
+  },
+  {
+    "slug": "madrid-paris-y-el-rin",
+    "title": "Madrid, París y el Rin",
+    "subtitle": "Madrid, San Sebastián, Burdeos, París, Bélgica, Países Bajos y un crucero por el río Rin hasta Frankfurt.",
+    "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/5/57/Imagen_de_los_canales_conc%C3%A9ntricos_en_%C3%81msterdam.png/1280px-Imagen_de_los_canales_conc%C3%A9ntricos_en_%C3%81msterdam.png",
+    "images": [
+      "https://upload.wikimedia.org/wikipedia/commons/thumb/5/57/Imagen_de_los_canales_conc%C3%A9ntricos_en_%C3%81msterdam.png/1280px-Imagen_de_los_canales_conc%C3%A9ntricos_en_%C3%81msterdam.png"
+    ],
+    "region": "Europa",
+    "regionKey": "carouseleuropa",
+    "destino": "España, Francia, Bélgica, Países Bajos y Alemania",
+    "countries": [
+      "espana",
+      "francia",
+      "belgica",
+      "paises-bajos",
+      "alemania"
     ],
     "custom": true
   },
@@ -1112,6 +1187,25 @@
     "countries": [
       "espana",
       "portugal"
+    ],
+    "custom": true
+  },
+  {
+    "slug": "paris-castillos-del-loira-y-bretana",
+    "title": "París, Castillos del Loira y Bretaña",
+    "subtitle": "Los castillos del Valle del Loira, la Bretaña francesa y Normandía, con una extensión opcional a Bélgica, Países Bajos y el Rin.",
+    "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/d/d2/Eiffelturm.JPG/1280px-Eiffelturm.JPG",
+    "images": [
+      "https://upload.wikimedia.org/wikipedia/commons/thumb/d/d2/Eiffelturm.JPG/1280px-Eiffelturm.JPG"
+    ],
+    "region": "Europa",
+    "regionKey": "carouseleuropa",
+    "destino": "Francia",
+    "countries": [
+      "francia",
+      "belgica",
+      "paises-bajos",
+      "alemania"
     ],
     "custom": true
   },

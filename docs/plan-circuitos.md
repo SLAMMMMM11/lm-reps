@@ -53,11 +53,11 @@ Claude actualiza este archivo con cada tanda.
 | 36 | 20 | Italia, Costa Azul y España | 10 ó 14 | $1.550 | Tanda 7 | construido | italia-costa-azul-y-espana |
 | 37 | 24 | Londres y París | 7 | $1.205 | Tanda 7 | construido | londres-y-paris |
 | 38 | 25 | París y Londres | 6 | $1.075 | Tanda 7 | construido | paris-y-londres |
-| 39 | 26 | Madrid, Burdeos y París | 8 | $865 | Tanda 8 | pendiente |  |
-| 40 | 28 | (ver PDF) | 11 ó 12 | $1.460 | Tanda 8 | pendiente |  |
-| 41 | 30 | (ver PDF) | 12 ó 13 | $1.865 | Tanda 8 | pendiente |  |
-| 42 | 32 | (ver PDF) | 12 ó 14 | $1.905 | Tanda 8 | pendiente |  |
-| 43 | 34 | (ver PDF) | 15 | $1.830 | Tanda 8 | pendiente |  |
+| 39 | 26 | Madrid, Burdeos y París | 8 | $865 | Tanda 8 | construido | madrid-burdeos-y-paris |
+| 40 | 28 | Europa Soñada desde Londres y París (Londres, París, Países Bajos, El Rin) | 9 a 12 | $1.460 | Tanda 8 | construido | londres-paris-y-el-rin |
+| 41 | 30 | Europa Soñada desde Madrid (Madrid, París, Países Bajos, El Rin) | 12 ó 13 | $1.865 | Tanda 8 | construido | madrid-paris-y-el-rin |
+| 42 | 32 | Londres, París e Italia | 12 ó 14 | $1.905 | Tanda 8 | construido | londres-paris-e-italia |
+| 43 | 34 | París, Castillos del Loira, Bretaña y Normandía (+ extensión Países Bajos y El Rin) | 9 o 15 | $1.830 | Tanda 8 | construido | paris-castillos-del-loira-y-bretana |
 | 44 | 36 | (ver PDF) | 9 ó 11 | $2.600 | Tanda 9 | pendiente |  |
 | 45 | 38 | (ver PDF) | 15 | $4.175 | Tanda 9 | pendiente |  |
 | 46 | 40 | (ver PDF) | 9 | $2.125 | Tanda 9 | pendiente |  |
