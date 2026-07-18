@@ -21,7 +21,9 @@
     { "lugar": "Lagos de Covadonga", "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/d/d6/LAGOS_DE_COVADONGA_5.jpg/1280px-LAGOS_DE_COVADONGA_5.jpg" },
     { "lugar": "Catedral de Oviedo", "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/9/99/Cathedral_of_Oviedo_2021_-_exterior.jpg/1280px-Cathedral_of_Oviedo_2021_-_exterior.jpg" },
     { "lugar": "Catedral de Santiago de Compostela", "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/a/a9/Santiago_cathedral_2021.jpg/1280px-Santiago_cathedral_2021.jpg" },
-    { "lugar": "Teatro Romano de Mérida", "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/9/94/Ancient_Roman_theatre_in_M%C3%A9rida_2023.jpg/1280px-Ancient_Roman_theatre_in_M%C3%A9rida_2023.jpg" }
+    { "lugar": "Teatro Romano de Mérida", "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/9/94/Ancient_Roman_theatre_in_M%C3%A9rida_2023.jpg/1280px-Ancient_Roman_theatre_in_M%C3%A9rida_2023.jpg" },
+    { "lugar": "Acueducto de Segovia", "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/1/10/Aqueduct_of_Segovia_02.jpg/1280px-Aqueduct_of_Segovia_02.jpg" },
+    { "lugar": "Murallas de Ávila", "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/6/67/%C3%81vila_24-8-2002.jpg/1280px-%C3%81vila_24-8-2002.jpg" }
   ],
   "portugal": [
     { "lugar": "Tranvía de Lisboa", "url": "https://images.unsplash.com/photo-1585208798174-6cedd86e019a" },
@@ -30,7 +32,11 @@
     { "lugar": "Puente Don Luis I, Oporto", "url": "https://images.unsplash.com/photo-1569959220744-ff553533f492" },
     { "lugar": "Canal de Aveiro con barcos moliceiro", "url": "https://upload.wikimedia.org/wikipedia/commons/0/0f/Ria_de_Aveiro_edited_%28cropped%29.jpg" },
     { "lugar": "Santuario de Fátima", "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/f/f9/Sanctuary_of_Fatima.jpg/1280px-Sanctuary_of_Fatima.jpg" },
-    { "lugar": "Terrazas de viñedos, Valle del Duero", "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/4/4c/Alto_Douro_Vinhateiro_visto_de_um_comboio.jpg/1280px-Alto_Douro_Vinhateiro_visto_de_um_comboio.jpg" }
+    { "lugar": "Terrazas de viñedos, Valle del Duero", "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/4/4c/Alto_Douro_Vinhateiro_visto_de_um_comboio.jpg/1280px-Alto_Douro_Vinhateiro_visto_de_um_comboio.jpg" },
+    { "lugar": "Óbidos, casco histórico y castillo", "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/4/47/%C3%93bidos_view592.jpg/1280px-%C3%93bidos_view592.jpg" },
+    { "lugar": "Monasterio de Batalha", "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/5/54/Batalha_September_2021-53.jpg/1280px-Batalha_September_2021-53.jpg" },
+    { "lugar": "Universidad de Coímbra", "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/c/c5/Universidad_de_Co%C3%ADmbra%2C_Portugal%2C_2012-05-10%2C_DD_12.JPG/1280px-Universidad_de_Co%C3%ADmbra%2C_Portugal%2C_2012-05-10%2C_DD_12.JPG" },
+    { "lugar": "Santuario del Bom Jesus do Monte, Braga", "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/4/4e/Treppenaufgang_Bom_Jesus_do_Monte.jpg/1280px-Treppenaufgang_Bom_Jesus_do_Monte.jpg" }
   ],
   "peru": [
     { "lugar": "Machu Picchu", "url": "https://images.unsplash.com/photo-1587595431973-160d0d94add1" },
