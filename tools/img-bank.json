@@ -120,7 +120,9 @@
   "francia": [
     { "lugar": "Torre Eiffel, París", "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/d/d2/Eiffelturm.JPG/1280px-Eiffelturm.JPG" },
     { "lugar": "Santuario de Nuestra Señora de Lourdes", "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/2/2a/Lourdes_basilique_vue_depuis_ch%C3%A2teau_%283%29.JPG/1280px-Lourdes_basilique_vue_depuis_ch%C3%A2teau_%283%29.JPG" },
-    { "lugar": "Mónaco, Costa Azul", "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/1/1b/Fuerstenhof_zu_Monaco.jpg/1280px-Fuerstenhof_zu_Monaco.jpg" }
+    { "lugar": "Mónaco, Costa Azul", "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/1/1b/Fuerstenhof_zu_Monaco.jpg/1280px-Fuerstenhof_zu_Monaco.jpg" },
+    { "lugar": "Castillo de Chenonceau, Valle del Loira", "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/3/30/Chenonceau-20050320.jpg/1280px-Chenonceau-20050320.jpg" },
+    { "lugar": "Place de la Bourse (espejo de agua), Burdeos", "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/6/64/Bordeaux_place_de_la_bourse_with_tram.JPG/1280px-Bordeaux_place_de_la_bourse_with_tram.JPG" }
   ],
   "inglaterra": [
     { "lugar": "Palacio de Westminster y Big Ben, Londres", "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/4/48/Westminster_palace.jpg/1280px-Westminster_palace.jpg" },
@@ -129,5 +131,15 @@
   ],
   "malta": [
     { "lugar": "La Valeta, Malta", "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/b/b7/St_Sebastian_Curtain_%28cropped%29.jpg/1280px-St_Sebastian_Curtain_%28cropped%29.jpg" }
+  ],
+  "belgica": [
+    { "lugar": "Grand Place, Bruselas", "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/2/26/Grand-Place%2C_Brussels_-_panorama%2C_June_2018.jpg/1280px-Grand-Place%2C_Brussels_-_panorama%2C_June_2018.jpg" },
+    { "lugar": "Canales de Brujas", "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/7/70/Belgium-bruges-canal.jpg/1280px-Belgium-bruges-canal.jpg" }
+  ],
+  "paises-bajos": [
+    { "lugar": "Canales concéntricos de Ámsterdam (aérea)", "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/5/57/Imagen_de_los_canales_conc%C3%A9ntricos_en_%C3%81msterdam.png/1280px-Imagen_de_los_canales_conc%C3%A9ntricos_en_%C3%81msterdam.png" }
+  ],
+  "alemania": [
+    { "lugar": "Catedral de Colonia", "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/0/04/K%C3%B6lner_Dom_-_Westfassade_2022_ohne_Ger%C3%BCst-0968_b.jpg/1280px-K%C3%B6lner_Dom_-_Westfassade_2022_ohne_Ger%C3%BCst-0968_b.jpg" }
   ]
 }
