@@ -121,5 +121,13 @@
     { "lugar": "Torre Eiffel, París", "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/d/d2/Eiffelturm.JPG/1280px-Eiffelturm.JPG" },
     { "lugar": "Santuario de Nuestra Señora de Lourdes", "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/2/2a/Lourdes_basilique_vue_depuis_ch%C3%A2teau_%283%29.JPG/1280px-Lourdes_basilique_vue_depuis_ch%C3%A2teau_%283%29.JPG" },
     { "lugar": "Mónaco, Costa Azul", "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/1/1b/Fuerstenhof_zu_Monaco.jpg/1280px-Fuerstenhof_zu_Monaco.jpg" }
+  ],
+  "inglaterra": [
+    { "lugar": "Palacio de Westminster y Big Ben, Londres", "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/4/48/Westminster_palace.jpg/1280px-Westminster_palace.jpg" },
+    { "lugar": "Palacio de Buckingham, Londres", "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/1/13/Buckingham_Palace_from_gardens%2C_London%2C_UK_-_Diliff_%28cropped%29.jpg/1280px-Buckingham_Palace_from_gardens%2C_London%2C_UK_-_Diliff_%28cropped%29.jpg" },
+    { "lugar": "Torre de Londres", "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/0/06/Tower_of_London_%28Foto_Hilarmont%29.jpg/1280px-Tower_of_London_%28Foto_Hilarmont%29.jpg" }
+  ],
+  "malta": [
+    { "lugar": "La Valeta, Malta", "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/b/b7/St_Sebastian_Curtain_%28cropped%29.jpg/1280px-St_Sebastian_Curtain_%28cropped%29.jpg" }
   ]
 }
