@@ -416,6 +416,18 @@
     <priority>0.6</priority>
   </url>
   <url>
+    <loc>https://lm-reps.com/paquete/desde-madrid-barcelona-o-roma-a-madrid</loc>
+    <lastmod>2026-07-18</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://lm-reps.com/paquete/desde-madrid-o-barcelona-a-paris-o-londres</loc>
+    <lastmod>2026-07-18</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
     <loc>https://lm-reps.com/paquete/desde-paris-a-madrid</loc>
     <lastmod>2026-07-18</lastmod>
     <changefreq>monthly</changefreq>
@@ -476,6 +488,12 @@
     <priority>0.6</priority>
   </url>
   <url>
+    <loc>https://lm-reps.com/paquete/gran-tour-de-irlanda</loc>
+    <lastmod>2026-07-18</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
     <loc>https://lm-reps.com/paquete/gran-tour-espana-portugal-y-andalucia</loc>
     <lastmod>2026-07-18</lastmod>
     <changefreq>monthly</changefreq>
@@ -494,6 +512,12 @@
     <priority>0.6</priority>
   </url>
   <url>
+    <loc>https://lm-reps.com/paquete/gran-tour-inglaterra-y-escocia</loc>
+    <lastmod>2026-07-18</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
     <loc>https://lm-reps.com/paquete/gran-tour-norte-de-espana</loc>
     <lastmod>2026-07-18</lastmod>
     <changefreq>monthly</changefreq>
@@ -501,6 +525,12 @@
   </url>
   <url>
     <loc>https://lm-reps.com/paquete/iberia-al-completo</loc>
+    <lastmod>2026-07-18</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://lm-reps.com/paquete/inglaterra-escocia-e-irlanda</loc>
     <lastmod>2026-07-18</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>

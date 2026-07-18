@@ -58,11 +58,11 @@ Claude actualiza este archivo con cada tanda.
 | 41 | 30 | Europa Soñada desde Madrid (Madrid, París, Países Bajos, El Rin) | 12 ó 13 | $1.865 | Tanda 8 | construido | madrid-paris-y-el-rin |
 | 42 | 32 | Londres, París e Italia | 12 ó 14 | $1.905 | Tanda 8 | construido | londres-paris-e-italia |
 | 43 | 34 | París, Castillos del Loira, Bretaña y Normandía (+ extensión Países Bajos y El Rin) | 9 o 15 | $1.830 | Tanda 8 | construido | paris-castillos-del-loira-y-bretana |
-| 44 | 36 | (ver PDF) | 9 ó 11 | $2.600 | Tanda 9 | pendiente |  |
-| 45 | 38 | (ver PDF) | 15 | $4.175 | Tanda 9 | pendiente |  |
-| 46 | 40 | (ver PDF) | 9 | $2.125 | Tanda 9 | pendiente |  |
-| 47 | 42 | Desde Madrid, Barcelona o Roma a Madrid | 17 ó 18 | $2.385 | Tanda 9 | pendiente |  |
-| 48 | 44 | Desde Madrid o Barcelona a París o Londres | 16 ó 17 | $2.365 | Tanda 9 | pendiente |  |
+| 44 | 36 | Gran Tour Inglaterra y Escocia | 9 ó 11 | $2.600 | Tanda 9 | construido | gran-tour-inglaterra-y-escocia |
+| 45 | 38 | Maravillas de Inglaterra, Escocia e Irlanda | 15 | $4.175 | Tanda 9 | construido | inglaterra-escocia-e-irlanda |
+| 46 | 40 | Gran Tour de Irlanda | 9 | $2.125 | Tanda 9 | construido | gran-tour-de-irlanda |
+| 47 | 42 | Desde Madrid, Barcelona o Roma a Madrid | 15, 17 ó 18 | $2.385 | Tanda 9 | construido | desde-madrid-barcelona-o-roma-a-madrid |
+| 48 | 44 | Desde Madrid o Barcelona a París o Londres | 14, 15, 16 ó 17 | $2.365 | Tanda 9 | construido | desde-madrid-o-barcelona-a-paris-o-londres |
 | 49 | 46 | (ver PDF) | 20 ó 21 | $2.680 | Tanda 10 | pendiente |  |
 | 50 | 48 | Desde Madrid o Roma a Castilla, Galicia y Portugal | 20 ó 24 | $2.130 | Tanda 10 | pendiente |  |
 | 51 | 50 | Desde Londres | 16 ó 18 | $2.200 | Tanda 10 | pendiente |  |

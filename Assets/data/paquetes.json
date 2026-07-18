@@ -712,6 +712,47 @@
     "custom": true
   },
   {
+    "slug": "desde-madrid-barcelona-o-roma-a-madrid",
+    "title": "Desde Madrid, Barcelona o Roma a Madrid",
+    "subtitle": "Madrid, Barcelona, la Costa Azul, Roma, Florencia, Venecia, Innsbruck, Suiza, París y Lourdes: el gran círculo de España a Italia y Francia.",
+    "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/d/d2/Eiffelturm.JPG/1280px-Eiffelturm.JPG",
+    "images": [
+      "https://upload.wikimedia.org/wikipedia/commons/thumb/d/d2/Eiffelturm.JPG/1280px-Eiffelturm.JPG"
+    ],
+    "region": "Europa",
+    "regionKey": "carouseleuropa",
+    "destino": "España, Francia, Italia, Austria y Suiza",
+    "countries": [
+      "espana",
+      "italia",
+      "francia",
+      "suiza",
+      "austria"
+    ],
+    "custom": true
+  },
+  {
+    "slug": "desde-madrid-o-barcelona-a-paris-o-londres",
+    "title": "Desde Madrid o Barcelona a París o Londres",
+    "subtitle": "Madrid, Barcelona, la Costa Azul, Roma, Florencia, Venecia, Innsbruck, Suiza y un final a elección: París o Londres.",
+    "image": "https://images.unsplash.com/photo-1552832230-c0197dd311b5?q=80&w=1600",
+    "images": [
+      "https://images.unsplash.com/photo-1552832230-c0197dd311b5?q=80&w=1600"
+    ],
+    "region": "Europa",
+    "regionKey": "carouseleuropa",
+    "destino": "España, Italia, Austria, Suiza, Francia y Reino Unido",
+    "countries": [
+      "espana",
+      "italia",
+      "suiza",
+      "austria",
+      "francia",
+      "reino-unido"
+    ],
+    "custom": true
+  },
+  {
     "slug": "desde-paris-a-madrid",
     "title": "Desde París a Madrid",
     "subtitle": "París, Lourdes, San Sebastián y Madrid: un primer vistazo a Francia y España en una sola escapada.",
@@ -882,6 +923,23 @@
     "custom": true
   },
   {
+    "slug": "gran-tour-de-irlanda",
+    "title": "Gran Tour de Irlanda",
+    "subtitle": "Dublín, la Calzada de los Gigantes, Belfast, Galway, los Acantilados de Moher y el Anillo de Kerry: la Isla Esmeralda al completo.",
+    "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/c/c0/Causeway-code_poet-4.jpg/1280px-Causeway-code_poet-4.jpg",
+    "images": [
+      "https://upload.wikimedia.org/wikipedia/commons/thumb/c/c0/Causeway-code_poet-4.jpg/1280px-Causeway-code_poet-4.jpg"
+    ],
+    "region": "Europa",
+    "regionKey": "carouseleuropa",
+    "destino": "Irlanda",
+    "countries": [
+      "irlanda",
+      "reino-unido"
+    ],
+    "custom": true
+  },
+  {
     "slug": "gran-tour-espana-portugal-y-andalucia",
     "title": "La Ruta Ibérica",
     "subtitle": "Madrid, Segovia, Ávila, Salamanca, Santiago, Oporto, Lisboa, Mérida, Sevilla, Córdoba y Granada — Castilla, Galicia, Portugal y Andalucía en un solo viaje.",
@@ -934,6 +992,22 @@
     "custom": true
   },
   {
+    "slug": "gran-tour-inglaterra-y-escocia",
+    "title": "Gran Tour Inglaterra y Escocia",
+    "subtitle": "Londres, Cambridge, York, Durham, Edimburgo y las Tierras Altas escocesas, con el Lago Ness y una destilería de whisky.",
+    "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/4/48/Westminster_palace.jpg/1280px-Westminster_palace.jpg",
+    "images": [
+      "https://upload.wikimedia.org/wikipedia/commons/thumb/4/48/Westminster_palace.jpg/1280px-Westminster_palace.jpg"
+    ],
+    "region": "Europa",
+    "regionKey": "carouseleuropa",
+    "destino": "Reino Unido",
+    "countries": [
+      "reino-unido"
+    ],
+    "custom": true
+  },
+  {
     "slug": "gran-tour-norte-de-espana",
     "title": "Gran Tour Norte de España",
     "subtitle": "Barcelona, Pamplona, San Sebastián, Bilbao, Covadonga, Oviedo, Santiago, Salamanca y Madrid.",
@@ -963,6 +1037,23 @@
     "countries": [
       "espana",
       "portugal"
+    ],
+    "custom": true
+  },
+  {
+    "slug": "inglaterra-escocia-e-irlanda",
+    "title": "Maravillas de Inglaterra, Escocia e Irlanda",
+    "subtitle": "El gran tour de las Islas Británicas: Londres, York, Edimburgo, las Tierras Altas, Belfast y toda Irlanda hasta Dublín.",
+    "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/5/5a/Dublin_-_aerial_-_panorama_-_2025-02-06.jpg/1280px-Dublin_-_aerial_-_panorama_-_2025-02-06.jpg",
+    "images": [
+      "https://upload.wikimedia.org/wikipedia/commons/thumb/5/5a/Dublin_-_aerial_-_panorama_-_2025-02-06.jpg/1280px-Dublin_-_aerial_-_panorama_-_2025-02-06.jpg"
+    ],
+    "region": "Europa",
+    "regionKey": "carouseleuropa",
+    "destino": "Reino Unido e Irlanda",
+    "countries": [
+      "reino-unido",
+      "irlanda"
     ],
     "custom": true
   },
