@@ -693,6 +693,23 @@
     "custom": true
   },
   {
+    "slug": "espana-y-portugal-imperial",
+    "title": "España y Portugal Imperial",
+    "subtitle": "Barcelona, Madrid, Segovia, Ávila, Salamanca, Santiago de Compostela, Oporto, Lisboa y Mérida.",
+    "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/6/67/%C3%81vila_24-8-2002.jpg/1280px-%C3%81vila_24-8-2002.jpg",
+    "images": [
+      "https://upload.wikimedia.org/wikipedia/commons/thumb/6/67/%C3%81vila_24-8-2002.jpg/1280px-%C3%81vila_24-8-2002.jpg"
+    ],
+    "region": "Europa",
+    "regionKey": "carouseleuropa",
+    "destino": "España y Portugal",
+    "countries": [
+      "espana",
+      "portugal"
+    ],
+    "custom": true
+  },
+  {
     "slug": "experiencia-madrid",
     "title": "Experiencia Madrid",
     "subtitle": "Estancia en Madrid con visita guiada — combinable con cualquier circuito.",
@@ -705,6 +722,40 @@
     "destino": "España",
     "countries": [
       "espana"
+    ],
+    "custom": true
+  },
+  {
+    "slug": "gran-gira-iberica",
+    "title": "Gran Gira Ibérica",
+    "subtitle": "Madrid, Mérida, Sevilla, Córdoba, Granada, Valencia, Barcelona, Pamplona, San Sebastián, Bilbao, Covadonga, Santiago, Oporto y Lisboa.",
+    "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/c/c7/Museo_Guggenheim%2C_Bilbao_%2831273245344%29.jpg/1280px-Museo_Guggenheim%2C_Bilbao_%2831273245344%29.jpg",
+    "images": [
+      "https://upload.wikimedia.org/wikipedia/commons/thumb/c/c7/Museo_Guggenheim%2C_Bilbao_%2831273245344%29.jpg/1280px-Museo_Guggenheim%2C_Bilbao_%2831273245344%29.jpg"
+    ],
+    "region": "Europa",
+    "regionKey": "carouseleuropa",
+    "destino": "España y Portugal",
+    "countries": [
+      "espana",
+      "portugal"
+    ],
+    "custom": true
+  },
+  {
+    "slug": "gran-tour-espana-portugal-y-andalucia",
+    "title": "La Ruta Ibérica",
+    "subtitle": "Madrid, Segovia, Ávila, Salamanca, Santiago, Oporto, Lisboa, Mérida, Sevilla, Córdoba y Granada — Castilla, Galicia, Portugal y Andalucía en un solo viaje.",
+    "image": "/Assets/img/espana/espana-sevilla.jpg",
+    "images": [
+      "/Assets/img/espana/espana-sevilla.jpg"
+    ],
+    "region": "Europa",
+    "regionKey": "carouseleuropa",
+    "destino": "España y Portugal",
+    "countries": [
+      "espana",
+      "portugal"
     ],
     "custom": true
   },
@@ -742,6 +793,23 @@
     "custom": true
   },
   {
+    "slug": "iberia-al-completo",
+    "title": "Gran Tour de Portugal y Andalucía",
+    "subtitle": "Barcelona, Madrid, Segovia, Ávila, Salamanca, Santiago, Oporto, Lisboa, Mérida, Sevilla, Córdoba, Granada, Costa del Sol y Ronda.",
+    "image": "/Assets/img/espana/espana-sevilla.jpg",
+    "images": [
+      "/Assets/img/espana/espana-sevilla.jpg"
+    ],
+    "region": "Europa",
+    "regionKey": "carouseleuropa",
+    "destino": "España y Portugal",
+    "countries": [
+      "espana",
+      "portugal"
+    ],
+    "custom": true
+  },
+  {
     "slug": "madrid-y-andalucia",
     "title": "Madrid y Andalucía",
     "subtitle": "Madrid, Mérida, Sevilla, Córdoba y Granada — salidas los sábados.",
@@ -770,6 +838,22 @@
     "destino": "España y Portugal",
     "countries": [
       "espana",
+      "portugal"
+    ],
+    "custom": true
+  },
+  {
+    "slug": "portugal-eterno",
+    "title": "Portugal Eterno",
+    "subtitle": "Lisboa, Óbidos, Batalha, Coímbra, Valle del Duero, Braga, Guimarães, Oporto, Aveiro y Fátima.",
+    "image": "https://images.unsplash.com/photo-1555881400-74d7acaacd8b?q=80&w=800",
+    "images": [
+      "https://images.unsplash.com/photo-1555881400-74d7acaacd8b?q=80&w=800"
+    ],
+    "region": "Europa",
+    "regionKey": "carouseleuropa",
+    "destino": "Portugal",
+    "countries": [
       "portugal"
     ],
     "custom": true

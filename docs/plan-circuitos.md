@@ -21,12 +21,12 @@ Claude actualiza este archivo con cada tanda.
 | 10 | 16 | (ver PDF) | 7 o 9 | $1.160 | Tanda 2 | construido | oporto-lisboa-y-madrid |
 | 11 | 17 | (ver PDF) | 8 | $810 | Tanda 2 | construido | esencia-de-portugal-y-madrid |
 | 12 | 18 | (ver PDF) | 10 ó 12 | $1.420 | Tanda 2 | construido | portugal-y-andalucia |
-| 13 | 19 | (ver PDF) | 9 | $1.460 | Tanda 3 | pendiente |  |
-| 14 | 20 | (ver PDF) | 12 ó 13 | $1.380 | Tanda 3 | pendiente |  |
-| 15 | 22 | (ver PDF) | 14 | $2.085 | Tanda 3 | pendiente |  |
+| 13 | 19 | Portugal Eterno | 9 | $1.460 | Tanda 3 | construido | portugal-eterno |
+| 14 | 20 | Barcelona, Madrid, Castilla, Galicia y Portugal | 12 ó 13 | $1.380 | Tanda 3 | construido | espana-y-portugal-imperial |
+| 15 | 22 | La Ruta Ibérica | 14 | $2.085 | Tanda 3 | construido | gran-tour-espana-portugal-y-andalucia |
 | 16 | 24 | (ver PDF) | 16 o 17 | $2.390 | — | publicado | espana-y-portugal |
-| 17 | 26 | (ver PDF) | 17 o 18 | $2.290 | Tanda 3 | pendiente |  |
-| 18 | 28 | (ver PDF) | 18 ó 19 | $3.120 | Tanda 3 | pendiente |  |
+| 17 | 26 | Gran Tour de Portugal y Andalucía | 17 o 18 | $2.290 | Tanda 3 | construido | iberia-al-completo |
+| 18 | 28 | Gran Gira Ibérica | 18 ó 19 | $3.120 | Tanda 3 | construido | gran-gira-iberica |
 | 19 | 30 | Ciudades Imperiales | 8 | $990 | Tanda 4 | pendiente |  |
 | 20 | 31 | (ver PDF) | 8 | $1.020 | Tanda 4 | pendiente |  |
 | 21 | 32 | Desde la Costa del Sol | 9 | $1.445 | Tanda 4 | pendiente |  |
