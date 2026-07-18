@@ -46,7 +46,8 @@ Claude actualiza este archivo con cada tanda.
 | 30 | 7 | Venecia, Florencia, Roma | 9 | $1.410 | Tanda 6 | construido | venecia-florencia-y-roma |
 | 31 | 8 | Milán, Venecia, Florencia, Roma | 10 | $1.565 | Tanda 6 | construido | milan-venecia-florencia-y-roma |
 | 32 | 9 | Italia Plus 3 "Italia al completo" | 8 (ó 12/13) | $1.460 | Tanda 6 | construido | italia-al-completo |
-| 33 | 11 | (ver PDF) | 10 ó 12 | $2.040 | Tanda 6 | pendiente |  |
+| 33 | 11 | Sur de Italia y la Puglia (Roma/Nápoles(2)/Costa Amalfitana/Puglia) | 10 ó 12 | $2.040 | Tanda 6 | pendiente |  |
+| 33b | 66 | Sur de Italia y Sicilia | 10 o 12 | $2.165 | Tanda 6 | construido | sur-de-italia-y-sicilia |
 | 34 | 16 | (ver PDF) | 7 | $1.385 | Tanda 7 | pendiente |  |
 | 35 | 17 | (ver PDF) | 9 | $2.485 | Tanda 7 | pendiente |  |
 | 36 | 20 | (ver PDF) | 10 ó 14 | $1.550 | Tanda 7 | pendiente |  |
