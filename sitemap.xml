@@ -512,7 +512,31 @@
     <priority>0.6</priority>
   </url>
   <url>
+    <loc>https://lm-reps.com/paquete/italia-con-estilo</loc>
+    <lastmod>2026-07-18</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://lm-reps.com/paquete/italia-costa-azul-y-espana</loc>
+    <lastmod>2026-07-18</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://lm-reps.com/paquete/londres-y-paris</loc>
+    <lastmod>2026-07-18</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
     <loc>https://lm-reps.com/paquete/madrid-y-andalucia</loc>
+    <lastmod>2026-07-18</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://lm-reps.com/paquete/malta-y-sicilia</loc>
     <lastmod>2026-07-18</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
@@ -531,6 +555,12 @@
   </url>
   <url>
     <loc>https://lm-reps.com/paquete/oporto-lisboa-y-madrid</loc>
+    <lastmod>2026-07-18</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://lm-reps.com/paquete/paris-y-londres</loc>
     <lastmod>2026-07-18</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
