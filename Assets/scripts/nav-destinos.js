@@ -1,24 +1,11 @@
-// Menú "Destinos" del navbar: el markup trae los 10 países con página de
-// destino; aquí se ocultan los que hoy no tienen paquetes etiquetados en el
-// manifiesto (campo País del panel admin). Sin red o sin JS quedan los 10.
-(function () {
-  const menu = document.getElementById('navDestinosMenu');
-  if (!menu) return;
-  fetch('/Assets/data/paquetes.json')
-    .then((r) => (r.ok ? r.json() : []))
-    .then((list) => {
-      const conPaquetes = new Set();
-      (list || []).forEach((p) => (p.countries || []).forEach((c) => conPaquetes.add(c)));
-      if (!conPaquetes.size) return;
-      let visibles = 0;
-      menu.querySelectorAll('[data-country]').forEach((li) => {
-        if (conPaquetes.has(li.dataset.country)) visibles += 1;
-        else li.classList.add('d-none');
-      });
-      if (!visibles) {
-        const item = document.getElementById('navDestinos');
-        if (item) item.classList.add('d-none');
-      }
-    })
-    .catch(() => {});
-})();
+// Menú "Destinos" del navbar: se muestran SIEMPRE los 10 países con página
+// de destino (markup fijo, sin ocultar ninguno).
+//
+// Antes este script ocultaba el país si no tenía ningún paquete/afiche
+// activo en el manifiesto — decisión revertida (2026-07-18): cada página de
+// país (/destinos/{pais}) ya tiene contenido propio de sobra (reseña,
+// destacados, galería, cuándo ir) y sus secciones de "Itinerarios" y
+// "Afiches y promociones" se ocultan solas cuando no tienen datos
+// (destino-paquetes.js / destino-flyers.js). No hay motivo para que el país
+// completo desaparezca del menú solo porque no tiene una promoción activa
+// en este momento — los afiches ya viven aparte en /promociones.

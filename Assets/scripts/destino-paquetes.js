@@ -1,14 +1,16 @@
 // Grilla "Itinerarios a {país}" en las páginas de país (/destinos/...).
 // Muestra SOLO los paquetes con página hecha a mano (custom, ej. Colores de
 // España, creados desde los PDF del mayorista) — los afiches/flyers van en su
-// propia sección al final de la página (destino-flyers.js). La sección está
-// oculta (d-none) hasta que hay resultados.
+// propia sección al final de la página (destino-flyers.js). La sección
+// (id="itinerarios") y su pill del subnav empiezan ocultas (d-none) en el
+// HTML; este script las revela solo si el país tiene algún paquete custom.
 (function () {
   const grid = document.getElementById('paquetesPais');
   if (!grid) return;
   const country = grid.dataset.country;
   if (!country) return;
-  const section = document.getElementById('paquetesPaisSection');
+  const section = document.getElementById('itinerarios');
+  const subnavPill = document.getElementById('dtSubnavItinerarios');
 
   function escapeHtml(t) {
     const d = document.createElement('div');
@@ -40,6 +42,7 @@
         )
         .join('');
       if (section) section.classList.remove('d-none');
+      if (subnavPill) subnavPill.classList.remove('d-none');
     })
     .catch(() => {});
 })();
