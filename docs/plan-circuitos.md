@@ -27,11 +27,11 @@ Claude actualiza este archivo con cada tanda.
 | 16 | 24 | (ver PDF) | 16 o 17 | $2.390 | — | publicado | espana-y-portugal |
 | 17 | 26 | Gran Tour de Portugal y Andalucía | 17 o 18 | $2.290 | Tanda 3 | construido | iberia-al-completo |
 | 18 | 28 | Gran Gira Ibérica | 18 ó 19 | $3.120 | Tanda 3 | construido | gran-gira-iberica |
-| 19 | 30 | Ciudades Imperiales | 8 | $990 | Tanda 4 | pendiente |  |
-| 20 | 31 | (ver PDF) | 8 | $1.020 | Tanda 4 | pendiente |  |
-| 21 | 32 | Desde la Costa del Sol | 9 | $1.445 | Tanda 4 | pendiente |  |
-| 22 | 33 | (ver PDF) | 14 | $2.520 | Tanda 4 | pendiente |  |
-| 23 | 34 | (ver PDF) | 20 | $3.390 | Tanda 4 | pendiente |  |
+| 19 | 30 | Ciudades Imperiales | 8 | $990 | Tanda 4 | construido | ciudades-imperiales-marruecos |
+| 20 | 31 | Marruecos Espectacular-2 (especial noche en el desierto) | 8 | $1.020 | Tanda 4 | construido | marruecos-imperial-y-sahara |
+| 21 | 32 | Desde la Costa del Sol | 9 | $1.445 | Tanda 4 | construido | desde-costa-del-sol-a-marruecos |
+| 22 | 33 | Madrid, Andalucía y Marruecos | 14 | $2.520 | Tanda 4 | construido | espana-y-marruecos |
+| 23 | 34 | España, Portugal y Marruecos | 20 | $3.390 | Tanda 4 | construido | gran-tour-iberia-y-marruecos |
 | 24 | 36 | (ver PDF) | 15 | $2.485 | Tanda 5 | pendiente |  |
 | 25 | 38 | (ver PDF) | 20 | $3.870 | Tanda 5 | pendiente |  |
 | 26 | 40 | (ver PDF) | 17 | $2.400 | Tanda 5 | pendiente |  |

@@ -644,6 +644,39 @@
     "custom": true
   },
   {
+    "slug": "ciudades-imperiales-marruecos",
+    "title": "Ciudades Imperiales",
+    "subtitle": "Casablanca, Rabat, Tánger, Chefchaouen, Meknes, Fez y Marrakech: las cuatro ciudades imperiales de Marruecos.",
+    "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/a/a4/Vista_de_Xauen_%282%29.jpg/1280px-Vista_de_Xauen_%282%29.jpg",
+    "images": [
+      "https://upload.wikimedia.org/wikipedia/commons/thumb/a/a4/Vista_de_Xauen_%282%29.jpg/1280px-Vista_de_Xauen_%282%29.jpg"
+    ],
+    "region": "Europa",
+    "regionKey": "carouseleuropa",
+    "destino": "Marruecos",
+    "countries": [
+      "marruecos"
+    ],
+    "custom": true
+  },
+  {
+    "slug": "desde-costa-del-sol-a-marruecos",
+    "title": "Desde la Costa del Sol a Marruecos",
+    "subtitle": "Costa del Sol, cruce en ferry a Tánger, Chefchaouen, Meknes, Fez y Marrakech.",
+    "image": "/Assets/img/espana/espana-costa-sol.jpg",
+    "images": [
+      "/Assets/img/espana/espana-costa-sol.jpg"
+    ],
+    "region": "Europa",
+    "regionKey": "carouseleuropa",
+    "destino": "España y Marruecos",
+    "countries": [
+      "espana",
+      "marruecos"
+    ],
+    "custom": true
+  },
+  {
     "slug": "esencia-de-portugal-y-madrid",
     "title": "Esencia de Portugal y Madrid",
     "subtitle": "Oporto, Aveiro, Fátima, Lisboa y extensión a Madrid — la escapada ideal a Portugal.",
@@ -689,6 +722,23 @@
     "destino": "España",
     "countries": [
       "espana"
+    ],
+    "custom": true
+  },
+  {
+    "slug": "espana-y-marruecos",
+    "title": "España y Marruecos",
+    "subtitle": "Madrid, Mérida, Sevilla, Córdoba, Granada, Costa del Sol y, cruzando el Estrecho, Tánger, Fez y Marrakech.",
+    "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/7/79/Djemaa_el_Fna.jpg/1280px-Djemaa_el_Fna.jpg",
+    "images": [
+      "https://upload.wikimedia.org/wikipedia/commons/thumb/7/79/Djemaa_el_Fna.jpg/1280px-Djemaa_el_Fna.jpg"
+    ],
+    "region": "Europa",
+    "regionKey": "carouseleuropa",
+    "destino": "España y Marruecos",
+    "countries": [
+      "espana",
+      "marruecos"
     ],
     "custom": true
   },
@@ -777,6 +827,24 @@
     "custom": true
   },
   {
+    "slug": "gran-tour-iberia-y-marruecos",
+    "title": "Gran Tour Iberia y Marruecos",
+    "subtitle": "Madrid, Segovia, Ávila, Salamanca, Santiago de Compostela, Oporto, Aveiro, Fátima, Lisboa, Mérida, Sevilla, Córdoba, Granada, Costa del Sol y, cruzando el Estrecho, Tánger, Fez y Marrakech.",
+    "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/7/79/Djemaa_el_Fna.jpg/1280px-Djemaa_el_Fna.jpg",
+    "images": [
+      "https://upload.wikimedia.org/wikipedia/commons/thumb/7/79/Djemaa_el_Fna.jpg/1280px-Djemaa_el_Fna.jpg"
+    ],
+    "region": "Europa",
+    "regionKey": "carouseleuropa",
+    "destino": "España, Portugal y Marruecos",
+    "countries": [
+      "espana",
+      "portugal",
+      "marruecos"
+    ],
+    "custom": true
+  },
+  {
     "slug": "gran-tour-norte-de-espana",
     "title": "Gran Tour Norte de España",
     "subtitle": "Barcelona, Pamplona, San Sebastián, Bilbao, Covadonga, Oviedo, Santiago, Salamanca y Madrid.",
@@ -822,6 +890,22 @@
     "destino": "España",
     "countries": [
       "espana"
+    ],
+    "custom": true
+  },
+  {
+    "slug": "marruecos-imperial-y-sahara",
+    "title": "Marruecos Imperial y Sahara",
+    "subtitle": "Casablanca, Rabat, Tánger, Chefchaouen, Fez, las Gargantas del Todra, la Ruta de las Kasbahs, Ouarzazate y Marrakech, con opción de noche en el desierto del Sahara.",
+    "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/a/a4/Bab_Mansour.jpg/1280px-Bab_Mansour.jpg",
+    "images": [
+      "https://upload.wikimedia.org/wikipedia/commons/thumb/a/a4/Bab_Mansour.jpg/1280px-Bab_Mansour.jpg"
+    ],
+    "region": "Europa",
+    "regionKey": "carouseleuropa",
+    "destino": "Marruecos",
+    "countries": [
+      "marruecos"
     ],
     "custom": true
   },
