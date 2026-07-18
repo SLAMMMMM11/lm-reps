@@ -42,10 +42,10 @@ Claude actualiza este archivo con cada tanda.
 |---|---|---|---|---|---|---|---|
 | 27 | 4 | Desde París a Madrid | 8 | $1.375 | Tanda 5 | construido | desde-paris-a-madrid |
 | 28 | 5 | Desde Madrid a Roma y Venecia | 9 ó 11 | $1.550 | Tanda 5 | construido | desde-madrid-a-roma-y-venecia |
-| 29 | 6 | Desde Roma a París o Londres | 12 o 13 | $2.030 | Tanda 6 | pendiente |  |
-| 30 | 7 | Venecia, Florencia, Roma | 9 | $1.410 | Tanda 6 | pendiente |  |
-| 31 | 8 | Milán, Venecia, Florencia, Roma | 10 | $1.565 | Tanda 6 | pendiente |  |
-| 32 | 9 | (ver PDF) | 8 | $1.460 | Tanda 6 | pendiente |  |
+| 29 | 6 | Desde Roma a París o Londres | 12 o 13 | $2.030 | Tanda 6 | construido | desde-roma-a-paris-o-londres |
+| 30 | 7 | Venecia, Florencia, Roma | 9 | $1.410 | Tanda 6 | construido | venecia-florencia-y-roma |
+| 31 | 8 | Milán, Venecia, Florencia, Roma | 10 | $1.565 | Tanda 6 | construido | milan-venecia-florencia-y-roma |
+| 32 | 9 | Italia Plus 3 "Italia al completo" | 8 (ó 12/13) | $1.460 | Tanda 6 | construido | italia-al-completo |
 | 33 | 11 | (ver PDF) | 10 ó 12 | $2.040 | Tanda 6 | pendiente |  |
 | 34 | 16 | (ver PDF) | 7 | $1.385 | Tanda 7 | pendiente |  |
 | 35 | 17 | (ver PDF) | 9 | $2.485 | Tanda 7 | pendiente |  |

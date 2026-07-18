@@ -729,6 +729,26 @@
     "custom": true
   },
   {
+    "slug": "desde-roma-a-paris-o-londres",
+    "title": "Desde Roma a París o Londres",
+    "subtitle": "Roma, Florencia, Venecia, Innsbruck, Lucerna, Zúrich, París y Londres: el gran cruce de Italia a Francia y Reino Unido.",
+    "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/d/d2/Eiffelturm.JPG/1280px-Eiffelturm.JPG",
+    "images": [
+      "https://upload.wikimedia.org/wikipedia/commons/thumb/d/d2/Eiffelturm.JPG/1280px-Eiffelturm.JPG"
+    ],
+    "region": "Europa",
+    "regionKey": "carouseleuropa",
+    "destino": "Italia, Austria, Suiza, Francia y Reino Unido",
+    "countries": [
+      "italia",
+      "austria",
+      "suiza",
+      "francia",
+      "reino-unido"
+    ],
+    "custom": true
+  },
+  {
     "slug": "esencia-de-portugal-y-madrid",
     "title": "Esencia de Portugal y Madrid",
     "subtitle": "Oporto, Aveiro, Fátima, Lisboa y extensión a Madrid — la escapada ideal a Portugal.",
@@ -947,6 +967,22 @@
     "custom": true
   },
   {
+    "slug": "italia-al-completo",
+    "title": "Italia Plus 3: Italia al Completo",
+    "subtitle": "Milán, el Lago de Garda, Verona, Venecia, Florencia, Siena, Asís, Roma, Nápoles, Capri, Sorrento y la Costa Amalfitana.",
+    "image": "https://images.unsplash.com/photo-1552832230-c0197dd311b5?q=80&w=800",
+    "images": [
+      "https://images.unsplash.com/photo-1552832230-c0197dd311b5?q=80&w=800"
+    ],
+    "region": "Europa",
+    "regionKey": "carouseleuropa",
+    "destino": "Italia",
+    "countries": [
+      "italia"
+    ],
+    "custom": true
+  },
+  {
     "slug": "madrid-y-andalucia",
     "title": "Madrid y Andalucía",
     "subtitle": "Madrid, Mérida, Sevilla, Córdoba y Granada — salidas los sábados.",
@@ -975,6 +1011,22 @@
     "destino": "Marruecos",
     "countries": [
       "marruecos"
+    ],
+    "custom": true
+  },
+  {
+    "slug": "milan-venecia-florencia-y-roma",
+    "title": "Italia Plus 2: Milán, Venecia, Florencia y Roma",
+    "subtitle": "Milán, el Lago de Garda, Verona, Venecia, Florencia, Siena, Asís y Roma: Italia de norte a sur.",
+    "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/9/9f/Ponte_Vecchio_%28Florencia%29.jpg/1280px-Ponte_Vecchio_%28Florencia%29.jpg",
+    "images": [
+      "https://upload.wikimedia.org/wikipedia/commons/thumb/9/9f/Ponte_Vecchio_%28Florencia%29.jpg/1280px-Ponte_Vecchio_%28Florencia%29.jpg"
+    ],
+    "region": "Europa",
+    "regionKey": "carouseleuropa",
+    "destino": "Italia",
+    "countries": [
+      "italia"
     ],
     "custom": true
   },
@@ -1043,6 +1095,38 @@
     "countries": [
       "espana",
       "portugal"
+    ],
+    "custom": true
+  },
+  {
+    "slug": "sur-de-italia-y-sicilia",
+    "title": "Sur de Italia y Sicilia",
+    "subtitle": "Roma, Nápoles, Capri, la Costa Amalfitana, Calabria y Sicilia: Taormina, Siracusa, Agrigento y Palermo.",
+    "image": "https://images.unsplash.com/photo-1515542622106-78bda8ba0e5b?q=80&w=800",
+    "images": [
+      "https://images.unsplash.com/photo-1515542622106-78bda8ba0e5b?q=80&w=800"
+    ],
+    "region": "Europa",
+    "regionKey": "carouseleuropa",
+    "destino": "Italia",
+    "countries": [
+      "italia"
+    ],
+    "custom": true
+  },
+  {
+    "slug": "venecia-florencia-y-roma",
+    "title": "Italia Plus 1: Venecia, Florencia y Roma",
+    "subtitle": "Venecia, Padua, Florencia, Siena, Asís y Roma: la esencia de Italia en un solo circuito.",
+    "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/1/1b/View_of_Santa_Maria_del_Fiore_in_Florence.jpg/1280px-View_of_Santa_Maria_del_Fiore_in_Florence.jpg",
+    "images": [
+      "https://upload.wikimedia.org/wikipedia/commons/thumb/1/1b/View_of_Santa_Maria_del_Fiore_in_Florence.jpg/1280px-View_of_Santa_Maria_del_Fiore_in_Florence.jpg"
+    ],
+    "region": "Europa",
+    "regionKey": "carouseleuropa",
+    "destino": "Italia",
+    "countries": [
+      "italia"
     ],
     "custom": true
   },

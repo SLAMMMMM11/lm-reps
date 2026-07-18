@@ -422,6 +422,12 @@
     <priority>0.6</priority>
   </url>
   <url>
+    <loc>https://lm-reps.com/paquete/desde-roma-a-paris-o-londres</loc>
+    <lastmod>2026-07-18</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
     <loc>https://lm-reps.com/paquete/esencia-de-portugal-y-madrid</loc>
     <lastmod>2026-07-18</lastmod>
     <changefreq>monthly</changefreq>
@@ -500,6 +506,12 @@
     <priority>0.6</priority>
   </url>
   <url>
+    <loc>https://lm-reps.com/paquete/italia-al-completo</loc>
+    <lastmod>2026-07-18</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
     <loc>https://lm-reps.com/paquete/madrid-y-andalucia</loc>
     <lastmod>2026-07-18</lastmod>
     <changefreq>monthly</changefreq>
@@ -507,6 +519,12 @@
   </url>
   <url>
     <loc>https://lm-reps.com/paquete/marruecos-imperial-y-sahara</loc>
+    <lastmod>2026-07-18</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://lm-reps.com/paquete/milan-venecia-florencia-y-roma</loc>
     <lastmod>2026-07-18</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
@@ -531,6 +549,18 @@
   </url>
   <url>
     <loc>https://lm-reps.com/paquete/portugal-y-andalucia</loc>
+    <lastmod>2026-07-18</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://lm-reps.com/paquete/sur-de-italia-y-sicilia</loc>
+    <lastmod>2026-07-18</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://lm-reps.com/paquete/venecia-florencia-y-roma</loc>
     <lastmod>2026-07-18</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
