@@ -32,9 +32,9 @@ Claude actualiza este archivo con cada tanda.
 | 21 | 32 | Desde la Costa del Sol | 9 | $1.445 | Tanda 4 | construido | desde-costa-del-sol-a-marruecos |
 | 22 | 33 | Madrid, Andalucía y Marruecos | 14 | $2.520 | Tanda 4 | construido | espana-y-marruecos |
 | 23 | 34 | España, Portugal y Marruecos | 20 | $3.390 | Tanda 4 | construido | gran-tour-iberia-y-marruecos |
-| 24 | 36 | (ver PDF) | 15 | $2.485 | Tanda 5 | pendiente |  |
-| 25 | 38 | (ver PDF) | 20 | $3.870 | Tanda 5 | pendiente |  |
-| 26 | 40 | (ver PDF) | 17 | $2.400 | Tanda 5 | pendiente |  |
+| 24 | 36 | Gira de Andalucía y Marruecos Espectacular | 15 | $2.485 | Tanda 5 | construido | gira-andalucia-y-marruecos-kasbahs |
+| 25 | 38 | Portugal Eterno, Andalucía y Marruecos Espectacular | 20 | $3.870 | Tanda 5 | construido | portugal-eterno-andalucia-y-marruecos |
+| 26 | 40 | De Lisboa a la Ronda Española | 17 | $2.400 | Tanda 5 | construido | de-lisboa-a-la-ronda-espanola |
 
 ## Europa Occidental (34 circuitos)
 

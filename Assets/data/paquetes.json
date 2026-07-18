@@ -660,6 +660,23 @@
     "custom": true
   },
   {
+    "slug": "de-lisboa-a-la-ronda-espanola",
+    "title": "De Lisboa a la Ronda Española",
+    "subtitle": "Lisboa, Mérida, Sevilla, Córdoba, Granada, Valencia, Barcelona, Madrid, Segovia, Ávila, Salamanca, Santiago de Compostela y Oporto: la vuelta completa a la península.",
+    "image": "https://images.unsplash.com/photo-1585208798174-6cedd86e019a?q=80&w=800",
+    "images": [
+      "https://images.unsplash.com/photo-1585208798174-6cedd86e019a?q=80&w=800"
+    ],
+    "region": "Europa",
+    "regionKey": "carouseleuropa",
+    "destino": "Portugal y España",
+    "countries": [
+      "portugal",
+      "espana"
+    ],
+    "custom": true
+  },
+  {
     "slug": "desde-costa-del-sol-a-marruecos",
     "title": "Desde la Costa del Sol a Marruecos",
     "subtitle": "Costa del Sol, cruce en ferry a Tánger, Chefchaouen, Meknes, Fez y Marrakech.",
@@ -772,6 +789,23 @@
     "destino": "España",
     "countries": [
       "espana"
+    ],
+    "custom": true
+  },
+  {
+    "slug": "gira-andalucia-y-marruecos-kasbahs",
+    "title": "Gira de Andalucía y Marruecos Espectacular",
+    "subtitle": "Madrid, Mérida, Sevilla, Córdoba, Granada, Costa del Sol y, cruzando el Estrecho, Tánger, Fez, la Ruta de las Kasbahs y Marrakech, con opción de noche en el desierto del Sahara.",
+    "image": "/Assets/img/espana/espana-alhambra.jpg",
+    "images": [
+      "/Assets/img/espana/espana-alhambra.jpg"
+    ],
+    "region": "Europa",
+    "regionKey": "carouseleuropa",
+    "destino": "España y Marruecos",
+    "countries": [
+      "espana",
+      "marruecos"
     ],
     "custom": true
   },
@@ -923,6 +957,24 @@
     "countries": [
       "espana",
       "portugal"
+    ],
+    "custom": true
+  },
+  {
+    "slug": "portugal-eterno-andalucia-y-marruecos",
+    "title": "Portugal Eterno, Andalucía y Marruecos Espectacular",
+    "subtitle": "Lisboa, Coímbra, Braga, Oporto y Fátima; Mérida, Sevilla, Córdoba, Granada y la Costa del Sol; y cruzando el Estrecho, Tánger, Fez, la Ruta de las Kasbahs y Marrakech, con opción de noche en el desierto del Sahara.",
+    "image": "https://images.unsplash.com/photo-1585208798174-6cedd86e019a?q=80&w=800",
+    "images": [
+      "https://images.unsplash.com/photo-1585208798174-6cedd86e019a?q=80&w=800"
+    ],
+    "region": "Europa",
+    "regionKey": "carouseleuropa",
+    "destino": "Portugal, España y Marruecos",
+    "countries": [
+      "portugal",
+      "espana",
+      "marruecos"
     ],
     "custom": true
   },
