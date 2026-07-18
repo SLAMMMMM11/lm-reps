@@ -141,5 +141,14 @@
   ],
   "alemania": [
     { "lugar": "Catedral de Colonia", "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/0/04/K%C3%B6lner_Dom_-_Westfassade_2022_ohne_Ger%C3%BCst-0968_b.jpg/1280px-K%C3%B6lner_Dom_-_Westfassade_2022_ohne_Ger%C3%BCst-0968_b.jpg" }
+  ],
+  "escocia": [
+    { "lugar": "Castillo de Edimburgo (aérea)", "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/7/72/Scotland-2016-Aerial-Edinburgh_Castle_%28cropped%29.jpg/1280px-Scotland-2016-Aerial-Edinburgh_Castle_%28cropped%29.jpg" },
+    { "lugar": "Lago Ness y castillo de Urquhart", "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/5/51/LochNessUrquhart.jpg/1280px-LochNessUrquhart.jpg" }
+  ],
+  "irlanda": [
+    { "lugar": "Acantilados de Moher", "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/d/d1/Cliffs-Of-Moher-OBriens-From-South.JPG/1280px-Cliffs-Of-Moher-OBriens-From-South.JPG" },
+    { "lugar": "Calzada del Gigante, Irlanda del Norte", "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/c/c0/Causeway-code_poet-4.jpg/1280px-Causeway-code_poet-4.jpg" },
+    { "lugar": "Dublín (aérea)", "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/5/5a/Dublin_-_aerial_-_panorama_-_2025-02-06.jpg/1280px-Dublin_-_aerial_-_panorama_-_2025-02-06.jpg" }
   ]
 }
