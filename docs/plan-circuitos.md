@@ -40,8 +40,8 @@ Claude actualiza este archivo con cada tanda.
 
 | # | Pág. | Circuito | Días | Desde | Tanda | Estado | Slug |
 |---|---|---|---|---|---|---|---|
-| 27 | 4 | Desde París a Madrid | 8 | $1.375 | Tanda 5 | pendiente |  |
-| 28 | 5 | Desde Madrid a Roma y Venecia | 9 ó 11 | $1.550 | Tanda 5 | pendiente |  |
+| 27 | 4 | Desde París a Madrid | 8 | $1.375 | Tanda 5 | construido | desde-paris-a-madrid |
+| 28 | 5 | Desde Madrid a Roma y Venecia | 9 ó 11 | $1.550 | Tanda 5 | construido | desde-madrid-a-roma-y-venecia |
 | 29 | 6 | Desde Roma a París o Londres | 12 o 13 | $2.030 | Tanda 6 | pendiente |  |
 | 30 | 7 | Venecia, Florencia, Roma | 9 | $1.410 | Tanda 6 | pendiente |  |
 | 31 | 8 | Milán, Venecia, Florencia, Roma | 10 | $1.565 | Tanda 6 | pendiente |  |

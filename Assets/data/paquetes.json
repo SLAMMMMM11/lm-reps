@@ -694,6 +694,41 @@
     "custom": true
   },
   {
+    "slug": "desde-madrid-a-roma-y-venecia",
+    "title": "Desde Madrid a Roma y Venecia",
+    "subtitle": "Madrid, Zaragoza, Barcelona, la Costa Azul, Pisa, Roma, Florencia y Venecia: de España a Italia por la Riviera.",
+    "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/1/1b/View_of_Santa_Maria_del_Fiore_in_Florence.jpg/1280px-View_of_Santa_Maria_del_Fiore_in_Florence.jpg",
+    "images": [
+      "https://upload.wikimedia.org/wikipedia/commons/thumb/1/1b/View_of_Santa_Maria_del_Fiore_in_Florence.jpg/1280px-View_of_Santa_Maria_del_Fiore_in_Florence.jpg"
+    ],
+    "region": "Europa",
+    "regionKey": "carouseleuropa",
+    "destino": "España, Francia e Italia",
+    "countries": [
+      "espana",
+      "francia",
+      "italia"
+    ],
+    "custom": true
+  },
+  {
+    "slug": "desde-paris-a-madrid",
+    "title": "Desde París a Madrid",
+    "subtitle": "París, Lourdes, San Sebastián y Madrid: un primer vistazo a Francia y España en una sola escapada.",
+    "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/d/d2/Eiffelturm.JPG/1280px-Eiffelturm.JPG",
+    "images": [
+      "https://upload.wikimedia.org/wikipedia/commons/thumb/d/d2/Eiffelturm.JPG/1280px-Eiffelturm.JPG"
+    ],
+    "region": "Europa",
+    "regionKey": "carouseleuropa",
+    "destino": "Francia y España",
+    "countries": [
+      "francia",
+      "espana"
+    ],
+    "custom": true
+  },
+  {
     "slug": "esencia-de-portugal-y-madrid",
     "title": "Esencia de Portugal y Madrid",
     "subtitle": "Oporto, Aveiro, Fátima, Lisboa y extensión a Madrid — la escapada ideal a Portugal.",
