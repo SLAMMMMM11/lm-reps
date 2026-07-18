@@ -644,6 +644,39 @@
     "custom": true
   },
   {
+    "slug": "esencia-de-portugal-y-madrid",
+    "title": "Esencia de Portugal y Madrid",
+    "subtitle": "Oporto, Aveiro, Fátima, Lisboa y extensión a Madrid — la escapada ideal a Portugal.",
+    "image": "https://upload.wikimedia.org/wikipedia/commons/0/0f/Ria_de_Aveiro_edited_%28cropped%29.jpg",
+    "images": [
+      "https://upload.wikimedia.org/wikipedia/commons/0/0f/Ria_de_Aveiro_edited_%28cropped%29.jpg"
+    ],
+    "region": "Europa",
+    "regionKey": "carouseleuropa",
+    "destino": "España y Portugal",
+    "countries": [
+      "espana",
+      "portugal"
+    ],
+    "custom": true
+  },
+  {
+    "slug": "espana-al-completo",
+    "title": "España al Completo",
+    "subtitle": "Madrid, Mérida, Sevilla, Córdoba, Granada, Valencia, Barcelona y el norte: Pamplona, San Sebastián, Bilbao, Covadonga, Santiago y Salamanca.",
+    "image": "/Assets/img/espana/espana-alhambra.jpg",
+    "images": [
+      "/Assets/img/espana/espana-alhambra.jpg"
+    ],
+    "region": "Europa",
+    "regionKey": "carouseleuropa",
+    "destino": "España",
+    "countries": [
+      "espana"
+    ],
+    "custom": true
+  },
+  {
     "slug": "espana-fabulosa",
     "title": "España Fabulosa",
     "subtitle": "Barcelona, Zaragoza, Madrid, Mérida, Sevilla, Córdoba y Granada.",
@@ -676,6 +709,23 @@
     "custom": true
   },
   {
+    "slug": "gran-tour-espana-y-portugal",
+    "title": "Gran Tour España y Portugal",
+    "subtitle": "Barcelona, País Vasco, Asturias, Santiago, Oporto, Lisboa, Mérida y Madrid — el gran cruce ibérico.",
+    "image": "https://images.unsplash.com/photo-1585208798174-6cedd86e019a?q=80&w=800",
+    "images": [
+      "https://images.unsplash.com/photo-1585208798174-6cedd86e019a?q=80&w=800"
+    ],
+    "region": "Europa",
+    "regionKey": "carouseleuropa",
+    "destino": "España y Portugal",
+    "countries": [
+      "espana",
+      "portugal"
+    ],
+    "custom": true
+  },
+  {
     "slug": "gran-tour-norte-de-espana",
     "title": "Gran Tour Norte de España",
     "subtitle": "Barcelona, Pamplona, San Sebastián, Bilbao, Covadonga, Oviedo, Santiago, Salamanca y Madrid.",
@@ -704,6 +754,40 @@
     "destino": "España",
     "countries": [
       "espana"
+    ],
+    "custom": true
+  },
+  {
+    "slug": "oporto-lisboa-y-madrid",
+    "title": "Oporto, Lisboa y Madrid con Crucero del Duero",
+    "subtitle": "Oporto con crucero por el Valle del Duero, Aveiro, Fátima, Lisboa y extensión a Madrid.",
+    "image": "https://images.unsplash.com/photo-1555881400-74d7acaacd8b?q=80&w=800",
+    "images": [
+      "https://images.unsplash.com/photo-1555881400-74d7acaacd8b?q=80&w=800"
+    ],
+    "region": "Europa",
+    "regionKey": "carouseleuropa",
+    "destino": "España y Portugal",
+    "countries": [
+      "espana",
+      "portugal"
+    ],
+    "custom": true
+  },
+  {
+    "slug": "portugal-y-andalucia",
+    "title": "Portugal y Andalucía",
+    "subtitle": "Oporto, Aveiro, Fátima, Lisboa, Mérida, Sevilla, Córdoba, Granada y Madrid.",
+    "image": "/Assets/img/espana/espana-alhambra.jpg",
+    "images": [
+      "/Assets/img/espana/espana-alhambra.jpg"
+    ],
+    "region": "Europa",
+    "regionKey": "carouseleuropa",
+    "destino": "España y Portugal",
+    "countries": [
+      "espana",
+      "portugal"
     ],
     "custom": true
   },

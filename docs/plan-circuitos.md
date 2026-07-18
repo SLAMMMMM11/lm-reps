@@ -16,11 +16,11 @@ Claude actualiza este archivo con cada tanda.
 | 5 | 9 | (ver PDF) | 10 | $1.460 | Tanda 1 | publicado | espana-fabulosa |
 | 6 | 10 | (ver PDF) | 11 | $1.500 | — | publicado | espana-encantadora |
 | 7 | 11 | (ver PDF) | 11 | $1.535 | Tanda 1 | publicado | gran-tour-norte-de-espana |
-| 8 | 12 | (ver PDF) | 13 ó 14 | $1.795 | Tanda 2 | pendiente |  |
-| 9 | 14 | (ver PDF) | 16 | $2.690 | Tanda 2 | pendiente |  |
-| 10 | 16 | (ver PDF) | 7 o 9 | $1.160 | Tanda 2 | pendiente |  |
-| 11 | 17 | (ver PDF) | 8 | $810 | Tanda 2 | pendiente |  |
-| 12 | 18 | (ver PDF) | 10 ó 12 | $1.420 | Tanda 2 | pendiente |  |
+| 8 | 12 | (ver PDF) | 13 ó 14 | $1.795 | Tanda 2 | construido | gran-tour-espana-y-portugal |
+| 9 | 14 | (ver PDF) | 16 | $2.690 | Tanda 2 | construido | espana-al-completo |
+| 10 | 16 | (ver PDF) | 7 o 9 | $1.160 | Tanda 2 | construido | oporto-lisboa-y-madrid |
+| 11 | 17 | (ver PDF) | 8 | $810 | Tanda 2 | construido | esencia-de-portugal-y-madrid |
+| 12 | 18 | (ver PDF) | 10 ó 12 | $1.420 | Tanda 2 | construido | portugal-y-andalucia |
 | 13 | 19 | (ver PDF) | 9 | $1.460 | Tanda 3 | pendiente |  |
 | 14 | 20 | (ver PDF) | 12 ó 13 | $1.380 | Tanda 3 | pendiente |  |
 | 15 | 22 | (ver PDF) | 14 | $2.085 | Tanda 3 | pendiente |  |
