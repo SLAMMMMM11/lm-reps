@@ -38,6 +38,15 @@
     { "lugar": "Universidad de Coímbra", "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/c/c5/Universidad_de_Co%C3%ADmbra%2C_Portugal%2C_2012-05-10%2C_DD_12.JPG/1280px-Universidad_de_Co%C3%ADmbra%2C_Portugal%2C_2012-05-10%2C_DD_12.JPG" },
     { "lugar": "Santuario del Bom Jesus do Monte, Braga", "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/4/4e/Treppenaufgang_Bom_Jesus_do_Monte.jpg/1280px-Treppenaufgang_Bom_Jesus_do_Monte.jpg" }
   ],
+  "marruecos": [
+    { "lugar": "Chefchaouen, la ciudad azul", "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/a/a4/Vista_de_Xauen_%282%29.jpg/1280px-Vista_de_Xauen_%282%29.jpg" },
+    { "lugar": "Mezquita Hassan II, Casablanca", "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/8/8a/Sunshine_on_mosque_Hassan_II_in_Casablanca%2C_Morocco_-_Flickr_-_Milamber%27s_portfolio.jpg/1280px-Sunshine_on_mosque_Hassan_II_in_Casablanca%2C_Morocco_-_Flickr_-_Milamber%27s_portfolio.jpg" },
+    { "lugar": "Jemaa el-Fnaa, Marrakech", "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/7/79/Djemaa_el_Fna.jpg/1280px-Djemaa_el_Fna.jpg" },
+    { "lugar": "Curtidurías de Chouara, Fez", "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/4/46/Chouara_Tannery_-_154_-_Marokko_Handybilder_2018_-_Fes_%2827347707917%29.jpg/1280px-Chouara_Tannery_-_154_-_Marokko_Handybilder_2018_-_Fes_%2827347707917%29.jpg" },
+    { "lugar": "Puerta Bab Mansour, Meknes", "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/a/a4/Bab_Mansour.jpg/1280px-Bab_Mansour.jpg" },
+    { "lugar": "Torre Hassan, Rabat", "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/d/d9/Hassan_Tower%2C_Rabat%2C_Marocco_%28%D8%B5%D9%88%D9%85%D8%B9%D8%A9_%D8%AD%D8%B3%D8%A7%D9%86_%29.jpg/1280px-Hassan_Tower%2C_Rabat%2C_Marocco_%28%D8%B5%D9%88%D9%85%D8%B9%D8%A9_%D8%AD%D8%B3%D8%A7%D9%86_%29.jpg" },
+    { "lugar": "Dunas del Sahara, Merzouga", "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/b/bd/Morocco_Africa_Flickr_Rosino_December_2005_84514010.jpg/1280px-Morocco_Africa_Flickr_Rosino_December_2005_84514010.jpg" }
+  ],
   "peru": [
     { "lugar": "Machu Picchu", "url": "https://images.unsplash.com/photo-1587595431973-160d0d94add1" },
     { "lugar": "Costa Verde, Lima", "url": "https://images.unsplash.com/photo-1531968455001-5c5272a41129" },
