@@ -12,13 +12,25 @@
     { "lugar": "Alhambra, Granada", "url": "/Assets/img/espana/espana-alhambra.jpg" },
     { "lugar": "Plaza Mayor, Madrid", "url": "/Assets/img/espana/espana-madrid.jpg" },
     { "lugar": "Costa del Sol, Málaga", "url": "/Assets/img/espana/espana-costa-sol.jpg" },
-    { "lugar": "Skyline de Madrid", "url": "/Assets/img/espana/madrid-hero.jpg" }
+    { "lugar": "Skyline de Madrid", "url": "/Assets/img/espana/madrid-hero.jpg" },
+    { "lugar": "Basílica del Pilar, Zaragoza", "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/6/62/Zaragoza_-_Basilica_de_Nuestra_Se%C3%B1ora_del_Pilar_01.jpg/1280px-Zaragoza_-_Basilica_de_Nuestra_Se%C3%B1ora_del_Pilar_01.jpg" },
+    { "lugar": "Plaza del Castillo, Pamplona", "url": "https://upload.wikimedia.org/wikipedia/commons/6/65/Pamplona_plaza_del_Castillo_2.jpg" },
+    { "lugar": "Bahía de la Concha, San Sebastián", "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/b/b7/San_Sebastian_aerea.jpg/1280px-San_Sebastian_aerea.jpg" },
+    { "lugar": "Museo Guggenheim, Bilbao", "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/c/c7/Museo_Guggenheim%2C_Bilbao_%2831273245344%29.jpg/1280px-Museo_Guggenheim%2C_Bilbao_%2831273245344%29.jpg" },
+    { "lugar": "Colegiata de Santillana del Mar", "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/a/a9/ColegiataSantillana-1.jpg/1280px-ColegiataSantillana-1.jpg" },
+    { "lugar": "Lagos de Covadonga", "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/d/d6/LAGOS_DE_COVADONGA_5.jpg/1280px-LAGOS_DE_COVADONGA_5.jpg" },
+    { "lugar": "Catedral de Oviedo", "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/9/99/Cathedral_of_Oviedo_2021_-_exterior.jpg/1280px-Cathedral_of_Oviedo_2021_-_exterior.jpg" },
+    { "lugar": "Catedral de Santiago de Compostela", "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/a/a9/Santiago_cathedral_2021.jpg/1280px-Santiago_cathedral_2021.jpg" },
+    { "lugar": "Teatro Romano de Mérida", "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/9/94/Ancient_Roman_theatre_in_M%C3%A9rida_2023.jpg/1280px-Ancient_Roman_theatre_in_M%C3%A9rida_2023.jpg" }
   ],
   "portugal": [
     { "lugar": "Tranvía de Lisboa", "url": "https://images.unsplash.com/photo-1585208798174-6cedd86e019a" },
     { "lugar": "Lisboa, Alfama", "url": "https://images.unsplash.com/photo-1536663815808-535e2280d2c2" },
     { "lugar": "Ribeira de Oporto", "url": "https://images.unsplash.com/photo-1555881400-74d7acaacd8b" },
-    { "lugar": "Puente Don Luis I, Oporto", "url": "https://images.unsplash.com/photo-1569959220744-ff553533f492" }
+    { "lugar": "Puente Don Luis I, Oporto", "url": "https://images.unsplash.com/photo-1569959220744-ff553533f492" },
+    { "lugar": "Canal de Aveiro con barcos moliceiro", "url": "https://upload.wikimedia.org/wikipedia/commons/0/0f/Ria_de_Aveiro_edited_%28cropped%29.jpg" },
+    { "lugar": "Santuario de Fátima", "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/f/f9/Sanctuary_of_Fatima.jpg/1280px-Sanctuary_of_Fatima.jpg" },
+    { "lugar": "Terrazas de viñedos, Valle del Duero", "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/4/4c/Alto_Douro_Vinhateiro_visto_de_um_comboio.jpg/1280px-Alto_Douro_Vinhateiro_visto_de_um_comboio.jpg" }
   ],
   "peru": [
     { "lugar": "Machu Picchu", "url": "https://images.unsplash.com/photo-1587595431973-160d0d94add1" },
