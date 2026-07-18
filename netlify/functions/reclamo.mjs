@@ -94,9 +94,19 @@ export default async (req) => {
 
   if (req.method !== 'POST') return json({ error: 'method_not_allowed' }, 405);
 
-  const SERVICE = process.env.SUPABASE_SERVICE_ROLE_KEY;
+  const SERVICE = (process.env.SUPABASE_SERVICE_ROLE_KEY || '').trim();
   if (!SERVICE) return json({ error: 'service_key_no_configurada' }, 500);
-  const auth = { Authorization: `Bearer ${SERVICE}`, apikey: SERVICE };
+  // Las llaves nuevas de Supabase (sb_secret_...) van solo en "apikey"; las
+  // legacy (JWT eyJ...) ademas en Authorization. Soportamos ambas.
+  const formato = SERVICE.startsWith('sb_secret_') ? 'sb_secret'
+    : SERVICE.startsWith('sb_publishable_') ? 'sb_publishable_(ES_LA_EQUIVOCADA)'
+    : SERVICE.startsWith('eyJ') ? 'jwt_legacy'
+    : 'desconocido';
+  if (formato !== 'sb_secret' && formato !== 'jwt_legacy')
+    console.error('service key con formato inesperado:', formato, '| largo:', SERVICE.length);
+  const auth = SERVICE.startsWith('sb_')
+    ? { apikey: SERVICE }
+    : { apikey: SERVICE, Authorization: `Bearer ${SERVICE}` };
 
   let body;
   try { body = await req.json(); } catch { return json({ error: 'json_invalido' }, 400); }
