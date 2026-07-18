@@ -983,6 +983,57 @@
     "custom": true
   },
   {
+    "slug": "italia-con-estilo",
+    "title": "Italia con Estilo",
+    "subtitle": "Roma, Florencia y Venecia: lo esencial de Italia en un circuito corto y directo.",
+    "image": "https://images.unsplash.com/photo-1515542622106-78bda8ba0e5b?q=80&w=800",
+    "images": [
+      "https://images.unsplash.com/photo-1515542622106-78bda8ba0e5b?q=80&w=800"
+    ],
+    "region": "Europa",
+    "regionKey": "carouseleuropa",
+    "destino": "Italia",
+    "countries": [
+      "italia"
+    ],
+    "custom": true
+  },
+  {
+    "slug": "italia-costa-azul-y-espana",
+    "title": "Italia, Costa Azul y España",
+    "subtitle": "Venecia, Florencia, Roma, Pisa, la Costa Azul, Barcelona y Madrid: de Italia a España cruzando la Riviera.",
+    "image": "https://images.unsplash.com/photo-1583422409516-2895a77efded?q=80&w=800",
+    "images": [
+      "https://images.unsplash.com/photo-1583422409516-2895a77efded?q=80&w=800"
+    ],
+    "region": "Europa",
+    "regionKey": "carouseleuropa",
+    "destino": "Italia, Francia y España",
+    "countries": [
+      "italia",
+      "francia",
+      "espana"
+    ],
+    "custom": true
+  },
+  {
+    "slug": "londres-y-paris",
+    "title": "Londres y París",
+    "subtitle": "Londres y París cruzando el Canal de la Mancha por el Eurotunnel: dos capitales en una sola escapada.",
+    "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/d/d2/Eiffelturm.JPG/1280px-Eiffelturm.JPG",
+    "images": [
+      "https://upload.wikimedia.org/wikipedia/commons/thumb/d/d2/Eiffelturm.JPG/1280px-Eiffelturm.JPG"
+    ],
+    "region": "Europa",
+    "regionKey": "carouseleuropa",
+    "destino": "Reino Unido y Francia",
+    "countries": [
+      "reino-unido",
+      "francia"
+    ],
+    "custom": true
+  },
+  {
     "slug": "madrid-y-andalucia",
     "title": "Madrid y Andalucía",
     "subtitle": "Madrid, Mérida, Sevilla, Córdoba y Granada — salidas los sábados.",
@@ -995,6 +1046,23 @@
     "destino": "España",
     "countries": [
       "espana"
+    ],
+    "custom": true
+  },
+  {
+    "slug": "malta-y-sicilia",
+    "title": "Islas de Malta y Sicilia",
+    "subtitle": "Malta, Catania, Siracusa, Agrigento, Trapani y Palermo: dos islas del Mediterráneo en un solo viaje.",
+    "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/b/b7/St_Sebastian_Curtain_%28cropped%29.jpg/1280px-St_Sebastian_Curtain_%28cropped%29.jpg",
+    "images": [
+      "https://upload.wikimedia.org/wikipedia/commons/thumb/b/b7/St_Sebastian_Curtain_%28cropped%29.jpg/1280px-St_Sebastian_Curtain_%28cropped%29.jpg"
+    ],
+    "region": "Europa",
+    "regionKey": "carouseleuropa",
+    "destino": "Malta e Italia (Sicilia)",
+    "countries": [
+      "malta",
+      "italia"
     ],
     "custom": true
   },
@@ -1044,6 +1112,23 @@
     "countries": [
       "espana",
       "portugal"
+    ],
+    "custom": true
+  },
+  {
+    "slug": "paris-y-londres",
+    "title": "París y Londres",
+    "subtitle": "París y Londres cruzando el Canal de la Mancha en ferry: la escapada más corta a las dos capitales.",
+    "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/4/48/Westminster_palace.jpg/1280px-Westminster_palace.jpg",
+    "images": [
+      "https://upload.wikimedia.org/wikipedia/commons/thumb/4/48/Westminster_palace.jpg/1280px-Westminster_palace.jpg"
+    ],
+    "region": "Europa",
+    "regionKey": "carouseleuropa",
+    "destino": "Francia y Reino Unido",
+    "countries": [
+      "francia",
+      "reino-unido"
     ],
     "custom": true
   },

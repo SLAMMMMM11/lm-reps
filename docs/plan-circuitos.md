@@ -48,11 +48,11 @@ Claude actualiza este archivo con cada tanda.
 | 32 | 9 | Italia Plus 3 "Italia al completo" | 8 (ó 12/13) | $1.460 | Tanda 6 | construido | italia-al-completo |
 | 33 | 11 | Sur de Italia y la Puglia (Roma/Nápoles(2)/Costa Amalfitana/Puglia) | 10 ó 12 | $2.040 | Tanda 6 | pendiente |  |
 | 33b | 66 | Sur de Italia y Sicilia | 10 o 12 | $2.165 | Tanda 6 | construido | sur-de-italia-y-sicilia |
-| 34 | 16 | (ver PDF) | 7 | $1.385 | Tanda 7 | pendiente |  |
-| 35 | 17 | (ver PDF) | 9 | $2.485 | Tanda 7 | pendiente |  |
-| 36 | 20 | (ver PDF) | 10 ó 14 | $1.550 | Tanda 7 | pendiente |  |
-| 37 | 24 | (ver PDF) | 7 | $1.205 | Tanda 7 | pendiente |  |
-| 38 | 25 | (ver PDF) | 6 | $1.075 | Tanda 7 | pendiente |  |
+| 34 | 16 | Italia con Estilo | 7 | $1.385 | Tanda 7 | construido | italia-con-estilo |
+| 35 | 17 | Islas de Malta y Sicilia | 9 | $2.485 | Tanda 7 | construido | malta-y-sicilia |
+| 36 | 20 | Italia, Costa Azul y España | 10 ó 14 | $1.550 | Tanda 7 | construido | italia-costa-azul-y-espana |
+| 37 | 24 | Londres y París | 7 | $1.205 | Tanda 7 | construido | londres-y-paris |
+| 38 | 25 | París y Londres | 6 | $1.075 | Tanda 7 | construido | paris-y-londres |
 | 39 | 26 | Madrid, Burdeos y París | 8 | $865 | Tanda 8 | pendiente |  |
 | 40 | 28 | (ver PDF) | 11 ó 12 | $1.460 | Tanda 8 | pendiente |  |
 | 41 | 30 | (ver PDF) | 12 ó 13 | $1.865 | Tanda 8 | pendiente |  |
