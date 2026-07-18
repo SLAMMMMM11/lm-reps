@@ -111,6 +111,15 @@
     { "lugar": "Plaza San Pedro, Vaticano", "url": "https://images.unsplash.com/photo-1531572753322-ad063cecc140" },
     { "lugar": "Puente de Rialto, Venecia", "url": "https://images.unsplash.com/photo-1523906834658-6e24ef2386f9" },
     { "lugar": "Manarola, Cinque Terre", "url": "https://images.unsplash.com/photo-1516483638261-f4dbaf036963" },
-    { "lugar": "Roma y el río Tíber", "url": "https://images.unsplash.com/photo-1529260830199-42c24126f198" }
+    { "lugar": "Roma y el río Tíber", "url": "https://images.unsplash.com/photo-1529260830199-42c24126f198" },
+    { "lugar": "Catedral de Santa María del Fiore (Duomo), Florencia", "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/1/1b/View_of_Santa_Maria_del_Fiore_in_Florence.jpg/1280px-View_of_Santa_Maria_del_Fiore_in_Florence.jpg" },
+    { "lugar": "Ponte Vecchio, Florencia", "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/9/9f/Ponte_Vecchio_%28Florencia%29.jpg/1280px-Ponte_Vecchio_%28Florencia%29.jpg" },
+    { "lugar": "Plaza de San Marcos, Venecia", "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/1/17/Piazza_San_Marco_%28Venice%29_at_night-msu-2021-6449-.jpg/1280px-Piazza_San_Marco_%28Venice%29_at_night-msu-2021-6449-.jpg" },
+    { "lugar": "Torre inclinada de Pisa", "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/5/59/The_Leaning_Tower_of_Pisa_2026.jpg/1280px-The_Leaning_Tower_of_Pisa_2026.jpg" }
+  ],
+  "francia": [
+    { "lugar": "Torre Eiffel, París", "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/d/d2/Eiffelturm.JPG/1280px-Eiffelturm.JPG" },
+    { "lugar": "Santuario de Nuestra Señora de Lourdes", "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/2/2a/Lourdes_basilique_vue_depuis_ch%C3%A2teau_%283%29.JPG/1280px-Lourdes_basilique_vue_depuis_ch%C3%A2teau_%283%29.JPG" },
+    { "lugar": "Mónaco, Costa Azul", "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/1/1b/Fuerstenhof_zu_Monaco.jpg/1280px-Fuerstenhof_zu_Monaco.jpg" }
   ]
 }
