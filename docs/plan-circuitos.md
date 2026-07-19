@@ -68,10 +68,10 @@ Claude actualiza este archivo con cada tanda.
 | 51 | 50 | Europa en Breve: Desde Londres | 10, 14, 16 o 18 | $2.200 | Tanda 10 | construido | europa-en-breve-desde-londres |
 | 52 | 52 | Europa en Breve: Desde París | 8, 12, 14 o 16 | $1.625 | Tanda 10 | construido | europa-en-breve-desde-paris |
 | 53 | 54 | Europa en Breve: Desde Madrid | 15, 17 o 18 | $2.515 | Tanda 10 | construido | europa-en-breve-desde-madrid |
-| 54 | 56 | (ver PDF) | 20 ó 22 | $3.630 | Tanda 11 | pendiente |  |
-| 55 | 58 | (ver PDF) | 20 ó 22 | $2.900 | Tanda 11 | pendiente |  |
-| 56 | 60 | (ver PDF) | 19 ó 22 | $3.350 | Tanda 11 | pendiente |  |
-| 57 | 62 | (ver PDF) | 22 | $2.660 | Tanda 11 | pendiente |  |
+| 54 | 56 | Europa para Todos (Madrid, Burdeos, París, Rin, Suiza, Italia + Mérida/Sevilla/Córdoba/Granada) | 20 ó 22 | $3.630 | Tanda 11 | construido | europa-para-todos |
+| 55 | 58 | La Europa de Siempre: Desde Londres o París | 16, 18, 20 ó 22 | $2.900 | Tanda 11 | construido | la-europa-de-siempre-desde-londres |
+| 56 | 60 | La Europa de Siempre: Desde Madrid | 19 ó 22 | $3.350 | Tanda 11 | construido | la-europa-de-siempre-desde-madrid |
+| 57 | 62 | La Pequeña Gira Europea | 15, 17, 20 ó 22 | $2.660 | Tanda 11 | construido | la-pequena-gira-europea |
 | 58 | 64 | (ver PDF) | 21 ó 22 | $2.960 | Tanda 11 | pendiente |  |
 | 59 | 66 | (ver PDF) | 24 ó 26 | $3.275 | Tanda 12 | pendiente |  |
 | 60 | 68 | (ver PDF) | 22 ó 26 | $3.595 | Tanda 12 | pendiente |  |

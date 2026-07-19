@@ -978,6 +978,26 @@
     "custom": true
   },
   {
+    "slug": "europa-para-todos",
+    "title": "Europa para Todos",
+    "subtitle": "Madrid, San Sebastián, Burdeos, la región del Loira, París, un paseo en barco por el río Rin, Frankfurt, Suiza, Milán, Venecia, Florencia, Roma, Costa Azul, Barcelona, Zaragoza, Mérida, Sevilla, Córdoba y Granada.",
+    "image": "/Assets/img/espana/espana-alhambra.jpg",
+    "images": [
+      "/Assets/img/espana/espana-alhambra.jpg"
+    ],
+    "region": "Europa",
+    "regionKey": "carouseleuropa",
+    "destino": "España, Francia, Alemania, Suiza e Italia",
+    "countries": [
+      "espana",
+      "francia",
+      "alemania",
+      "suiza",
+      "italia"
+    ],
+    "custom": true
+  },
+  {
     "slug": "experiencia-madrid",
     "title": "Experiencia Madrid",
     "subtitle": "Estancia en Madrid con visita guiada — combinable con cualquier circuito.",
@@ -1208,6 +1228,72 @@
     "countries": [
       "italia",
       "francia",
+      "espana"
+    ],
+    "custom": true
+  },
+  {
+    "slug": "la-europa-de-siempre-desde-londres",
+    "title": "La Europa de Siempre: Desde Londres o París",
+    "subtitle": "Londres, París, Bruselas, Gante, Brujas, Amberes, La Haya, Ámsterdam, Colonia, un paseo en barco por el río Rin, Frankfurt, Suiza, Milán, Venecia, Florencia, Roma, Costa Azul, Barcelona y Madrid.",
+    "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/2/26/Grand-Place%2C_Brussels_-_panorama%2C_June_2018.jpg/1280px-Grand-Place%2C_Brussels_-_panorama%2C_June_2018.jpg",
+    "images": [
+      "https://upload.wikimedia.org/wikipedia/commons/thumb/2/26/Grand-Place%2C_Brussels_-_panorama%2C_June_2018.jpg/1280px-Grand-Place%2C_Brussels_-_panorama%2C_June_2018.jpg"
+    ],
+    "region": "Europa",
+    "regionKey": "carouseleuropa",
+    "destino": "Inglaterra, Francia, Bélgica, Países Bajos, Alemania, Suiza e Italia",
+    "countries": [
+      "inglaterra",
+      "francia",
+      "belgica",
+      "paises-bajos",
+      "alemania",
+      "suiza",
+      "italia",
+      "espana"
+    ],
+    "custom": true
+  },
+  {
+    "slug": "la-europa-de-siempre-desde-madrid",
+    "title": "La Europa de Siempre: Desde Madrid",
+    "subtitle": "Madrid, San Sebastián, Burdeos, París, Bruselas, Gante, Brujas, Amberes, La Haya, Ámsterdam, Colonia, un paseo en barco por el río Rin, Frankfurt, Suiza, Milán, Venecia, Florencia, Roma, Costa Azul, Barcelona y Zaragoza.",
+    "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/5/57/Imagen_de_los_canales_conc%C3%A9ntricos_en_%C3%81msterdam.png/1280px-Imagen_de_los_canales_conc%C3%A9ntricos_en_%C3%81msterdam.png",
+    "images": [
+      "https://upload.wikimedia.org/wikipedia/commons/thumb/5/57/Imagen_de_los_canales_conc%C3%A9ntricos_en_%C3%81msterdam.png/1280px-Imagen_de_los_canales_conc%C3%A9ntricos_en_%C3%81msterdam.png"
+    ],
+    "region": "Europa",
+    "regionKey": "carouseleuropa",
+    "destino": "España, Francia, Bélgica, Países Bajos, Alemania, Suiza e Italia",
+    "countries": [
+      "espana",
+      "francia",
+      "belgica",
+      "paises-bajos",
+      "alemania",
+      "suiza",
+      "italia"
+    ],
+    "custom": true
+  },
+  {
+    "slug": "la-pequena-gira-europea",
+    "title": "La Pequeña Gira Europea",
+    "subtitle": "Londres, París, un paseo en barco por el río Rin, Frankfurt, Heidelberg, Estrasburgo, Basilea, Lucerna, Como, Milán, Venecia, Florencia, Siena, Asís, Roma, Costa Azul, Barcelona y Madrid.",
+    "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/1/1e/Kapellbruecke.JPG/1280px-Kapellbruecke.JPG",
+    "images": [
+      "https://upload.wikimedia.org/wikipedia/commons/thumb/1/1e/Kapellbruecke.JPG/1280px-Kapellbruecke.JPG"
+    ],
+    "region": "Europa",
+    "regionKey": "carouseleuropa",
+    "destino": "Inglaterra, Francia, Alemania, Suiza e Italia",
+    "countries": [
+      "inglaterra",
+      "francia",
+      "alemania",
+      "suiza",
+      "italia",
       "espana"
     ],
     "custom": true

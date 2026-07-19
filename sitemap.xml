@@ -500,6 +500,12 @@
     <priority>0.6</priority>
   </url>
   <url>
+    <loc>https://lm-reps.com/paquete/europa-para-todos</loc>
+    <lastmod>2026-07-19</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
     <loc>https://lm-reps.com/paquete/experiencia-madrid</loc>
     <lastmod>2026-07-19</lastmod>
     <changefreq>monthly</changefreq>
@@ -579,6 +585,24 @@
   </url>
   <url>
     <loc>https://lm-reps.com/paquete/italia-costa-azul-y-espana</loc>
+    <lastmod>2026-07-19</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://lm-reps.com/paquete/la-europa-de-siempre-desde-londres</loc>
+    <lastmod>2026-07-19</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://lm-reps.com/paquete/la-europa-de-siempre-desde-madrid</loc>
+    <lastmod>2026-07-19</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://lm-reps.com/paquete/la-pequena-gira-europea</loc>
     <lastmod>2026-07-19</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
