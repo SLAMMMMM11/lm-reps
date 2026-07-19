@@ -150,5 +150,12 @@
     { "lugar": "Acantilados de Moher", "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/d/d1/Cliffs-Of-Moher-OBriens-From-South.JPG/1280px-Cliffs-Of-Moher-OBriens-From-South.JPG" },
     { "lugar": "Calzada del Gigante, Irlanda del Norte", "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/c/c0/Causeway-code_poet-4.jpg/1280px-Causeway-code_poet-4.jpg" },
     { "lugar": "Dublín (aérea)", "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/5/5a/Dublin_-_aerial_-_panorama_-_2025-02-06.jpg/1280px-Dublin_-_aerial_-_panorama_-_2025-02-06.jpg" }
+  ],
+  "austria": [
+    { "lugar": "Innsbruck, Tirol", "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/8/85/Innsbruck_-_Maria-Theresia-Stra%C3%9Fe4.jpg/1280px-Innsbruck_-_Maria-Theresia-Stra%C3%9Fe4.jpg" }
+  ],
+  "suiza": [
+    { "lugar": "Puente de la Capilla (Kapellbrücke), Lucerna", "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/1/1e/Kapellbruecke.JPG/1280px-Kapellbruecke.JPG" },
+    { "lugar": "Zúrich y su lago (panorámica)", "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/0/0f/Panoramablick_auf_die_Altstadt_von_Z%C3%BCrich_und_den_Z%C3%BCrichsee.jpg/1280px-Panoramablick_auf_die_Altstadt_von_Z%C3%BCrich_und_den_Z%C3%BCrichsee.jpg" }
   ]
 }
