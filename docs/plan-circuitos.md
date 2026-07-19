@@ -46,7 +46,7 @@ Claude actualiza este archivo con cada tanda.
 | 30 | 7 | Venecia, Florencia, Roma | 9 | $1.410 | Tanda 6 | construido | venecia-florencia-y-roma |
 | 31 | 8 | Milán, Venecia, Florencia, Roma | 10 | $1.565 | Tanda 6 | construido | milan-venecia-florencia-y-roma |
 | 32 | 9 | Italia Plus 3 "Italia al completo" | 8 (ó 12/13) | $1.460 | Tanda 6 | construido | italia-al-completo |
-| 33 | 11 | Sur de Italia y la Puglia (Roma/Nápoles(2)/Costa Amalfitana/Puglia) | 10 ó 12 | $2.040 | Tanda 6 | pendiente |  |
+| 33 | 11 | Sur de Italia y la Puglia (Roma/Nápoles(2)/Costa Amalfitana/Puglia) | 10 ó 12 | $2.040 | Tanda 6 | construido | sur-de-italia-y-la-puglia |
 | 33b | 66 | Sur de Italia y Sicilia | 10 o 12 | $2.165 | Tanda 6 | construido | sur-de-italia-y-sicilia |
 | 34 | 16 | Italia con Estilo | 7 | $1.385 | Tanda 7 | construido | italia-con-estilo |
 | 35 | 17 | Islas de Malta y Sicilia | 9 | $2.485 | Tanda 7 | construido | malta-y-sicilia |
@@ -72,9 +72,9 @@ Claude actualiza este archivo con cada tanda.
 | 55 | 58 | La Europa de Siempre: Desde Londres o París | 16, 18, 20 ó 22 | $2.900 | Tanda 11 | construido | la-europa-de-siempre-desde-londres |
 | 56 | 60 | La Europa de Siempre: Desde Madrid | 19 ó 22 | $3.350 | Tanda 11 | construido | la-europa-de-siempre-desde-madrid |
 | 57 | 62 | La Pequeña Gira Europea | 15, 17, 20 ó 22 | $2.660 | Tanda 11 | construido | la-pequena-gira-europea |
-| 58 | 64 | (ver PDF) | 21 ó 22 | $2.960 | Tanda 11 | pendiente |  |
-| 59 | 66 | (ver PDF) | 24 ó 26 | $3.275 | Tanda 12 | pendiente |  |
-| 60 | 68 | (ver PDF) | 22 ó 26 | $3.595 | Tanda 12 | pendiente |  |
+| 58 | 64 | Querida Europa | 18, 21 ó 22 | $2.960 | Tanda 12 | construido | querida-europa |
+| 59 | 66 | Europa en Bandeja: Desde Londres o París | 19, 21, 24 ó 26 | $3.275 | Tanda 12 | construido | europa-en-bandeja-desde-londres |
+| 60 | 68 | Europa en Bandeja: Desde Madrid | 22 ó 26 | $3.595 | Tanda 12 | construido | europa-en-bandeja-desde-madrid |
 
 ## Países Mediterráneos (17 circuitos)
 

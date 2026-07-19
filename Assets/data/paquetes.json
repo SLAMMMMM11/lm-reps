@@ -917,6 +917,51 @@
     "custom": true
   },
   {
+    "slug": "europa-en-bandeja-desde-londres",
+    "title": "Europa en Bandeja: Desde Londres o París",
+    "subtitle": "Londres, París, Bruselas, Gante, Brujas, Amberes, La Haya, Ámsterdam, Colonia, un paseo en barco por el río Rin, Frankfurt, Heidelberg, Estrasburgo, Basilea, Lucerna, Como, Milán, Venecia, Florencia, Siena, Asís, Roma, Costa Azul, Barcelona y Madrid.",
+    "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/2/26/Grand-Place%2C_Brussels_-_panorama%2C_June_2018.jpg/1280px-Grand-Place%2C_Brussels_-_panorama%2C_June_2018.jpg",
+    "images": [
+      "https://upload.wikimedia.org/wikipedia/commons/thumb/2/26/Grand-Place%2C_Brussels_-_panorama%2C_June_2018.jpg/1280px-Grand-Place%2C_Brussels_-_panorama%2C_June_2018.jpg"
+    ],
+    "region": "Europa",
+    "regionKey": "carouseleuropa",
+    "destino": "Inglaterra, Francia, Bélgica, Países Bajos, Alemania, Suiza e Italia",
+    "countries": [
+      "inglaterra",
+      "francia",
+      "belgica",
+      "paises-bajos",
+      "alemania",
+      "suiza",
+      "italia",
+      "espana"
+    ],
+    "custom": true
+  },
+  {
+    "slug": "europa-en-bandeja-desde-madrid",
+    "title": "Europa en Bandeja: Desde Madrid",
+    "subtitle": "Madrid, San Sebastián, Burdeos, la región del Loira, París, Bruselas, Gante, Brujas, Amberes, La Haya, Ámsterdam, Colonia, un paseo en barco por el río Rin, Frankfurt, Heidelberg, Estrasburgo, Basilea, Lucerna, Como, Milán, Venecia, Florencia, Siena, Asís, Roma, Costa Azul y Barcelona.",
+    "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/7/70/Belgium-bruges-canal.jpg/1280px-Belgium-bruges-canal.jpg",
+    "images": [
+      "https://upload.wikimedia.org/wikipedia/commons/thumb/7/70/Belgium-bruges-canal.jpg/1280px-Belgium-bruges-canal.jpg"
+    ],
+    "region": "Europa",
+    "regionKey": "carouseleuropa",
+    "destino": "España, Francia, Bélgica, Países Bajos, Alemania, Suiza e Italia",
+    "countries": [
+      "espana",
+      "francia",
+      "belgica",
+      "paises-bajos",
+      "alemania",
+      "suiza",
+      "italia"
+    ],
+    "custom": true
+  },
+  {
     "slug": "europa-en-breve-desde-londres",
     "title": "Europa en Breve: Desde Londres",
     "subtitle": "Londres, París, un paseo en barco por el río Rin, Frankfurt, Suiza, Milán, Venecia, Florencia, Roma, Costa Azul, Barcelona y Madrid.",
@@ -1556,6 +1601,42 @@
     "countries": [
       "espana",
       "portugal"
+    ],
+    "custom": true
+  },
+  {
+    "slug": "querida-europa",
+    "title": "Querida Europa",
+    "subtitle": "Madrid, San Sebastián, Burdeos, la región del Loira, París, un paseo en barco por el río Rin, Frankfurt, Heidelberg, Estrasburgo, Basilea, Lucerna, Lugano, Como, Milán, Venecia, Florencia, Siena, Asís, Roma, Costa Azul y Barcelona.",
+    "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/6/64/Bordeaux_place_de_la_bourse_with_tram.JPG/1280px-Bordeaux_place_de_la_bourse_with_tram.JPG",
+    "images": [
+      "https://upload.wikimedia.org/wikipedia/commons/thumb/6/64/Bordeaux_place_de_la_bourse_with_tram.JPG/1280px-Bordeaux_place_de_la_bourse_with_tram.JPG"
+    ],
+    "region": "Europa",
+    "regionKey": "carouseleuropa",
+    "destino": "España, Francia, Alemania, Suiza e Italia",
+    "countries": [
+      "espana",
+      "francia",
+      "alemania",
+      "suiza",
+      "italia"
+    ],
+    "custom": true
+  },
+  {
+    "slug": "sur-de-italia-y-la-puglia",
+    "title": "Sur de Italia y la Puglia",
+    "subtitle": "Roma, Nápoles, Capri, Sorrento, la Costa Amalfitana, Matera, Tarento, Lecce, Alberobello y Bari.",
+    "image": "https://images.unsplash.com/photo-1515542622106-78bda8ba0e5b?q=80&w=800",
+    "images": [
+      "https://images.unsplash.com/photo-1515542622106-78bda8ba0e5b?q=80&w=800"
+    ],
+    "region": "Europa",
+    "regionKey": "carouseleuropa",
+    "destino": "Italia",
+    "countries": [
+      "italia"
     ],
     "custom": true
   },
