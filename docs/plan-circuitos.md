@@ -63,11 +63,11 @@ Claude actualiza este archivo con cada tanda.
 | 46 | 40 | Gran Tour de Irlanda | 9 | $2.125 | Tanda 9 | construido | gran-tour-de-irlanda |
 | 47 | 42 | Desde Madrid, Barcelona o Roma a Madrid | 15, 17 ó 18 | $2.385 | Tanda 9 | construido | desde-madrid-barcelona-o-roma-a-madrid |
 | 48 | 44 | Desde Madrid o Barcelona a París o Londres | 14, 15, 16 ó 17 | $2.365 | Tanda 9 | construido | desde-madrid-o-barcelona-a-paris-o-londres |
-| 49 | 46 | (ver PDF) | 20 ó 21 | $2.680 | Tanda 10 | pendiente |  |
-| 50 | 48 | Desde Madrid o Roma a Castilla, Galicia y Portugal | 20 ó 24 | $2.130 | Tanda 10 | pendiente |  |
-| 51 | 50 | Desde Londres | 16 ó 18 | $2.200 | Tanda 10 | pendiente |  |
-| 52 | 52 | Desde París | 14 ó16 | $1.625 | Tanda 10 | pendiente |  |
-| 53 | 54 | Desde Madrid | 17 o 18 | $2.515 | Tanda 10 | pendiente |  |
+| 49 | 46 | Europa Estilo MP 3: Desde Madrid, Barcelona o Roma a París, Países Bajos y Alemania | 16, 17, 18, 19, 20 o 21 | $2.680 | Tanda 10 | construido | desde-madrid-barcelona-o-roma-a-paises-bajos-y-alemania |
+| 50 | 48 | Desde Madrid o Roma a Castilla, Galicia y Portugal | 13, 20 o 24 | $2.130 | Tanda 10 | construido | desde-madrid-o-roma-a-castilla-galicia-y-portugal |
+| 51 | 50 | Europa en Breve: Desde Londres | 10, 14, 16 o 18 | $2.200 | Tanda 10 | construido | europa-en-breve-desde-londres |
+| 52 | 52 | Europa en Breve: Desde París | 8, 12, 14 o 16 | $1.625 | Tanda 10 | construido | europa-en-breve-desde-paris |
+| 53 | 54 | Europa en Breve: Desde Madrid | 15, 17 o 18 | $2.515 | Tanda 10 | construido | europa-en-breve-desde-madrid |
 | 54 | 56 | (ver PDF) | 20 ó 22 | $3.630 | Tanda 11 | pendiente |  |
 | 55 | 58 | (ver PDF) | 20 ó 22 | $2.900 | Tanda 11 | pendiente |  |
 | 56 | 60 | (ver PDF) | 19 ó 22 | $3.350 | Tanda 11 | pendiente |  |

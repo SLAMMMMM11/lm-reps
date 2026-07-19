@@ -732,6 +732,29 @@
     "custom": true
   },
   {
+    "slug": "desde-madrid-barcelona-o-roma-a-paises-bajos-y-alemania",
+    "title": "Desde Madrid, Barcelona o Roma a París, Países Bajos y Alemania",
+    "subtitle": "Madrid, Barcelona, la Costa Azul, Roma, Florencia, Venecia, Innsbruck, Suiza, París, Bruselas, Brujas, Ámsterdam y un crucero por el río Rin hasta Frankfurt.",
+    "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/2/26/Grand-Place%2C_Brussels_-_panorama%2C_June_2018.jpg/1280px-Grand-Place%2C_Brussels_-_panorama%2C_June_2018.jpg",
+    "images": [
+      "https://upload.wikimedia.org/wikipedia/commons/thumb/2/26/Grand-Place%2C_Brussels_-_panorama%2C_June_2018.jpg/1280px-Grand-Place%2C_Brussels_-_panorama%2C_June_2018.jpg"
+    ],
+    "region": "Europa",
+    "regionKey": "carouseleuropa",
+    "destino": "España, Italia, Austria, Suiza, Francia, Bélgica, Países Bajos y Alemania",
+    "countries": [
+      "espana",
+      "italia",
+      "austria",
+      "suiza",
+      "francia",
+      "belgica",
+      "paises-bajos",
+      "alemania"
+    ],
+    "custom": true
+  },
+  {
     "slug": "desde-madrid-o-barcelona-a-paris-o-londres",
     "title": "Desde Madrid o Barcelona a París o Londres",
     "subtitle": "Madrid, Barcelona, la Costa Azul, Roma, Florencia, Venecia, Innsbruck, Suiza y un final a elección: París o Londres.",
@@ -749,6 +772,27 @@
       "austria",
       "francia",
       "reino-unido"
+    ],
+    "custom": true
+  },
+  {
+    "slug": "desde-madrid-o-roma-a-castilla-galicia-y-portugal",
+    "title": "Desde Madrid o Roma a Castilla, Galicia y Portugal",
+    "subtitle": "Madrid, Barcelona, la Costa Azul, Roma, Florencia, Venecia, Innsbruck, Suiza, París, Lourdes, Salamanca, Santiago de Compostela, Oporto, Fátima y Lisboa.",
+    "image": "https://images.unsplash.com/photo-1555881400-74d7acaacd8b",
+    "images": [
+      "https://images.unsplash.com/photo-1555881400-74d7acaacd8b"
+    ],
+    "region": "Europa",
+    "regionKey": "carouseleuropa",
+    "destino": "España, Italia, Austria, Suiza, Francia y Portugal",
+    "countries": [
+      "espana",
+      "italia",
+      "austria",
+      "suiza",
+      "francia",
+      "portugal"
     ],
     "custom": true
   },
@@ -869,6 +913,67 @@
     "countries": [
       "espana",
       "portugal"
+    ],
+    "custom": true
+  },
+  {
+    "slug": "europa-en-breve-desde-londres",
+    "title": "Europa en Breve: Desde Londres",
+    "subtitle": "Londres, París, un paseo en barco por el río Rin, Frankfurt, Suiza, Milán, Venecia, Florencia, Roma, Costa Azul, Barcelona y Madrid.",
+    "image": "https://images.unsplash.com/photo-1552832230-c0197dd311b5",
+    "images": [
+      "https://images.unsplash.com/photo-1552832230-c0197dd311b5"
+    ],
+    "region": "Europa",
+    "regionKey": "carouseleuropa",
+    "destino": "Reino Unido, Francia, Alemania, Suiza, Italia y España",
+    "countries": [
+      "reino-unido",
+      "francia",
+      "alemania",
+      "suiza",
+      "italia",
+      "espana"
+    ],
+    "custom": true
+  },
+  {
+    "slug": "europa-en-breve-desde-madrid",
+    "title": "Europa en Breve: Desde Madrid",
+    "subtitle": "Madrid, San Sebastián, Burdeos, la región del Loire, París, un paseo en barco por el río Rin, Frankfurt, Suiza, Milán, Venecia, Florencia, Roma, Costa Azul y Barcelona.",
+    "image": "https://images.unsplash.com/photo-1552832230-c0197dd311b5",
+    "images": [
+      "https://images.unsplash.com/photo-1552832230-c0197dd311b5"
+    ],
+    "region": "Europa",
+    "regionKey": "carouseleuropa",
+    "destino": "España, Francia, Alemania, Suiza e Italia",
+    "countries": [
+      "espana",
+      "francia",
+      "alemania",
+      "suiza",
+      "italia"
+    ],
+    "custom": true
+  },
+  {
+    "slug": "europa-en-breve-desde-paris",
+    "title": "Europa en Breve: Desde París",
+    "subtitle": "París, un paseo en barco por el río Rin, Frankfurt, Suiza, Milán, Venecia, Florencia, Roma, Costa Azul, Barcelona y Madrid.",
+    "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/1/17/Piazza_San_Marco_%28Venice%29_at_night-msu-2021-6449-.jpg/1280px-Piazza_San_Marco_%28Venice%29_at_night-msu-2021-6449-.jpg",
+    "images": [
+      "https://upload.wikimedia.org/wikipedia/commons/thumb/1/17/Piazza_San_Marco_%28Venice%29_at_night-msu-2021-6449-.jpg/1280px-Piazza_San_Marco_%28Venice%29_at_night-msu-2021-6449-.jpg"
+    ],
+    "region": "Europa",
+    "regionKey": "carouseleuropa",
+    "destino": "Francia, Alemania, Suiza, Italia y España",
+    "countries": [
+      "francia",
+      "alemania",
+      "suiza",
+      "italia",
+      "espana"
     ],
     "custom": true
   },
