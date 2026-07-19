@@ -159,14 +159,28 @@ function build(d) {
     </section>` : '';
 
   const cabecera = d.precios.columnas.map((c, i) => `<th${i === d.precios.mejorCol ? ' class="pq-best-col"' : ''}>${esc(c)}</th>`).join('\n                ');
-  const filas = d.precios.filas.map((f, fi) => {
-    const zebra = Math.floor(fi / 2) % 2 === 1 ? ' class="table-light"' : '';
-    const rowspan = fi % 2 === 0 ? `<td rowspan="2" class="text-start fw-semibold">${f.tour}</td>\n                ` : '';
-    const celdas = f.valores.map((v, i) => `<td class="${fi % 2 === 0 ? 'fw-semibold ' : ''}${i === d.precios.mejorCol ? 'pq-best-col' : ''}">$${esc(v)}</td>`).join('');
-    return `              <tr${zebra}>
+  // Agrupa filas por "tour": una fila con tour no vacío abre un grupo (una
+  // duración/variante); las siguientes con tour: '' son la misma variante en
+  // otra categoría de hotel y comparten la celda de "tour" via rowspan. No
+  // asumir pares fijos de 2 — un grupo puede tener 1 sola fila (categoría
+  // "Única") o más de 2.
+  const grupos = [];
+  d.precios.filas.forEach((f) => {
+    if (f.tour !== '' || grupos.length === 0) grupos.push([]);
+    grupos[grupos.length - 1].push(f);
+  });
+  const filas = grupos.map((grupo, gi) => {
+    const zebra = gi % 2 === 1 ? ' class="table-light"' : '';
+    return grupo.map((f, ri) => {
+      const rowspan = ri === 0
+        ? `<td${grupo.length > 1 ? ` rowspan="${grupo.length}"` : ''} class="text-start fw-semibold">${f.tour}</td>\n                `
+        : '';
+      const celdas = f.valores.map((v, i) => `<td class="${ri === 0 ? 'fw-semibold ' : ''}${i === d.precios.mejorCol ? 'pq-best-col' : ''}">$${esc(v)}</td>`).join('');
+      return `              <tr${zebra}>
                 ${rowspan}<td class="text-start">${esc(f.categoria)}</td>
                 ${celdas}
               </tr>`;
+    }).join('\n');
   }).join('\n');
 
   const hoteles = d.hoteles ? `
